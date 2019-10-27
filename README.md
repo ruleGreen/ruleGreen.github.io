@@ -1,2 +1,2 @@
 # ruleGreen.github.io
-personal web page
+this is my personal web page

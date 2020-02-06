@@ -11,7 +11,7 @@
     import Cookies from './js/js.cookie.mjs'
 
     var answer = 1;
-    Cookies.set('answer', answer);
+    Cookies.set('answer', "1");
     console.log(Cookies.get('answer'));
 
 
@@ -1286,12 +1286,9 @@
               }
             }
           }}};
-    Cookies.set('data', data);
-    const liaData = Cookies.getJSON('data');
-    console.log(liaData);
-
-    Cookies.set('raw', JSON.parse(data));
-    console.log( Cookies.get('raw'));
+    console.log(data);
+    Cookies.set('data', {life: { verb: { question: "是那你死"} }, format: {norm: {question: "大把数据库"}}});
+    console.log(JSON.parse(Cookies.get('data')));
   </script>
   <script nomodule defer src="js/js.cookie.js"></script>
 

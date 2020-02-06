@@ -1,0 +1,503 @@
+<!doctype html>
+<html>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- JS-Cookie -->
+  <script type="module" src="js/js.cookie.mjs"></script>
+  <script type="module">
+    import Cookies from './js/js.cookie.mjs'
+
+    Cookies.set('foo', 'bar');
+    var res = Cookies.get('foo');
+    console.log(res);
+  </script>
+  <script nomodule defer src="js/js.cookie.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <title>zone</title>
+
+  <style>
+
+    body {
+      color: #000000;
+      background-image: url("img/background.jpg");
+      background-position: center 0;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      -webkit-background-size: cover;
+      -o-background-size: cover;
+      -moz-background-size: cover;
+      -ms-background-size: cover;
+
+      overflow: hidden;
+
+    }
+    .board{
+      margin-top: 25vh;
+      width: 80%;
+      height: 60%;
+    }
+
+    .sub-board{
+      margin-top: 15px;
+    }
+
+    .question-bg{
+      padding: 10px;
+      border-radius: .7rem!important;
+      background-color:rgba(138, 146, 160, 0.6);
+      height: 200px;
+      margin: 10px;
+
+      max-width: 300px;
+    }
+
+    .question-board {
+      /*border-radius: .7rem!important;*/
+    }
+
+    .question-serial {
+      position:relative;
+      height:60px;
+      /*top:10px;*/
+      border: 10px;
+      background-color:rgba(77,66,60,1);
+      border-radius: 15px 15px 0 0;
+      color:rgba(183,173,145,1);
+      text-align: center;
+      padding: 8px;
+      font-size: 1.5em;
+    }
+
+    .question-des {
+      height:120px;
+      background-color:rgba(255,255,255,1);
+      border-radius: 0 0 15px 15px;
+      padding: 20px;
+      font-size: 0.6em;
+    }
+
+    .question-status {
+      position:absolute;
+      margin: auto;
+      width:40%;
+      max-width: 150px;
+      min-width: 100px;
+      height:45px;
+
+      bottom:-20px;
+
+
+      border-radius:10.7rem!important;
+      text-align: center;
+      font-size:1.2em;
+
+      left: 50%;
+      transform: translate(-50%,0);
+
+      transition: all 0.6s;
+    }
+
+    .question-status:hover{
+      transform: translate(-50%,0) scale(1.1);
+      cursor:pointer;
+    }
+
+    .status-done{
+      background-color: rgba(23, 94, 49, 1);
+      border:3px solid rgba(33, 137, 59, 0.9);
+    }
+
+    .status-notDone{
+      background-color: rgba(174, 48, 53, 1);
+      border:3px solid rgba(216, 55, 50, 0.9);
+    }
+
+    .status-false{
+      background-color: rgba(174, 48, 53, 1);
+      border:3px solid rgba(33, 137, 59, 0.9);
+    }
+
+    .button-status{
+      position:absolute;
+      color:rgba(255,255,255,1);
+      text-align: center;
+      top:50%;
+      transform: translate(-50%,-50%);
+    }
+
+
+    a{
+      text-decoration: none;
+      color: #f7f7f7;
+    }
+    a:hover{
+      text-decoration: none;
+      color: #f7f7f7;
+    }
+    #return{
+      position: fixed;
+      top:5vh;
+      left: 2vw;
+      width: 100px;
+      height: 60px;
+
+      font-size: 1.8em;
+    }
+
+    /*.modal-backdrop {*/
+    /*  opacity: 0 !important;*/
+    /*  filter: alpha(opacity=0) !important;*/
+    /*}*/
+
+    #exampleModal{
+      overflow: hidden;
+    }
+
+    .modal-bg{
+      padding: 20px;
+      border-radius: .7rem!important;
+      background-color:rgba(138, 146, 160, 0.6);
+      width: 60vw;
+    }
+
+    .modal-header-bg{
+      background-color:rgba(93,75,68,1);
+      border-top-left-radius: .7rem!important;
+      border-top-right-radius: .7rem!important;
+      height: 80px;
+      text-align: center;
+    }
+
+    .modal-header-bg span{
+      color: rgba(253, 238, 211, 1);
+      display: inline-block;
+      text-align: center;
+      font-size: 2em;
+
+
+      position:absolute;
+      left: 50%;
+      transform: translate(-50%,0);
+    }
+
+    .question-body{
+      background-color: rgba(255, 255, 255, 1);
+      border-bottom-left-radius: .7rem!important;
+      border-bottom-right-radius: .7rem!important;
+      padding: 20px;
+    }
+
+    #question-content{
+      height: 30vh;
+      color: #000000;
+
+    }
+
+    .question-word{
+      font-size: 1.9em;
+    }
+
+    .word-selected{
+      background-color: #ff0000;
+    }
+
+    .modal-footer{
+      border-top: 1px solid rgba(174, 159, 143, 1);
+      padding-top: 30px;
+      padding-bottom: 20px;
+    }
+    .answer-board{
+      position:absolute;
+      left: 50%;
+      transform: translate(-50%,0);
+
+      display: inline-block;
+      vertical-align:middle;
+
+      font-size: 40px;
+    }
+    #user-answer{
+      width: 60px;
+      height: 60px;
+      font-size: 40px;
+
+    }
+
+    input {
+      outline: none;
+      text-align: center;
+    }
+
+    .btn-submit{
+
+      color: #ffffff;
+      background-color: rgba(174, 48, 53, 1);
+      border:3px solid rgba(216, 55, 50, 0.9);
+
+      width:20%;
+      max-width: 150px;
+      min-width: 120px;
+      height:45px;
+
+      position: relative;
+      right: 0px;
+
+      /*bottom:-20px;*/
+
+
+      border-radius:10.7rem!important;
+      text-align: center;
+      font-size:1.2em;
+    }
+
+    .btn-confirm{
+
+      color: #ffffff;
+      background-color: rgba(174, 48, 53, 1);
+      border:3px solid rgba(216, 55, 50, 0.9);
+
+      width:20%;
+      max-width: 150px;
+      min-width: 120px;
+      height:45px;
+
+      position: relative;
+      right: 0px;
+
+      /*bottom:-20px;*/
+
+
+      border-radius:10.7rem!important;
+      text-align: center;
+      font-size:1.2em;
+    }
+
+  </style>
+</head>
+<body>
+
+<div id="return">
+			<a href="start.html"><p > <	返回</p></a>
+</div>
+
+<div class="container board">
+
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop=”static”>
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content modal-bg">
+      <div class="modal-header modal-header-bg">
+        <span id="question-title">題目</span>
+      </div>
+      <div class="question-body">
+        <div class="modal-body">
+          <div id="question-content">
+
+          </div>
+        </div>
+        <div class="modal-footer">
+
+          <div class="answer-board">
+            <span>正字：</span>
+            <input type="text" id="user-answer">
+          </div>
+
+          <button type="button" class="btn btn-submit" id="submit">提交</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="notificationModal" tabindex="-1" role="dialog" aria-labelledby="notificationModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div id="result-content">
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-confirm" data-dismiss="modal" id="confirm">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script src="data/data.js"></script>
+<script>
+
+  var typeID;
+  var subTypeID;
+
+  var url = window.location.search;
+  if (url.indexOf("?") != -1 && url.indexOf("&") != -1) {
+      var str = url.split('?')[1];
+      strs = str.split("&");
+      typeID = strs[0].split('=')[1];
+      subTypeID = strs[1].split('=')[1];
+  }
+  else {
+      alert('url err, show default content');
+      typeID = 'lidnPO';
+      subTypeID = 'zGqDtC';
+  }
+
+  console.log(typeID, subTypeID);
+
+  var quesDict = questionLib[typeID]["subTypes"][subTypeID]["questions"];
+
+  var rowDiv = $('<div class="row sub-board" >');
+  $(".board:first").append(rowDiv);
+  for(let i in quesDict){
+      // console.log(quesDict[i]);
+      if (i==5){
+          rowDiv = $('<div class="row sub-board" >');
+          $(".board").append(rowDiv);
+      }
+
+      let questionBg = $('<div class="col-lg question-bg"></div>');
+      rowDiv.append(questionBg);
+
+      let quesBoard = $('<div class="question-board"></div>');
+      questionBg.append(quesBoard);
+
+      let quesSerial = $('<div class="question-serial"><p>'+quesDict[i]["questionName"]+'</p></div>');
+      quesBoard.append(quesSerial);
+
+      let quesContent = $('<div class="question-des"><p >'+quesDict[i]["content"]+'</p></div>');
+      quesBoard.append(quesContent);
+
+      let quesStatus = $('<div id="question'+i+'" class="question-status" data-toggle="modal" data-target="#exampleModal" data-serial='+i+'></div>');
+      //'+ quesDict[i]["done"]==1?"status-done":"status-notDone"+'
+      let quesBtnSpan = $('<span class="button-status"></span>');
+
+      if (quesDict[i]["done"] == 1){
+          quesBtnSpan.text('完成');
+          quesStatus.attr("class", "question-status status-done");
+      }
+      else{
+          quesBtnSpan.text('進入');
+          quesStatus.attr("class", "question-status status-notDone");
+      }
+      quesStatus.append(quesBtnSpan);
+      quesBoard.append(quesStatus);
+
+
+  }
+
+
+  var curQuesIndex = 0;
+  var curQuestion = {};
+
+  var answerErrIndex = -1;
+
+
+   $('#question-content').on('click','.question-word', function(){
+      $(this).css('background-color', '#ff0000');
+      $(this).siblings().css('background-color', '#ffffff');
+
+      answerErrIndex = $(this).attr('name');
+      console.log(answerErrIndex);
+
+  });
+
+  // $('#exampleModal').modal('show');
+
+  // $('#exampleModal').modal({backdrop:'static',keyboard:false});
+
+  $('#exampleModal').on('show.bs.modal', function (event) {
+    // $(".container").hide();
+    // $("#return").hide();
+
+    $("#question-content").html('');
+    answerErrIndex = -1;
+
+    curQuesIndex = $(event.relatedTarget).data('serial'); // Extract info from data-* attributes
+    curQuestion = quesDict[curQuesIndex];
+
+    $(this).find('#question-title').text(curQuestion["questionName"]);
+
+    for(let i=0; i< curQuestion["content"].length; i++){
+      let span = $("<span class='question-word' name="+i+">"+curQuestion["content"][i]+"</span>");
+      $("#question-content").append(span);
+    }
+
+    /* modal two to render a box to notify user the result is correct or incorrect */
+    $("#submit").click(function() {
+        let user_answer = $('#user-answer').val();
+        curQuestion["answerWord"] = user_answer;
+        curQuestion["answerErrIndex"] = answerErrIndex;
+
+        if (curQuestion["answerWord"]== curQuestion["correct"] && curQuestion["answerErrIndex"]== curQuestion["errIndex"] ){
+          //console.log("恭喜！你答對了！");
+          var result = document.getElementById("result-content");
+          result.innerHTML = "恭喜！你答對了！";
+          $('#notificationModal').modal('show');
+          $('#exampleModal').modal('hide');
+        }
+        else{
+          //console.log("你答錯了。請再嘗試。");
+          var result = document.getElementById("result-content");
+          result.innerHTML = "你答錯了。請再嘗試。";
+          $('#notificationModal').modal('show');
+          /* empty all user input */
+          $("#confirm").click(function() {
+            $('#question-content').find('span').css('background-color', '#ffffff');
+            $('#user-answer').val('');
+          });
+        }
+                
+    });
+
+
+  }).on('hidden.bs.modal', function (event) {
+
+  // $(".container").show();
+  // $("#return").show();
+
+  console.log(quesDict[curQuesIndex]);
+  let user_answer = $('#user-answer').val();
+
+  // console.log(user_answer, answerErrIndex);
+
+  curQuestion["done"] = 1;
+
+  curQuestion["answerWord"] = user_answer;
+  curQuestion["answerErrIndex"] = answerErrIndex;
+
+  if (curQuestion["answerWord"]== curQuestion["correct"] && curQuestion["answerErrIndex"]== curQuestion["errIndex"] ){
+      curQuestion["result"] = 1;
+  }
+  else{
+      curQuestion["result"] = 0;
+  }
+
+  // console.log('用户回答：', curQuestion);
+
+  console.log("回答：", curQuestion["result"] == 1? "正确":"错误");
+
+  $('#question-content').find('span').css('background-color', '#ffffff');
+  $('#user-answer').val('');
+  $("#question"+curQuesIndex).removeClass( "status-notDone");
+  $("#question"+curQuesIndex).addClass(curQuestion["result"] == 1? "status-done":"status-false");
+  $("#question"+curQuesIndex).find('span').text(curQuestion["result"] == 1? "完成":"進入")
+  });
+</script>
+</body>
+</html>

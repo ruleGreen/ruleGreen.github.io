@@ -14,7 +14,7 @@
     Cookies.set('answer', "1");
     console.log(Cookies.get('answer'));
 
-    Cookies.set('person',  { 'name': 'user', 'age': '18' });
+    Cookies.set('person',  { 'user': {'name' : 0 }, 'age': '18' });
     console.log(Cookies.getJSON('person'));
 
     const data = {'life': {
@@ -1289,12 +1289,15 @@
             }
           }}};
     Cookies.set('data', data);
-    var raw = Cookies.getJSON('data');
+    var raw = Cookies.get('data');
 
     console.log(raw);
     console.log(Cookies.get());
     // console.log(JSON.parse(raw));
     console.log(JSON.stringify(raw));
+
+
+    console.log(Cookies.getJSON('data'));
   </script>
 
   <!-- Bootstrap CSS -->

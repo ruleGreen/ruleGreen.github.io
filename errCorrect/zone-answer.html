@@ -8,14 +8,14 @@
   <!-- JS-Cookie -->
   <script src="./js/js.cookie.js"></script>
   <script type="module">
-    import * as Cookies from './js/js.cookie.js'
+    import jsCookies from './js/js.cookie.js'
 
     var answer = 1;
-    Cookies.set('answer', "1");
-    console.log(Cookies.get('answer'));
+    jsCookies.set('answer', "1");
+    console.log(jsCookies.get('answer'));
 
-    Cookies.set('person',  { 'user': {'name' : 0 }, 'age': '18' });
-    console.log(Cookies.getJSON('person'));
+    jsCookies.set('person',  { 'user': {'name' : 0 }, 'age': '18' });
+    console.log(jsCookies.getJSON('person'));
 
     /*
     const data = {'life': {

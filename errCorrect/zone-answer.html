@@ -1288,7 +1288,9 @@
           }}};
     console.log(data);
     Cookies.set('data', JSON.stringify(data));
-    console.log(Cookies.get('data'));
+    var raw = Cookies.get('data');
+
+    console.log(raw['life']);
   </script>
   <script nomodule defer src="js/js.cookie.js"></script>
 

@@ -10,8 +10,12 @@
   <script type="module">
     import Cookies from './js/js.cookie.mjs'
 
-    const data = {
-        'life': {
+    var answer = 1;
+    Cookies.set('answer', answer);
+    console.log(Cookies.get('answer'));
+
+
+    const data = {'life': {
           'typeName': '生活',
           'subTypes': {
             'verb': {
@@ -413,9 +417,7 @@
                 }
               }
             }
-          }
-        },
-        'idiom': {
+          }}, 'idiom': {
           'typeName': '成語',
           'subTypes': {
             'person': {
@@ -881,9 +883,7 @@
                 }
               }
             }
-          }
-        },
-        'font': {
+          }}, 'font': {
           'typeName': '字型',
           'subTypes': {
             'pron': {
@@ -1285,13 +1285,13 @@
                 }
               }
             }
-          }
-        }
-    }
-
+          }}};
     Cookies.set('data', data);
     const liaData = Cookies.getJSON('data');
-    console.log(liaData['life']);
+    console.log(liaData);
+
+    Cookies.set('raw', JSON.parse(data));
+    console.log( Cookies.get('raw'));
   </script>
   <script nomodule defer src="js/js.cookie.js"></script>
 

@@ -9,7 +9,7 @@
   <script src="./js/js.cookie.js"></script>
   <script type="module">
     import Cookies from './js/js.cookie.js'
-    
+
     var answer = 1;
     Cookies.set('answer', "1");
     console.log(Cookies.get('answer'));
@@ -1288,9 +1288,8 @@
               }
             }
           }}};
-    console.log(data);
     Cookies.set('data', data);
-    var raw = Cookies.get('data');
+    var raw = Cookies.getJSON('data');
 
     console.log(raw);
     console.log(Cookies.get());

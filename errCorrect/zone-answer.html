@@ -1287,8 +1287,8 @@
             }
           }}};
     console.log(data);
-    Cookies.set('data', {'name': 'user', 'age': '18'});
-    console.log(JSON.parse(Cookies.get('data')));
+    Cookies.set('data', JSON.parse(data));
+    console.log(Cookies.get('data'));
   </script>
   <script nomodule defer src="js/js.cookie.js"></script>
 

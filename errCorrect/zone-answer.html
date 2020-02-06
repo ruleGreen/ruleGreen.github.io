@@ -1290,7 +1290,8 @@
     Cookies.set('data', JSON.stringify(data));
     var raw = Cookies.get('data');
 
-    console.log(raw['life']);
+    console.log(raw);
+    console.log(JSON.parse(raw));
   </script>
   <script nomodule defer src="js/js.cookie.js"></script>
 

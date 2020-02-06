@@ -1291,6 +1291,7 @@
     var raw = Cookies.get('data');
 
     console.log(raw);
+    console.log(Cookies.get());
     // console.log(JSON.parse(raw));
     console.log(JSON.stringify(raw));
   </script>
@@ -1694,6 +1695,9 @@
 
       answerErrIndex = $(this).attr('name');
       console.log(answerErrIndex);
+
+      Cookies.set("answerErrIndex", answerErrIndex);
+      console.log(Cookies.get("answerErrIndex"));
 
   });
 

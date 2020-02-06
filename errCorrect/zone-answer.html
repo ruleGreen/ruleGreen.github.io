@@ -14,6 +14,8 @@
     Cookies.set('answer', "1");
     console.log(Cookies.get('answer'));
 
+    Cookies.set('person',  { 'name': 'user', 'age': '18' });
+    console.log(Cookies.getJSON('person'));
 
     const data = {'life': {
           'typeName': '生活',

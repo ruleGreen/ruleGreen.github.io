@@ -644,7 +644,6 @@
 
   /*This is for the cookies. */
   var pathname = typeID + subTypeID + missionID;
-  Cookies.set(mission, 1);
   console.log("test 1", quesDict);
   for (let i in quesDict){
     console.log("i", i);
@@ -765,9 +764,10 @@
     }
 
     /* Judge if all finished. */
+    var mission = typeID + subTypeID + missionID;
+    Cookies.set(mission, 1);
     for (let i in quesDict){
       if (quesDict[i]["done"] == 0) {
-        var mission = typeID + subTypeID + missionID;
         Cookies.set(mission, 0);
       }
     }

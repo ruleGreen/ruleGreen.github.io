@@ -762,6 +762,8 @@
     // console.log('用户回答：', curQuestion);
 
     console.log("test 1", quesDict);
+    Cookies.set(curQuestion["questionName"], 1);
+    console.log("test 3", Cookies.get(curQuestion["questionName"]));
     Cookies.set('quesDict', quesDict);
 
     console.log("回答：", curQuestion["result"] == 1? "正确":"错误");

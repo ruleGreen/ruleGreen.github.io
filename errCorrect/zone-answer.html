@@ -19,7 +19,7 @@
     console.log(Cookies.getJSON('person'));
 
     
-    const data = {
+    const origin = {
             "life": {
               "typeName": "生活",
               "subTypes": {
@@ -1297,8 +1297,8 @@
               }
             }
           }
-    Cookies.set('data', data);
-    console.log(Cookies.getJSON('data'));
+    Cookies.set('origin', origin);
+    console.log(Cookies.get('origin'));
     // console.log(JSON.parse(Cookies.get('data')));
 
     const raw = 66;

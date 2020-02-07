@@ -1298,7 +1298,11 @@
     const user = {name: "wanghongru", age: 18}
     Cookies.set('user', user);
     console.log(Cookies.get('user'));
-    console.log(JSON.parse(Cookies.get('user')))    
+    console.log(JSON.parse(Cookies.get('user')))
+
+    const question = { "life": { "subtype": { "verb": { 0: { "question": "的那就是"}}}}}
+    Cookies.set('question', question);
+    console.log(Cookies.get('question'));
   </script>
 
   <!-- Bootstrap CSS -->

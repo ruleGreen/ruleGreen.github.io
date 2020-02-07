@@ -646,6 +646,7 @@
   if(Cookies.get("quesDict") == null) {
     var quesDict = questionLib[typeID]["subTypes"][subTypeID]["mission"][missionID]["questions"];
     Cookies.set("quesDict", quesDict);
+    console.log("test 5", Cookies.get("quesDict"));
   }else {
     var quesDict = JSON.parse(Cookies.get("quesDict"));
     console.log("test 2", quesDict);
@@ -765,6 +766,7 @@
     Cookies.set(curQuestion["questionName"], 1);
     console.log("test 3", Cookies.get(curQuestion["questionName"]));
     Cookies.set('quesDict', quesDict);
+    console.log("test 4", Cookies.get('quesDict'));
 
     console.log("回答：", curQuestion["result"] == 1? "正确":"错误");
 

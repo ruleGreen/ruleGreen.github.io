@@ -643,20 +643,13 @@
   var quesDict = questionLib[typeID]["subTypes"][subTypeID]["mission"][missionID]["questions"];
 
   /*This is for the cookies. */
-  for (var i = 0; i < quesDict.length; i++){
+  console.log("test 1", quesDict);
+  for (let i in quesDict){
     console.log("i", i);
     if (Cookies.get(i) != null) {
       console.log("test 2", Cookies.get(i));
       quesDict[i]["done"] = 1;
     }
-  }
-  if(Cookies.get("quesDict") == null) {
-    var quesDict = questionLib[typeID]["subTypes"][subTypeID]["mission"][missionID]["questions"];
-    Cookies.set("quesDict", quesDict);
-    console.log("test 5", Cookies.get("quesDict"));
-  }else {
-    var quesDict = JSON.parse(Cookies.get("quesDict"));
-    console.log("test 2", quesDict);
   }
 
   var rowDiv = $('<div class="row sub-board" >');

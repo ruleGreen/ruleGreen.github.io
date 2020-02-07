@@ -200,7 +200,7 @@
             var mission = typeid + st + m;
             console.log("mission", typeid, st, m);
             if (Cookies.get(mission) != null) {
-              data[typeid]["subTypes"][st]["mission"][m]["finished"] == Cookies.get(mission);
+              data[typeid]["subTypes"][st]["mission"][m]["finished"] = Cookies.get(mission);
               console.log("start test", Cookies.get(mission));
             }
 

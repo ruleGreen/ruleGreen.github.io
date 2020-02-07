@@ -647,9 +647,8 @@
   console.log("test 1", quesDict);
   for (let i in quesDict){
     console.log("i", i);
-    console.log("pathname", pathname);
-    if (Cookies.get(i, {path: window.location.search }) != null) {
-      console.log("test 2", Cookies.get(i, {path: window.location.search }));
+    if (Cookies.get(quesDict[i]["id"]) != null) {
+      console.log("test 2", Cookies.get(quesDict[i]["id"]));
       quesDict[i]["done"] = 1;
     }
   }
@@ -774,8 +773,8 @@
 
     // console.log('用户回答：', curQuestion);
     // curQuesIndex indices the index of the question.
-    Cookies.set(curQuesIndex, 1, { path: window.location.search });
-    console.log("test 1", Cookies.get(curQuesIndex))
+    Cookies.set(quesDict[curQuesIndex]["id"], 1);
+    console.log("test 1", Cookies.get(quesDict[curQuesIndex]["id"]))
 
     console.log("回答：", curQuestion["result"] == 1? "正确":"错误");
 

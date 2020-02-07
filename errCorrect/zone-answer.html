@@ -644,6 +644,7 @@
 
   /*This is for the cookies. */
   var pathname = typeID + subTypeID + missionID;
+  Cookies.set(mission, 1);
   console.log("test 1", quesDict);
   for (let i in quesDict){
     console.log("i", i);
@@ -652,7 +653,13 @@
       console.log("test 2", Cookies.get(i, {path: window.location.search }));
       quesDict[i]["done"] = 1;
     }
+
+    if (quesDict[i]["done"] == 0) {
+      var mission = typeID + subTypeID + missionID;
+      Cookies.set(mission, 0);
+    }
   }
+
 
   var rowDiv = $('<div class="row sub-board" >');
   $(".board:first").append(rowDiv);

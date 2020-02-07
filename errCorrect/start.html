@@ -5,6 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- JS-Cookies -->
+    <script type="module" src="./js/js.cookie.mjs"></script>
+    <script src="./js/js.cookie.js"></script>
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -191,6 +195,14 @@
         taskDiv.append(btnDivs);
         for(let m in data[typeid]["subTypes"][st]["mission"]){
             let btnDiv = $('<div class="button1 rounded-circle"><span>'+m+'</span></div>');
+
+            /* read Cookies */
+            var mission = typeid + st + m;
+            console("mission", typeid, st, m);
+            if (Cookies.get(mission) != null) {
+              data[typeid]["subTypes"][st]["mission"][m]["finished"] == Cookies.get(mission);
+            }
+
             if (data[typeid]["subTypes"][st]["mission"][m]["finished"] == 1){
                 btnDiv = $('<div class="button1 rounded-circle missionDone"><span>'+m+'</span></div>');
             }

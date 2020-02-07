@@ -645,12 +645,12 @@
   /*This is for the cookies. */
   console.log("test 1", quesDict);
 
-  
+
   for (let i in quesDict){
     console.log("i", i);
     if (Cookies.get(quesDict[i]["id"]) != null) {
       console.log("test 2", Cookies.get(quesDict[i]["id"]));
-      quesDict[i]["done"] = 1;
+      quesDict[i]["done"] = Cookies.get(quesDict[i]["id"]);
     }
   }
 
@@ -774,8 +774,12 @@
 
     // console.log('用户回答：', curQuestion);
     // curQuesIndex indices the index of the question.
-    Cookies.set(quesDict[curQuesIndex]["id"], 1);
-    console.log("test 1", Cookies.get(quesDict[curQuesIndex]["id"]))
+    if (curQuestion["result"] == 1) {
+      Cookies.set(quesDict[curQuesIndex]["id"], 1);
+      console.log("test 1", Cookies.get(quesDict[curQuesIndex]["id"]))
+    } else {
+      Cookies.set(quesDict[curQuesIndex]["id"], 0);
+    }
 
     console.log("回答：", curQuestion["result"] == 1? "正确":"错误");
 

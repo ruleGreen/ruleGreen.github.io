@@ -198,7 +198,7 @@
 
             /* read Cookies */
             var mission = typeid + st + m;
-            console("mission", typeid, st, m);
+            console.log("mission", typeid, st, m);
             if (Cookies.get(mission) != null) {
               data[typeid]["subTypes"][st]["mission"][m]["finished"] == Cookies.get(mission);
             }

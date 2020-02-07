@@ -5,1724 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- JS-Cookie -->
+  <!-- JS-Cookies -->
   <script type="module" src="./js/js.cookie.mjs"></script>
   <script src="./js/js.cookie.js"></script>
-  <script>
-    // import Cookies from './js/js.cookie.js'
-
-    var answer = 1;
-    Cookies.set('answer', answer);
-    console.log(Cookies.get('answer'));
-
-    Cookies.set('person',  { 'user': {'name' : 0 }, 'age': '18' });
-    console.log(Cookies.getJSON('person'));
-
-    
-    const origin = {
-            "life": {
-              "typeName": "生活",
-              "subTypes": {
-                "verb": {
-                  "typeName": "動詞",
-                  "mission": {
-                    1: {
-                      "questions": {
-                        0: {
-                          "questionName": "題目一",
-                          "content": "這個網站被黑客攻激，完全看不到畫面的內容了。",
-                          "correct": "擊",
-                          "errIndex": 8
-                        },
-                        1: {
-                          "questionName": "題目二",
-                          "content": "現代科技的發展日新月義，不斷進步。",
-                          "correct": "異",
-                          "errIndex": 10
-                        },
-                        2: {
-                          "questionName": "題目三",
-                          "content": "這個週末，我們全家去度假村泡溫泉。",
-                          "correct": "渡",
-                          "errIndex": 10
-                        },
-                        3: {
-                          "questionName": "題目四",
-                          "content": "你大吵大鬧影響了別人做生意，必須要陪償他們的損失。",
-                          "correct": "賠",
-                          "errIndex": 17
-                        },
-                        4: {
-                          "questionName": "題目五",
-                          "content": "地震催毀了這個曾經非常繁華的城市。",
-                          "correct": "嗺",
-                          "errIndex": 2
-                        },
-                        5: {
-                          "questionName": "題目六",
-                          "content": "這家人的關係非常溶洽，家裏常常充滿歡聲笑語。",
-                          "correct": "融",
-                          "errIndex": 8
-                        },
-                        6: {
-                          "questionName": "題目七",
-                          "content": "美玲偷懶不溫習功課，結果考試不合格，真是得不嘗失啊！",
-                          "correct": "償",
-                          "errIndex": 22
-                        },
-                        7: {
-                          "questionName": "題目八",
-                          "content": "爺爺的農莊裏有一些小胡蘆，我常用它們來裝水。",
-                          "correct": "葫",
-                          "errIndex": 10
-                        },
-                        8: {
-                          "questionName": "題目九",
-                          "content": "雖然他沒贏得比賽，但爸爸一如繼往地支持他練習玩魔術。",
-                          "correct": "既",
-                          "errIndex": 14
-                        },
-                        9: {
-                          "questionName": "題目十",
-                          "content": "這個演員經常出現在電視螢幕上，深受觀眾的歡迎。",
-                          "correct": "熒",
-                          "errIndex": 11
-                        }
-                      }
-                    },
-                    2: {
-                      "questions": {
-                        0: {
-                          "questionName": "題目一",
-                          "content": "這個網站被黑客攻激，完全看不到畫面的內容了。",
-                          "correct": "擊",
-                          "errIndex": 8
-                        },
-                        1: {
-                          "questionName": "題目二",
-                          "content": "現代科技的發展日新月義，不斷進步。",
-                          "correct": "異",
-                          "errIndex": 10
-                        },
-                        2: {
-                          "questionName": "題目三",
-                          "content": "這個週末，我們全家去度假村泡溫泉。",
-                          "correct": "渡",
-                          "errIndex": 10
-                        },
-                        3: {
-                          "questionName": "題目四",
-                          "content": "你大吵大鬧影響了別人做生意，必須要陪償他們的損失。",
-                          "correct": "賠",
-                          "errIndex": 17
-                        },
-                        4: {
-                          "questionName": "題目五",
-                          "content": "地震催毀了這個曾經非常繁華的城市。",
-                          "correct": "嗺",
-                          "errIndex": 2
-                        },
-                        5: {
-                          "questionName": "題目六",
-                          "content": "這家人的關係非常溶洽，家裏常常充滿歡聲笑語。",
-                          "correct": "融",
-                          "errIndex": 8
-                        },
-                        6: {
-                          "questionName": "題目七",
-                          "content": "美玲偷懶不溫習功課，結果考試不合格，真是得不嘗失啊！",
-                          "correct": "償",
-                          "errIndex": 22
-                        },
-                        7: {
-                          "questionName": "題目八",
-                          "content": "爺爺的農莊裏有一些小胡蘆，我常用它們來裝水。",
-                          "correct": "葫",
-                          "errIndex": 10
-                        },
-                        8: {
-                          "questionName": "題目九",
-                          "content": "雖然他沒贏得比賽，但爸爸一如繼往地支持他練習玩魔術。",
-                          "correct": "既",
-                          "errIndex": 14
-                        },
-                        9: {
-                          "questionName": "題目十",
-                          "content": "這個演員經常出現在電視螢幕上，深受觀眾的歡迎。",
-                          "correct": "熒",
-                          "errIndex": 11
-                        }
-                      }
-                    },
-                    3: {
-                      "questions": {
-                        0: {
-                          "questionName": "題目一",
-                          "content": "這個網站被黑客攻激，完全看不到畫面的內容了。",
-                          "correct": "擊",
-                          "errIndex": 8
-                        },
-                        1: {
-                          "questionName": "題目二",
-                          "content": "現代科技的發展日新月義，不斷進步。",
-                          "correct": "異",
-                          "errIndex": 10
-                        },
-                        2: {
-                          "questionName": "題目三",
-                          "content": "這個週末，我們全家去度假村泡溫泉。",
-                          "correct": "渡",
-                          "errIndex": 10
-                        },
-                        3: {
-                          "questionName": "題目四",
-                          "content": "你大吵大鬧影響了別人做生意，必須要陪償他們的損失。",
-                          "correct": "賠",
-                          "errIndex": 17
-                        },
-                        4: {
-                          "questionName": "題目五",
-                          "content": "地震催毀了這個曾經非常繁華的城市。",
-                          "correct": "嗺",
-                          "errIndex": 2
-                        },
-                        5: {
-                          "questionName": "題目六",
-                          "content": "這家人的關係非常溶洽，家裏常常充滿歡聲笑語。",
-                          "correct": "融",
-                          "errIndex": 8
-                        },
-                        6: {
-                          "questionName": "題目七",
-                          "content": "美玲偷懶不溫習功課，結果考試不合格，真是得不嘗失啊！",
-                          "correct": "償",
-                          "errIndex": 22
-                        },
-                        7: {
-                          "questionName": "題目八",
-                          "content": "爺爺的農莊裏有一些小胡蘆，我常用它們來裝水。",
-                          "correct": "葫",
-                          "errIndex": 10
-                        },
-                        8: {
-                          "questionName": "題目九",
-                          "content": "雖然他沒贏得比賽，但爸爸一如繼往地支持他練習玩魔術。",
-                          "correct": "既",
-                          "errIndex": 14
-                        },
-                        9: {
-                          "questionName": "題目十",
-                          "content": "這個演員經常出現在電視螢幕上，深受觀眾的歡迎。",
-                          "correct": "熒",
-                          "errIndex": 11
-                        }
-                      }
-                    }
-                  }
-                },
-                "norm": {
-                  "typeName": "名詞",
-                  "mission": {
-                    1: {
-                      "questions": {
-                        0: {
-                          "questionName": "題目一",
-                          "content": "這個網站被黑客攻激，完全看不到畫面的內容了。",
-                          "correct": "擊",
-                          "errIndex": 8
-                        },
-                        1: {
-                          "questionName": "題目二",
-                          "content": "現代科技的發展日新月義，不斷進步。",
-                          "correct": "異",
-                          "errIndex": 10
-                        },
-                        2: {
-                          "questionName": "題目三",
-                          "content": "這個週末，我們全家去度假村泡溫泉。",
-                          "correct": "渡",
-                          "errIndex": 10
-                        },
-                        3: {
-                          "questionName": "題目四",
-                          "content": "你大吵大鬧影響了別人做生意，必須要陪償他們的損失。",
-                          "correct": "賠",
-                          "errIndex": 17
-                        },
-                        4: {
-                          "questionName": "題目五",
-                          "content": "地震催毀了這個曾經非常繁華的城市。",
-                          "correct": "嗺",
-                          "errIndex": 2
-                        },
-                        5: {
-                          "questionName": "題目六",
-                          "content": "這家人的關係非常溶洽，家裏常常充滿歡聲笑語。",
-                          "correct": "融",
-                          "errIndex": 8
-                        },
-                        6: {
-                          "questionName": "題目七",
-                          "content": "美玲偷懶不溫習功課，結果考試不合格，真是得不嘗失啊！",
-                          "correct": "償",
-                          "errIndex": 22
-                        },
-                        7: {
-                          "questionName": "題目八",
-                          "content": "爺爺的農莊裏有一些小胡蘆，我常用它們來裝水。",
-                          "correct": "葫",
-                          "errIndex": 10
-                        },
-                        8: {
-                          "questionName": "題目九",
-                          "content": "雖然他沒贏得比賽，但爸爸一如繼往地支持他練習玩魔術。",
-                          "correct": "既",
-                          "errIndex": 14
-                        },
-                        9: {
-                          "questionName": "題目十",
-                          "content": "這個演員經常出現在電視螢幕上，深受觀眾的歡迎。",
-                          "correct": "熒",
-                          "errIndex": 11
-                        }
-                      }
-                    },
-                    2: {
-                      "questions": {
-                        0: {
-                          "questionName": "題目一",
-                          "content": "這個網站被黑客攻激，完全看不到畫面的內容了。",
-                          "correct": "擊",
-                          "errIndex": 8
-                        },
-                        1: {
-                          "questionName": "題目二",
-                          "content": "現代科技的發展日新月義，不斷進步。",
-                          "correct": "異",
-                          "errIndex": 10
-                        },
-                        2: {
-                          "questionName": "題目三",
-                          "content": "這個週末，我們全家去度假村泡溫泉。",
-                          "correct": "渡",
-                          "errIndex": 10
-                        },
-                        3: {
-                          "questionName": "題目四",
-                          "content": "你大吵大鬧影響了別人做生意，必須要陪償他們的損失。",
-                          "correct": "賠",
-                          "errIndex": 17
-                        },
-                        4: {
-                          "questionName": "題目五",
-                          "content": "地震催毀了這個曾經非常繁華的城市。",
-                          "correct": "嗺",
-                          "errIndex": 2
-                        },
-                        5: {
-                          "questionName": "題目六",
-                          "content": "這家人的關係非常溶洽，家裏常常充滿歡聲笑語。",
-                          "correct": "融",
-                          "errIndex": 8
-                        },
-                        6: {
-                          "questionName": "題目七",
-                          "content": "美玲偷懶不溫習功課，結果考試不合格，真是得不嘗失啊！",
-                          "correct": "償",
-                          "errIndex": 22
-                        },
-                        7: {
-                          "questionName": "題目八",
-                          "content": "爺爺的農莊裏有一些小胡蘆，我常用它們來裝水。",
-                          "correct": "葫",
-                          "errIndex": 10
-                        },
-                        8: {
-                          "questionName": "題目九",
-                          "content": "雖然他沒贏得比賽，但爸爸一如繼往地支持他練習玩魔術。",
-                          "correct": "既",
-                          "errIndex": 14
-                        },
-                        9: {
-                          "questionName": "題目十",
-                          "content": "這個演員經常出現在電視螢幕上，深受觀眾的歡迎。",
-                          "correct": "熒",
-                          "errIndex": 11
-                        }
-                      }
-                    }
-                  }
-                },
-                "adj": {
-                  "typeName": "形容詞",
-                  "mission": {
-                    1: {
-                      "questions": {
-                        0: {
-                          "questionName": "題目一",
-                          "content": "這個網站被黑客攻激，完全看不到畫面的內容了。",
-                          "correct": "擊",
-                          "errIndex": 8
-                        },
-                        1: {
-                          "questionName": "題目二",
-                          "content": "現代科技的發展日新月義，不斷進步。",
-                          "correct": "異",
-                          "errIndex": 10
-                        },
-                        2: {
-                          "questionName": "題目三",
-                          "content": "這個週末，我們全家去度假村泡溫泉。",
-                          "correct": "渡",
-                          "errIndex": 10
-                        },
-                        3: {
-                          "questionName": "題目四",
-                          "content": "你大吵大鬧影響了別人做生意，必須要陪償他們的損失。",
-                          "correct": "賠",
-                          "errIndex": 17
-                        },
-                        4: {
-                          "questionName": "題目五",
-                          "content": "地震催毀了這個曾經非常繁華的城市。",
-                          "correct": "嗺",
-                          "errIndex": 2
-                        },
-                        5: {
-                          "questionName": "題目六",
-                          "content": "這家人的關係非常溶洽，家裏常常充滿歡聲笑語。",
-                          "correct": "融",
-                          "errIndex": 8
-                        },
-                        6: {
-                          "questionName": "題目七",
-                          "content": "美玲偷懶不溫習功課，結果考試不合格，真是得不嘗失啊！",
-                          "correct": "償",
-                          "errIndex": 22
-                        },
-                        7: {
-                          "questionName": "題目八",
-                          "content": "爺爺的農莊裏有一些小胡蘆，我常用它們來裝水。",
-                          "correct": "葫",
-                          "errIndex": 10
-                        },
-                        8: {
-                          "questionName": "題目九",
-                          "content": "雖然他沒贏得比賽，但爸爸一如繼往地支持他練習玩魔術。",
-                          "correct": "既",
-                          "errIndex": 14
-                        },
-                        9: {
-                          "questionName": "題目十",
-                          "content": "這個演員經常出現在電視螢幕上，深受觀眾的歡迎。",
-                          "correct": "熒",
-                          "errIndex": 11
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "idiom": {
-              "typeName": "成語",
-              "subTypes": {
-                "person": {
-                  "typeName": "描寫人物",
-                  "mission": {
-                    1: {
-                      "questions": {
-                        0: {
-                          "questionName": "題目一",
-                          "content": "這個網站被黑客攻激，完全看不到畫面的內容了。",
-                          "correct": "擊",
-                          "errIndex": 8
-                        },
-                        1: {
-                          "questionName": "題目二",
-                          "content": "現代科技的發展日新月義，不斷進步。",
-                          "correct": "異",
-                          "errIndex": 10
-                        },
-                        2: {
-                          "questionName": "題目三",
-                          "content": "這個週末，我們全家去度假村泡溫泉。",
-                          "correct": "渡",
-                          "errIndex": 10
-                        },
-                        3: {
-                          "questionName": "題目四",
-                          "content": "你大吵大鬧影響了別人做生意，必須要陪償他們的損失。",
-                          "correct": "賠",
-                          "errIndex": 17
-                        },
-                        4: {
-                          "questionName": "題目五",
-                          "content": "地震催毀了這個曾經非常繁華的城市。",
-                          "correct": "嗺",
-                          "errIndex": 2
-                        },
-                        5: {
-                          "questionName": "題目六",
-                          "content": "這家人的關係非常溶洽，家裏常常充滿歡聲笑語。",
-                          "correct": "融",
-                          "errIndex": 8
-                        },
-                        6: {
-                          "questionName": "題目七",
-                          "content": "美玲偷懶不溫習功課，結果考試不合格，真是得不嘗失啊！",
-                          "correct": "償",
-                          "errIndex": 22
-                        },
-                        7: {
-                          "questionName": "題目八",
-                          "content": "爺爺的農莊裏有一些小胡蘆，我常用它們來裝水。",
-                          "correct": "葫",
-                          "errIndex": 10
-                        },
-                        8: {
-                          "questionName": "題目九",
-                          "content": "雖然他沒贏得比賽，但爸爸一如繼往地支持他練習玩魔術。",
-                          "correct": "既",
-                          "errIndex": 14
-                        },
-                        9: {
-                          "questionName": "題目十",
-                          "content": "這個演員經常出現在電視螢幕上，深受觀眾的歡迎。",
-                          "correct": "熒",
-                          "errIndex": 11
-                        }
-                      }
-                    },
-                    2: {
-                      "questions": {
-                        0: {
-                          "questionName": "題目一",
-                          "content": "這個網站被黑客攻激，完全看不到畫面的內容了。",
-                          "correct": "擊",
-                          "errIndex": 8
-                        },
-                        1: {
-                          "questionName": "題目二",
-                          "content": "現代科技的發展日新月義，不斷進步。",
-                          "correct": "異",
-                          "errIndex": 10
-                        },
-                        2: {
-                          "questionName": "題目三",
-                          "content": "這個週末，我們全家去度假村泡溫泉。",
-                          "correct": "渡",
-                          "errIndex": 10
-                        },
-                        3: {
-                          "questionName": "題目四",
-                          "content": "你大吵大鬧影響了別人做生意，必須要陪償他們的損失。",
-                          "correct": "賠",
-                          "errIndex": 17
-                        },
-                        4: {
-                          "questionName": "題目五",
-                          "content": "地震催毀了這個曾經非常繁華的城市。",
-                          "correct": "嗺",
-                          "errIndex": 2
-                        },
-                        5: {
-                          "questionName": "題目六",
-                          "content": "這家人的關係非常溶洽，家裏常常充滿歡聲笑語。",
-                          "correct": "融",
-                          "errIndex": 8
-                        },
-                        6: {
-                          "questionName": "題目七",
-                          "content": "美玲偷懶不溫習功課，結果考試不合格，真是得不嘗失啊！",
-                          "correct": "償",
-                          "errIndex": 22
-                        },
-                        7: {
-                          "questionName": "題目八",
-                          "content": "爺爺的農莊裏有一些小胡蘆，我常用它們來裝水。",
-                          "correct": "葫",
-                          "errIndex": 10
-                        },
-                        8: {
-                          "questionName": "題目九",
-                          "content": "雖然他沒贏得比賽，但爸爸一如繼往地支持他練習玩魔術。",
-                          "correct": "既",
-                          "errIndex": 14
-                        },
-                        9: {
-                          "questionName": "題目十",
-                          "content": "這個演員經常出現在電視螢幕上，深受觀眾的歡迎。",
-                          "correct": "熒",
-                          "errIndex": 11
-                        }
-                      }
-                    },
-                    3: {
-                      "questions": {
-                        0: {
-                          "questionName": "題目一",
-                          "content": "這個網站被黑客攻激，完全看不到畫面的內容了。",
-                          "correct": "擊",
-                          "errIndex": 8
-                        },
-                        1: {
-                          "questionName": "題目二",
-                          "content": "現代科技的發展日新月義，不斷進步。",
-                          "correct": "異",
-                          "errIndex": 10
-                        },
-                        2: {
-                          "questionName": "題目三",
-                          "content": "這個週末，我們全家去度假村泡溫泉。",
-                          "correct": "渡",
-                          "errIndex": 10
-                        },
-                        3: {
-                          "questionName": "題目四",
-                          "content": "你大吵大鬧影響了別人做生意，必須要陪償他們的損失。",
-                          "correct": "賠",
-                          "errIndex": 17
-                        },
-                        4: {
-                          "questionName": "題目五",
-                          "content": "地震催毀了這個曾經非常繁華的城市。",
-                          "correct": "嗺",
-                          "errIndex": 2
-                        },
-                        5: {
-                          "questionName": "題目六",
-                          "content": "這家人的關係非常溶洽，家裏常常充滿歡聲笑語。",
-                          "correct": "融",
-                          "errIndex": 8
-                        },
-                        6: {
-                          "questionName": "題目七",
-                          "content": "美玲偷懶不溫習功課，結果考試不合格，真是得不嘗失啊！",
-                          "correct": "償",
-                          "errIndex": 22
-                        },
-                        7: {
-                          "questionName": "題目八",
-                          "content": "爺爺的農莊裏有一些小胡蘆，我常用它們來裝水。",
-                          "correct": "葫",
-                          "errIndex": 10
-                        },
-                        8: {
-                          "questionName": "題目九",
-                          "content": "雖然他沒贏得比賽，但爸爸一如繼往地支持他練習玩魔術。",
-                          "correct": "既",
-                          "errIndex": 14
-                        },
-                        9: {
-                          "questionName": "題目十",
-                          "content": "這個演員經常出現在電視螢幕上，深受觀眾的歡迎。",
-                          "correct": "熒",
-                          "errIndex": 11
-                        }
-                      }
-                    }
-                  }
-                },
-                "object": {
-                  "typeName": "描寫事物",
-                  "mission": {
-                    1: {
-                      "questions": {
-                        0: {
-                          "questionName": "題目一",
-                          "content": "這個網站被黑客攻激，完全看不到畫面的內容了。",
-                          "correct": "擊",
-                          "errIndex": 8
-                        },
-                        1: {
-                          "questionName": "題目二",
-                          "content": "現代科技的發展日新月義，不斷進步。",
-                          "correct": "異",
-                          "errIndex": 10
-                        },
-                        2: {
-                          "questionName": "題目三",
-                          "content": "這個週末，我們全家去度假村泡溫泉。",
-                          "correct": "渡",
-                          "errIndex": 10
-                        },
-                        3: {
-                          "questionName": "題目四",
-                          "content": "你大吵大鬧影響了別人做生意，必須要陪償他們的損失。",
-                          "correct": "賠",
-                          "errIndex": 17
-                        },
-                        4: {
-                          "questionName": "題目五",
-                          "content": "地震催毀了這個曾經非常繁華的城市。",
-                          "correct": "嗺",
-                          "errIndex": 2
-                        },
-                        5: {
-                          "questionName": "題目六",
-                          "content": "這家人的關係非常溶洽，家裏常常充滿歡聲笑語。",
-                          "correct": "融",
-                          "errIndex": 8
-                        },
-                        6: {
-                          "questionName": "題目七",
-                          "content": "美玲偷懶不溫習功課，結果考試不合格，真是得不嘗失啊！",
-                          "correct": "償",
-                          "errIndex": 22
-                        },
-                        7: {
-                          "questionName": "題目八",
-                          "content": "爺爺的農莊裏有一些小胡蘆，我常用它們來裝水。",
-                          "correct": "葫",
-                          "errIndex": 10
-                        },
-                        8: {
-                          "questionName": "題目九",
-                          "content": "雖然他沒贏得比賽，但爸爸一如繼往地支持他練習玩魔術。",
-                          "correct": "既",
-                          "errIndex": 14
-                        },
-                        9: {
-                          "questionName": "題目十",
-                          "content": "這個演員經常出現在電視螢幕上，深受觀眾的歡迎。",
-                          "correct": "熒",
-                          "errIndex": 11
-                        }
-                      }
-                    },
-                    2: {
-                      "questions": {
-                        0: {
-                          "questionName": "題目一",
-                          "content": "這個網站被黑客攻激，完全看不到畫面的內容了。",
-                          "correct": "擊",
-                          "errIndex": 8
-                        },
-                        1: {
-                          "questionName": "題目二",
-                          "content": "現代科技的發展日新月義，不斷進步。",
-                          "correct": "異",
-                          "errIndex": 10
-                        },
-                        2: {
-                          "questionName": "題目三",
-                          "content": "這個週末，我們全家去度假村泡溫泉。",
-                          "correct": "渡",
-                          "errIndex": 10
-                        },
-                        3: {
-                          "questionName": "題目四",
-                          "content": "你大吵大鬧影響了別人做生意，必須要陪償他們的損失。",
-                          "correct": "賠",
-                          "errIndex": 17
-                        },
-                        4: {
-                          "questionName": "題目五",
-                          "content": "地震催毀了這個曾經非常繁華的城市。",
-                          "correct": "嗺",
-                          "errIndex": 2
-                        },
-                        5: {
-                          "questionName": "題目六",
-                          "content": "這家人的關係非常溶洽，家裏常常充滿歡聲笑語。",
-                          "correct": "融",
-                          "errIndex": 8
-                        },
-                        6: {
-                          "questionName": "題目七",
-                          "content": "美玲偷懶不溫習功課，結果考試不合格，真是得不嘗失啊！",
-                          "correct": "償",
-                          "errIndex": 22
-                        },
-                        7: {
-                          "questionName": "題目八",
-                          "content": "爺爺的農莊裏有一些小胡蘆，我常用它們來裝水。",
-                          "correct": "葫",
-                          "errIndex": 10
-                        },
-                        8: {
-                          "questionName": "題目九",
-                          "content": "雖然他沒贏得比賽，但爸爸一如繼往地支持他練習玩魔術。",
-                          "correct": "既",
-                          "errIndex": 14
-                        },
-                        9: {
-                          "questionName": "題目十",
-                          "content": "這個演員經常出現在電視螢幕上，深受觀眾的歡迎。",
-                          "correct": "熒",
-                          "errIndex": 11
-                        }
-                      }
-                    }
-                  }
-                },
-                "scenery": {
-                  "typeName": "描寫風景",
-                  "mission": {
-                    1: {
-                      "questions": {
-                        0: {
-                          "questionName": "題目一",
-                          "content": "這個網站被黑客攻激，完全看不到畫面的內容了。",
-                          "correct": "擊",
-                          "errIndex": 8
-                        },
-                        1: {
-                          "questionName": "題目二",
-                          "content": "現代科技的發展日新月義，不斷進步。",
-                          "correct": "異",
-                          "errIndex": 10
-                        },
-                        2: {
-                          "questionName": "題目三",
-                          "content": "這個週末，我們全家去度假村泡溫泉。",
-                          "correct": "渡",
-                          "errIndex": 10
-                        },
-                        3: {
-                          "questionName": "題目四",
-                          "content": "你大吵大鬧影響了別人做生意，必須要陪償他們的損失。",
-                          "correct": "賠",
-                          "errIndex": 17
-                        },
-                        4: {
-                          "questionName": "題目五",
-                          "content": "地震催毀了這個曾經非常繁華的城市。",
-                          "correct": "嗺",
-                          "errIndex": 2
-                        },
-                        5: {
-                          "questionName": "題目六",
-                          "content": "這家人的關係非常溶洽，家裏常常充滿歡聲笑語。",
-                          "correct": "融",
-                          "errIndex": 8
-                        },
-                        6: {
-                          "questionName": "題目七",
-                          "content": "美玲偷懶不溫習功課，結果考試不合格，真是得不嘗失啊！",
-                          "correct": "償",
-                          "errIndex": 22
-                        },
-                        7: {
-                          "questionName": "題目八",
-                          "content": "爺爺的農莊裏有一些小胡蘆，我常用它們來裝水。",
-                          "correct": "葫",
-                          "errIndex": 10
-                        },
-                        8: {
-                          "questionName": "題目九",
-                          "content": "雖然他沒贏得比賽，但爸爸一如繼往地支持他練習玩魔術。",
-                          "correct": "既",
-                          "errIndex": 14
-                        },
-                        9: {
-                          "questionName": "題目十",
-                          "content": "這個演員經常出現在電視螢幕上，深受觀眾的歡迎。",
-                          "correct": "熒",
-                          "errIndex": 11
-                        }
-                      }
-                    },
-                    2: {
-                      "questions": {
-                        0: {
-                          "questionName": "題目一",
-                          "content": "這個網站被黑客攻激，完全看不到畫面的內容了。",
-                          "correct": "擊",
-                          "errIndex": 8
-                        },
-                        1: {
-                          "questionName": "題目二",
-                          "content": "現代科技的發展日新月義，不斷進步。",
-                          "correct": "異",
-                          "errIndex": 10
-                        },
-                        2: {
-                          "questionName": "題目三",
-                          "content": "這個週末，我們全家去度假村泡溫泉。",
-                          "correct": "渡",
-                          "errIndex": 10
-                        },
-                        3: {
-                          "questionName": "題目四",
-                          "content": "你大吵大鬧影響了別人做生意，必須要陪償他們的損失。",
-                          "correct": "賠",
-                          "errIndex": 17
-                        },
-                        4: {
-                          "questionName": "題目五",
-                          "content": "地震催毀了這個曾經非常繁華的城市。",
-                          "correct": "嗺",
-                          "errIndex": 2
-                        },
-                        5: {
-                          "questionName": "題目六",
-                          "content": "這家人的關係非常溶洽，家裏常常充滿歡聲笑語。",
-                          "correct": "融",
-                          "errIndex": 8
-                        },
-                        6: {
-                          "questionName": "題目七",
-                          "content": "美玲偷懶不溫習功課，結果考試不合格，真是得不嘗失啊！",
-                          "correct": "償",
-                          "errIndex": 22
-                        },
-                        7: {
-                          "questionName": "題目八",
-                          "content": "爺爺的農莊裏有一些小胡蘆，我常用它們來裝水。",
-                          "correct": "葫",
-                          "errIndex": 10
-                        },
-                        8: {
-                          "questionName": "題目九",
-                          "content": "雖然他沒贏得比賽，但爸爸一如繼往地支持他練習玩魔術。",
-                          "correct": "既",
-                          "errIndex": 14
-                        },
-                        9: {
-                          "questionName": "題目十",
-                          "content": "這個演員經常出現在電視螢幕上，深受觀眾的歡迎。",
-                          "correct": "熒",
-                          "errIndex": 11
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "font": {
-              "typeName": "字型",
-              "subTypes": {
-                "pron": {
-                  "typeName": "音近別字",
-                  "mission": {
-                    1: {
-                      "questions": {
-                        0: {
-                          "questionName": "題目一",
-                          "content": "這個網站被黑客攻激，完全看不到畫面的內容了。",
-                          "correct": "擊",
-                          "errIndex": 8
-                        },
-                        1: {
-                          "questionName": "題目二",
-                          "content": "現代科技的發展日新月義，不斷進步。",
-                          "correct": "異",
-                          "errIndex": 10
-                        },
-                        2: {
-                          "questionName": "題目三",
-                          "content": "這個週末，我們全家去度假村泡溫泉。",
-                          "correct": "渡",
-                          "errIndex": 10
-                        },
-                        3: {
-                          "questionName": "題目四",
-                          "content": "你大吵大鬧影響了別人做生意，必須要陪償他們的損失。",
-                          "correct": "賠",
-                          "errIndex": 17
-                        },
-                        4: {
-                          "questionName": "題目五",
-                          "content": "地震催毀了這個曾經非常繁華的城市。",
-                          "correct": "嗺",
-                          "errIndex": 2
-                        },
-                        5: {
-                          "questionName": "題目六",
-                          "content": "這家人的關係非常溶洽，家裏常常充滿歡聲笑語。",
-                          "correct": "融",
-                          "errIndex": 8
-                        },
-                        6: {
-                          "questionName": "題目七",
-                          "content": "美玲偷懶不溫習功課，結果考試不合格，真是得不嘗失啊！",
-                          "correct": "償",
-                          "errIndex": 22
-                        },
-                        7: {
-                          "questionName": "題目八",
-                          "content": "爺爺的農莊裏有一些小胡蘆，我常用它們來裝水。",
-                          "correct": "葫",
-                          "errIndex": 10
-                        },
-                        8: {
-                          "questionName": "題目九",
-                          "content": "雖然他沒贏得比賽，但爸爸一如繼往地支持他練習玩魔術。",
-                          "correct": "既",
-                          "errIndex": 14
-                        },
-                        9: {
-                          "questionName": "題目十",
-                          "content": "這個演員經常出現在電視螢幕上，深受觀眾的歡迎。",
-                          "correct": "熒",
-                          "errIndex": 11
-                        }
-                      }
-                    },
-                    2: {
-                      "questions": {
-                        0: {
-                          "questionName": "題目一",
-                          "content": "這個網站被黑客攻激，完全看不到畫面的內容了。",
-                          "correct": "擊",
-                          "errIndex": 8
-                        },
-                        1: {
-                          "questionName": "題目二",
-                          "content": "現代科技的發展日新月義，不斷進步。",
-                          "correct": "異",
-                          "errIndex": 10
-                        },
-                        2: {
-                          "questionName": "題目三",
-                          "content": "這個週末，我們全家去度假村泡溫泉。",
-                          "correct": "渡",
-                          "errIndex": 10
-                        },
-                        3: {
-                          "questionName": "題目四",
-                          "content": "你大吵大鬧影響了別人做生意，必須要陪償他們的損失。",
-                          "correct": "賠",
-                          "errIndex": 17
-                        },
-                        4: {
-                          "questionName": "題目五",
-                          "content": "地震催毀了這個曾經非常繁華的城市。",
-                          "correct": "嗺",
-                          "errIndex": 2
-                        },
-                        5: {
-                          "questionName": "題目六",
-                          "content": "這家人的關係非常溶洽，家裏常常充滿歡聲笑語。",
-                          "correct": "融",
-                          "errIndex": 8
-                        },
-                        6: {
-                          "questionName": "題目七",
-                          "content": "美玲偷懶不溫習功課，結果考試不合格，真是得不嘗失啊！",
-                          "correct": "償",
-                          "errIndex": 22
-                        },
-                        7: {
-                          "questionName": "題目八",
-                          "content": "爺爺的農莊裏有一些小胡蘆，我常用它們來裝水。",
-                          "correct": "葫",
-                          "errIndex": 10
-                        },
-                        8: {
-                          "questionName": "題目九",
-                          "content": "雖然他沒贏得比賽，但爸爸一如繼往地支持他練習玩魔術。",
-                          "correct": "既",
-                          "errIndex": 14
-                        },
-                        9: {
-                          "questionName": "題目十",
-                          "content": "這個演員經常出現在電視螢幕上，深受觀眾的歡迎。",
-                          "correct": "熒",
-                          "errIndex": 11
-                        }
-                      }
-                    },
-                    3: {
-                      "questions": {
-                        0: {
-                          "questionName": "題目一",
-                          "content": "這個網站被黑客攻激，完全看不到畫面的內容了。",
-                          "correct": "擊",
-                          "errIndex": 8
-                        },
-                        1: {
-                          "questionName": "題目二",
-                          "content": "現代科技的發展日新月義，不斷進步。",
-                          "correct": "異",
-                          "errIndex": 10
-                        },
-                        2: {
-                          "questionName": "題目三",
-                          "content": "這個週末，我們全家去度假村泡溫泉。",
-                          "correct": "渡",
-                          "errIndex": 10
-                        },
-                        3: {
-                          "questionName": "題目四",
-                          "content": "你大吵大鬧影響了別人做生意，必須要陪償他們的損失。",
-                          "correct": "賠",
-                          "errIndex": 17
-                        },
-                        4: {
-                          "questionName": "題目五",
-                          "content": "地震催毀了這個曾經非常繁華的城市。",
-                          "correct": "嗺",
-                          "errIndex": 2
-                        },
-                        5: {
-                          "questionName": "題目六",
-                          "content": "這家人的關係非常溶洽，家裏常常充滿歡聲笑語。",
-                          "correct": "融",
-                          "errIndex": 8
-                        },
-                        6: {
-                          "questionName": "題目七",
-                          "content": "美玲偷懶不溫習功課，結果考試不合格，真是得不嘗失啊！",
-                          "correct": "償",
-                          "errIndex": 22
-                        },
-                        7: {
-                          "questionName": "題目八",
-                          "content": "爺爺的農莊裏有一些小胡蘆，我常用它們來裝水。",
-                          "correct": "葫",
-                          "errIndex": 10
-                        },
-                        8: {
-                          "questionName": "題目九",
-                          "content": "雖然他沒贏得比賽，但爸爸一如繼往地支持他練習玩魔術。",
-                          "correct": "既",
-                          "errIndex": 14
-                        },
-                        9: {
-                          "questionName": "題目十",
-                          "content": "這個演員經常出現在電視螢幕上，深受觀眾的歡迎。",
-                          "correct": "熒",
-                          "errIndex": 11
-                        }
-                      }
-                    }
-                  }
-                },
-                "format": {
-                  "typeName": "型近別字",
-                  "mission": {
-                    1: {
-                      "questions": {
-                        0: {
-                          "questionName": "題目一",
-                          "content": "這個網站被黑客攻激，完全看不到畫面的內容了。",
-                          "correct": "擊",
-                          "errIndex": 8
-                        },
-                        1: {
-                          "questionName": "題目二",
-                          "content": "現代科技的發展日新月義，不斷進步。",
-                          "correct": "異",
-                          "errIndex": 10
-                        },
-                        2: {
-                          "questionName": "題目三",
-                          "content": "這個週末，我們全家去度假村泡溫泉。",
-                          "correct": "渡",
-                          "errIndex": 10
-                        },
-                        3: {
-                          "questionName": "題目四",
-                          "content": "你大吵大鬧影響了別人做生意，必須要陪償他們的損失。",
-                          "correct": "賠",
-                          "errIndex": 17
-                        },
-                        4: {
-                          "questionName": "題目五",
-                          "content": "地震催毀了這個曾經非常繁華的城市。",
-                          "correct": "嗺",
-                          "errIndex": 2
-                        },
-                        5: {
-                          "questionName": "題目六",
-                          "content": "這家人的關係非常溶洽，家裏常常充滿歡聲笑語。",
-                          "correct": "融",
-                          "errIndex": 8
-                        },
-                        6: {
-                          "questionName": "題目七",
-                          "content": "美玲偷懶不溫習功課，結果考試不合格，真是得不嘗失啊！",
-                          "correct": "償",
-                          "errIndex": 22
-                        },
-                        7: {
-                          "questionName": "題目八",
-                          "content": "爺爺的農莊裏有一些小胡蘆，我常用它們來裝水。",
-                          "correct": "葫",
-                          "errIndex": 10
-                        },
-                        8: {
-                          "questionName": "題目九",
-                          "content": "雖然他沒贏得比賽，但爸爸一如繼往地支持他練習玩魔術。",
-                          "correct": "既",
-                          "errIndex": 14
-                        },
-                        9: {
-                          "questionName": "題目十",
-                          "content": "這個演員經常出現在電視螢幕上，深受觀眾的歡迎。",
-                          "correct": "熒",
-                          "errIndex": 11
-                        }
-                      }
-                    },
-                    2: {
-                      "questions": {
-                        0: {
-                          "questionName": "題目一",
-                          "content": "這個網站被黑客攻激，完全看不到畫面的內容了。",
-                          "correct": "擊",
-                          "errIndex": 8
-                        },
-                        1: {
-                          "questionName": "題目二",
-                          "content": "現代科技的發展日新月義，不斷進步。",
-                          "correct": "異",
-                          "errIndex": 10
-                        },
-                        2: {
-                          "questionName": "題目三",
-                          "content": "這個週末，我們全家去度假村泡溫泉。",
-                          "correct": "渡",
-                          "errIndex": 10
-                        },
-                        3: {
-                          "questionName": "題目四",
-                          "content": "你大吵大鬧影響了別人做生意，必須要陪償他們的損失。",
-                          "correct": "賠",
-                          "errIndex": 17
-                        },
-                        4: {
-                          "questionName": "題目五",
-                          "content": "地震催毀了這個曾經非常繁華的城市。",
-                          "correct": "嗺",
-                          "errIndex": 2
-                        },
-                        5: {
-                          "questionName": "題目六",
-                          "content": "這家人的關係非常溶洽，家裏常常充滿歡聲笑語。",
-                          "correct": "融",
-                          "errIndex": 8
-                        },
-                        6: {
-                          "questionName": "題目七",
-                          "content": "美玲偷懶不溫習功課，結果考試不合格，真是得不嘗失啊！",
-                          "correct": "償",
-                          "errIndex": 22
-                        },
-                        7: {
-                          "questionName": "題目八",
-                          "content": "爺爺的農莊裏有一些小胡蘆，我常用它們來裝水。",
-                          "correct": "葫",
-                          "errIndex": 10
-                        },
-                        8: {
-                          "questionName": "題目九",
-                          "content": "雖然他沒贏得比賽，但爸爸一如繼往地支持他練習玩魔術。",
-                          "correct": "既",
-                          "errIndex": 14
-                        },
-                        9: {
-                          "questionName": "題目十",
-                          "content": "這個演員經常出現在電視螢幕上，深受觀眾的歡迎。",
-                          "correct": "熒",
-                          "errIndex": 11
-                        }
-                      }
-                    }
-                  }
-                },
-                "part": {
-                  "typeName": "部件別字",
-                  "mission": {
-                    1: {
-                      "questions": {
-                        0: {
-                          "questionName": "題目一",
-                          "content": "這個網站被黑客攻激，完全看不到畫面的內容了。",
-                          "correct": "擊",
-                          "errIndex": 8
-                        },
-                        1: {
-                          "questionName": "題目二",
-                          "content": "現代科技的發展日新月義，不斷進步。",
-                          "correct": "異",
-                          "errIndex": 10
-                        },
-                        2: {
-                          "questionName": "題目三",
-                          "content": "這個週末，我們全家去度假村泡溫泉。",
-                          "correct": "渡",
-                          "errIndex": 10
-                        },
-                        3: {
-                          "questionName": "題目四",
-                          "content": "你大吵大鬧影響了別人做生意，必須要陪償他們的損失。",
-                          "correct": "賠",
-                          "errIndex": 17
-                        },
-                        4: {
-                          "questionName": "題目五",
-                          "content": "地震催毀了這個曾經非常繁華的城市。",
-                          "correct": "嗺",
-                          "errIndex": 2
-                        },
-                        5: {
-                          "questionName": "題目六",
-                          "content": "這家人的關係非常溶洽，家裏常常充滿歡聲笑語。",
-                          "correct": "融",
-                          "errIndex": 8
-                        },
-                        6: {
-                          "questionName": "題目七",
-                          "content": "美玲偷懶不溫習功課，結果考試不合格，真是得不嘗失啊！",
-                          "correct": "償",
-                          "errIndex": 22
-                        },
-                        7: {
-                          "questionName": "題目八",
-                          "content": "爺爺的農莊裏有一些小胡蘆，我常用它們來裝水。",
-                          "correct": "葫",
-                          "errIndex": 10
-                        },
-                        8: {
-                          "questionName": "題目九",
-                          "content": "雖然他沒贏得比賽，但爸爸一如繼往地支持他練習玩魔術。",
-                          "correct": "既",
-                          "errIndex": 14
-                        },
-                        9: {
-                          "questionName": "題目十",
-                          "content": "這個演員經常出現在電視螢幕上，深受觀眾的歡迎。",
-                          "correct": "熒",
-                          "errIndex": 11
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-    Cookies.set('origin', origin);
-    console.log(Cookies.get('origin'));
-    // console.log(JSON.parse(Cookies.get('data')));
-
-    const raw = 66;
-    Cookies.set('raw', raw);
-    console.log(Cookies.get('raw'));
-
-    const user = {name: "wanghongru", age: 18}
-    Cookies.set('user', user);
-    console.log(Cookies.get('user'));
-    console.log(JSON.parse(Cookies.get('user')))
-
-    const question = { "life": { "subtype": 
-      { "verb": { 0: { "question": "的那就是"}}}}}
-    Cookies.set('question', question);
-    console.log(Cookies.get('question'));
-    console.log(JSON.parse(Cookies.get('question')));
-
-    const life = { "life": {
-              "typeName": "生活",
-              "subTypes": {
-                "verb": {
-                  "typeName": "動詞",
-                  "mission": {
-                    1: {
-                      "questions": {
-                        0: {
-                          "questionName": "題目一",
-                          "content": "這個網站被黑客攻激，完全看不到畫面的內容了。",
-                          "correct": "擊",
-                          "errIndex": 8
-                        },
-                        1: {
-                          "questionName": "題目二",
-                          "content": "現代科技的發展日新月義，不斷進步。",
-                          "correct": "異",
-                          "errIndex": 10
-                        },
-                        2: {
-                          "questionName": "題目三",
-                          "content": "這個週末，我們全家去度假村泡溫泉。",
-                          "correct": "渡",
-                          "errIndex": 10
-                        },
-                        3: {
-                          "questionName": "題目四",
-                          "content": "你大吵大鬧影響了別人做生意，必須要陪償他們的損失。",
-                          "correct": "賠",
-                          "errIndex": 17
-                        },
-                        4: {
-                          "questionName": "題目五",
-                          "content": "地震催毀了這個曾經非常繁華的城市。",
-                          "correct": "嗺",
-                          "errIndex": 2
-                        },
-                        5: {
-                          "questionName": "題目六",
-                          "content": "這家人的關係非常溶洽，家裏常常充滿歡聲笑語。",
-                          "correct": "融",
-                          "errIndex": 8
-                        },
-                        6: {
-                          "questionName": "題目七",
-                          "content": "美玲偷懶不溫習功課，結果考試不合格，真是得不嘗失啊！",
-                          "correct": "償",
-                          "errIndex": 22
-                        },
-                        7: {
-                          "questionName": "題目八",
-                          "content": "爺爺的農莊裏有一些小胡蘆，我常用它們來裝水。",
-                          "correct": "葫",
-                          "errIndex": 10
-                        },
-                        8: {
-                          "questionName": "題目九",
-                          "content": "雖然他沒贏得比賽，但爸爸一如繼往地支持他練習玩魔術。",
-                          "correct": "既",
-                          "errIndex": 14
-                        },
-                        9: {
-                          "questionName": "題目十",
-                          "content": "這個演員經常出現在電視螢幕上，深受觀眾的歡迎。",
-                          "correct": "熒",
-                          "errIndex": 11
-                        }
-                      }
-                    },
-                    2: {
-                      "questions": {
-                        0: {
-                          "questionName": "題目一",
-                          "content": "這個網站被黑客攻激，完全看不到畫面的內容了。",
-                          "correct": "擊",
-                          "errIndex": 8
-                        },
-                        1: {
-                          "questionName": "題目二",
-                          "content": "現代科技的發展日新月義，不斷進步。",
-                          "correct": "異",
-                          "errIndex": 10
-                        },
-                        2: {
-                          "questionName": "題目三",
-                          "content": "這個週末，我們全家去度假村泡溫泉。",
-                          "correct": "渡",
-                          "errIndex": 10
-                        },
-                        3: {
-                          "questionName": "題目四",
-                          "content": "你大吵大鬧影響了別人做生意，必須要陪償他們的損失。",
-                          "correct": "賠",
-                          "errIndex": 17
-                        },
-                        4: {
-                          "questionName": "題目五",
-                          "content": "地震催毀了這個曾經非常繁華的城市。",
-                          "correct": "嗺",
-                          "errIndex": 2
-                        },
-                        5: {
-                          "questionName": "題目六",
-                          "content": "這家人的關係非常溶洽，家裏常常充滿歡聲笑語。",
-                          "correct": "融",
-                          "errIndex": 8
-                        },
-                        6: {
-                          "questionName": "題目七",
-                          "content": "美玲偷懶不溫習功課，結果考試不合格，真是得不嘗失啊！",
-                          "correct": "償",
-                          "errIndex": 22
-                        },
-                        7: {
-                          "questionName": "題目八",
-                          "content": "爺爺的農莊裏有一些小胡蘆，我常用它們來裝水。",
-                          "correct": "葫",
-                          "errIndex": 10
-                        },
-                        8: {
-                          "questionName": "題目九",
-                          "content": "雖然他沒贏得比賽，但爸爸一如繼往地支持他練習玩魔術。",
-                          "correct": "既",
-                          "errIndex": 14
-                        },
-                        9: {
-                          "questionName": "題目十",
-                          "content": "這個演員經常出現在電視螢幕上，深受觀眾的歡迎。",
-                          "correct": "熒",
-                          "errIndex": 11
-                        }
-                      }
-                    },
-                    3: {
-                      "questions": {
-                        0: {
-                          "questionName": "題目一",
-                          "content": "這個網站被黑客攻激，完全看不到畫面的內容了。",
-                          "correct": "擊",
-                          "errIndex": 8
-                        },
-                        1: {
-                          "questionName": "題目二",
-                          "content": "現代科技的發展日新月義，不斷進步。",
-                          "correct": "異",
-                          "errIndex": 10
-                        },
-                        2: {
-                          "questionName": "題目三",
-                          "content": "這個週末，我們全家去度假村泡溫泉。",
-                          "correct": "渡",
-                          "errIndex": 10
-                        },
-                        3: {
-                          "questionName": "題目四",
-                          "content": "你大吵大鬧影響了別人做生意，必須要陪償他們的損失。",
-                          "correct": "賠",
-                          "errIndex": 17
-                        },
-                        4: {
-                          "questionName": "題目五",
-                          "content": "地震催毀了這個曾經非常繁華的城市。",
-                          "correct": "嗺",
-                          "errIndex": 2
-                        },
-                        5: {
-                          "questionName": "題目六",
-                          "content": "這家人的關係非常溶洽，家裏常常充滿歡聲笑語。",
-                          "correct": "融",
-                          "errIndex": 8
-                        },
-                        6: {
-                          "questionName": "題目七",
-                          "content": "美玲偷懶不溫習功課，結果考試不合格，真是得不嘗失啊！",
-                          "correct": "償",
-                          "errIndex": 22
-                        },
-                        7: {
-                          "questionName": "題目八",
-                          "content": "爺爺的農莊裏有一些小胡蘆，我常用它們來裝水。",
-                          "correct": "葫",
-                          "errIndex": 10
-                        },
-                        8: {
-                          "questionName": "題目九",
-                          "content": "雖然他沒贏得比賽，但爸爸一如繼往地支持他練習玩魔術。",
-                          "correct": "既",
-                          "errIndex": 14
-                        },
-                        9: {
-                          "questionName": "題目十",
-                          "content": "這個演員經常出現在電視螢幕上，深受觀眾的歡迎。",
-                          "correct": "熒",
-                          "errIndex": 11
-                        }
-                      }
-                    }
-                  }
-                },
-                "norm": {
-                  "typeName": "名詞",
-                  "mission": {
-                    1: {
-                      "questions": {
-                        0: {
-                          "questionName": "題目一",
-                          "content": "這個網站被黑客攻激，完全看不到畫面的內容了。",
-                          "correct": "擊",
-                          "errIndex": 8
-                        },
-                        1: {
-                          "questionName": "題目二",
-                          "content": "現代科技的發展日新月義，不斷進步。",
-                          "correct": "異",
-                          "errIndex": 10
-                        },
-                        2: {
-                          "questionName": "題目三",
-                          "content": "這個週末，我們全家去度假村泡溫泉。",
-                          "correct": "渡",
-                          "errIndex": 10
-                        },
-                        3: {
-                          "questionName": "題目四",
-                          "content": "你大吵大鬧影響了別人做生意，必須要陪償他們的損失。",
-                          "correct": "賠",
-                          "errIndex": 17
-                        },
-                        4: {
-                          "questionName": "題目五",
-                          "content": "地震催毀了這個曾經非常繁華的城市。",
-                          "correct": "嗺",
-                          "errIndex": 2
-                        },
-                        5: {
-                          "questionName": "題目六",
-                          "content": "這家人的關係非常溶洽，家裏常常充滿歡聲笑語。",
-                          "correct": "融",
-                          "errIndex": 8
-                        },
-                        6: {
-                          "questionName": "題目七",
-                          "content": "美玲偷懶不溫習功課，結果考試不合格，真是得不嘗失啊！",
-                          "correct": "償",
-                          "errIndex": 22
-                        },
-                        7: {
-                          "questionName": "題目八",
-                          "content": "爺爺的農莊裏有一些小胡蘆，我常用它們來裝水。",
-                          "correct": "葫",
-                          "errIndex": 10
-                        },
-                        8: {
-                          "questionName": "題目九",
-                          "content": "雖然他沒贏得比賽，但爸爸一如繼往地支持他練習玩魔術。",
-                          "correct": "既",
-                          "errIndex": 14
-                        },
-                        9: {
-                          "questionName": "題目十",
-                          "content": "這個演員經常出現在電視螢幕上，深受觀眾的歡迎。",
-                          "correct": "熒",
-                          "errIndex": 11
-                        }
-                      }
-                    },
-                    2: {
-                      "questions": {
-                        0: {
-                          "questionName": "題目一",
-                          "content": "這個網站被黑客攻激，完全看不到畫面的內容了。",
-                          "correct": "擊",
-                          "errIndex": 8
-                        },
-                        1: {
-                          "questionName": "題目二",
-                          "content": "現代科技的發展日新月義，不斷進步。",
-                          "correct": "異",
-                          "errIndex": 10
-                        },
-                        2: {
-                          "questionName": "題目三",
-                          "content": "這個週末，我們全家去度假村泡溫泉。",
-                          "correct": "渡",
-                          "errIndex": 10
-                        },
-                        3: {
-                          "questionName": "題目四",
-                          "content": "你大吵大鬧影響了別人做生意，必須要陪償他們的損失。",
-                          "correct": "賠",
-                          "errIndex": 17
-                        },
-                        4: {
-                          "questionName": "題目五",
-                          "content": "地震催毀了這個曾經非常繁華的城市。",
-                          "correct": "嗺",
-                          "errIndex": 2
-                        },
-                        5: {
-                          "questionName": "題目六",
-                          "content": "這家人的關係非常溶洽，家裏常常充滿歡聲笑語。",
-                          "correct": "融",
-                          "errIndex": 8
-                        },
-                        6: {
-                          "questionName": "題目七",
-                          "content": "美玲偷懶不溫習功課，結果考試不合格，真是得不嘗失啊！",
-                          "correct": "償",
-                          "errIndex": 22
-                        },
-                        7: {
-                          "questionName": "題目八",
-                          "content": "爺爺的農莊裏有一些小胡蘆，我常用它們來裝水。",
-                          "correct": "葫",
-                          "errIndex": 10
-                        },
-                        8: {
-                          "questionName": "題目九",
-                          "content": "雖然他沒贏得比賽，但爸爸一如繼往地支持他練習玩魔術。",
-                          "correct": "既",
-                          "errIndex": 14
-                        },
-                        9: {
-                          "questionName": "題目十",
-                          "content": "這個演員經常出現在電視螢幕上，深受觀眾的歡迎。",
-                          "correct": "熒",
-                          "errIndex": 11
-                        }
-                      }
-                    }
-                  }
-                },
-                "adj": {
-                  "typeName": "形容詞",
-                  "mission": {
-                    1: {
-                      "questions": {
-                        0: {
-                          "questionName": "題目一",
-                          "content": "這個網站被黑客攻激，完全看不到畫面的內容了。",
-                          "correct": "擊",
-                          "errIndex": 8
-                        },
-                        1: {
-                          "questionName": "題目二",
-                          "content": "現代科技的發展日新月義，不斷進步。",
-                          "correct": "異",
-                          "errIndex": 10
-                        },
-                        2: {
-                          "questionName": "題目三",
-                          "content": "這個週末，我們全家去度假村泡溫泉。",
-                          "correct": "渡",
-                          "errIndex": 10
-                        },
-                        3: {
-                          "questionName": "題目四",
-                          "content": "你大吵大鬧影響了別人做生意，必須要陪償他們的損失。",
-                          "correct": "賠",
-                          "errIndex": 17
-                        },
-                        4: {
-                          "questionName": "題目五",
-                          "content": "地震催毀了這個曾經非常繁華的城市。",
-                          "correct": "嗺",
-                          "errIndex": 2
-                        },
-                        5: {
-                          "questionName": "題目六",
-                          "content": "這家人的關係非常溶洽，家裏常常充滿歡聲笑語。",
-                          "correct": "融",
-                          "errIndex": 8
-                        },
-                        6: {
-                          "questionName": "題目七",
-                          "content": "美玲偷懶不溫習功課，結果考試不合格，真是得不嘗失啊！",
-                          "correct": "償",
-                          "errIndex": 22
-                        },
-                        7: {
-                          "questionName": "題目八",
-                          "content": "爺爺的農莊裏有一些小胡蘆，我常用它們來裝水。",
-                          "correct": "葫",
-                          "errIndex": 10
-                        },
-                        8: {
-                          "questionName": "題目九",
-                          "content": "雖然他沒贏得比賽，但爸爸一如繼往地支持他練習玩魔術。",
-                          "correct": "既",
-                          "errIndex": 14
-                        },
-                        9: {
-                          "questionName": "題目十",
-                          "content": "這個演員經常出現在電視螢幕上，深受觀眾的歡迎。",
-                          "correct": "熒",
-                          "errIndex": 11
-                        }
-                      }
-                    }
-                  }
-                }
-              }} }
-    Cookies.set('life', life);
-    console.log(Cookies.get('life'));
-    console.log(Cookies.getJSON('life'));
-  </script>
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -1743,12 +28,11 @@
       -moz-background-size: cover;
       -ms-background-size: cover;
 
-      overflow: hidden;
 
     }
     .board{
       margin-top: 25vh;
-      width: 80%;
+      width: 75vw;
       height: 60%;
     }
 
@@ -1763,7 +47,10 @@
       height: 200px;
       margin: 10px;
 
-      max-width: 300px;
+      /*width: 19%;*/
+      /*max-width: 300px;*/
+      /*min-width: 150px;*/
+
     }
 
     .question-board {
@@ -1794,9 +81,9 @@
     .question-status {
       position:absolute;
       margin: auto;
-      width:40%;
-      max-width: 150px;
-      min-width: 100px;
+      width:100px;
+      /*max-width: 150px;*/
+      /*min-width: 100px;*/
       height:45px;
 
       bottom:-20px;
@@ -1849,15 +136,34 @@
       text-decoration: none;
       color: #f7f7f7;
     }
-    #return{
+    .return{
       position: fixed;
       top:5vh;
       left: 2vw;
       width: 100px;
-      height: 60px;
+      height: 50px;
 
-      font-size: 1.8em;
+      text-align: center;
+
+      border-radius: 10.7rem!important;
+      background-color:rgba(26,36,43,0.7);
+
+      border:2px solid rgba(39, 166, 137, 0.9);
+
+      font-size: 25px;
+      box-shadow: 0 0 3px rgba(39, 166, 137, 0.6);
+
+      transition: all 0.6s;
+
+      display: inline-block;
+      vertical-align:middle;
     }
+
+    .return:hover{
+      transform:scale(1.1);
+      cursor:pointer;
+    }
+
 
     /*.modal-backdrop {*/
     /*  opacity: 0 !important;*/
@@ -1873,6 +179,7 @@
       border-radius: .7rem!important;
       background-color:rgba(138, 146, 160, 0.6);
       width: 60vw;
+      min-width: 300px;
     }
 
     .modal-header-bg{
@@ -1881,14 +188,15 @@
       border-top-right-radius: .7rem!important;
       height: 80px;
       text-align: center;
+      color: rgba(253, 238, 211, 1);
     }
 
-    .modal-header-bg span{
-      color: rgba(253, 238, 211, 1);
+    .modal-header-bg #question-title{
+      /*color: rgba(253, 238, 211, 1);*/
       display: inline-block;
       text-align: center;
-      font-size: 2em;
 
+      font-size: 1.8em;
 
       position:absolute;
       left: 50%;
@@ -1905,12 +213,13 @@
     #question-content{
       height: 30vh;
       color: #000000;
-
+      cursor:pointer;
     }
 
     .question-word{
-      font-size: 1.9em;
-    }
+        font-size: 1.8em;
+      }
+
 
     .word-selected{
       background-color: #ff0000;
@@ -1929,12 +238,13 @@
       display: inline-block;
       vertical-align:middle;
 
-      font-size: 40px;
+      font-size: 35px;
+
     }
     #user-answer{
       width: 60px;
       height: 60px;
-      font-size: 40px;
+      font-size: 35px;
 
     }
 
@@ -1950,9 +260,8 @@
       border:3px solid rgba(216, 55, 50, 0.9);
 
       width:20%;
-      max-width: 150px;
-      min-width: 120px;
       height:45px;
+      font-size:20px;
 
       position: relative;
       right: 0px;
@@ -1962,7 +271,257 @@
 
       border-radius:10.7rem!important;
       text-align: center;
-      font-size:1.2em;
+
+    }
+
+    .quesReturn{
+      position: relative;
+
+      width: 60px;
+      height: 40px;
+
+      text-align: center;
+
+      border-radius: 10rem!important;
+      background-color:rgba(26,36,43,0.7);
+
+      border:2px solid rgba(253, 238, 211, 1);
+
+      font-size: 19px;
+      /*box-shadow: 0 0 3px rgba(253, 238, 211, 1);*/
+
+      transition: all 0.6s;
+
+
+    }
+
+    .quesReturn span{
+      display: inline-block;
+      vertical-align:middle;
+    }
+
+    .quesReturn:hover{
+      transform:scale(1.1);
+      cursor:pointer;
+    }
+
+    @media screen and (max-width:1200px){
+      .question-bg{
+        width: 200px;
+      }
+
+      .question-serial {
+        height:60px;
+        font-size: 1.4em;
+      }
+
+      .question-des {
+        /*height:120px;*/
+        font-size: 0.6em;
+      }
+
+      .question-status {
+        width:100px;
+        height:45px;
+        font-size:1.2em;
+      }
+
+      .question-word{
+        font-size: 1.6em;
+      }
+
+      #question-title{
+        font-size: 1.8em;
+      }
+
+      .answer-board{
+        font-size: 35px;
+      }
+
+      #user-answer{
+        width: 60px;
+        height: 60px;
+        font-size: 35px;
+
+      }
+
+      .btn-submit{
+
+        width:130px;
+        height: 45px;
+
+        font-size:20px;
+      }
+
+      .quesReturn{
+
+        width: 60px;
+        height: 40px;
+
+        font-size: 19px;
+
+      }
+    }
+
+    @media screen and (max-width:992px){
+      .question-bg{
+        width: 170px;
+      }
+
+      .question-serial {
+        height:60px;
+        font-size: 1.3em;
+      }
+
+      .question-des {
+        /*height:150px;*/
+        font-size: 0.5em;
+      }
+
+      .question-status {
+        width:90px;
+        height:45px;
+        font-size:1em;
+      }
+
+      .question-word{
+        font-size: 1.4em;
+      }
+      #question-title{
+        font-size: 1.2em;
+      }
+      .answer-board{
+        font-size: 30px;
+      }
+
+      #user-answer{
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+
+      }
+
+      .btn-submit{
+
+        width:80px;
+        height: 40px;
+        font-size:18px;
+      }
+
+      .quesReturn{
+
+        width: 50px;
+        height: 36px;
+
+        font-size: 18px;
+
+      }
+
+      .answer-board{
+        left: 30%;
+      }
+    }
+
+    @media screen and (max-width:768px){
+      .question-bg{
+        width: 150px;
+      }
+
+      .question-serial {
+        height:60px;
+        font-size: 1.2em;
+      }
+
+      .question-des {
+        /*height:180px;*/
+        font-size: 0.25em;
+      }
+
+      .question-status {
+        width:80px;
+        height:45px;
+        font-size:0.8em;
+      }
+
+      .question-word{
+        font-size: 1.2em;
+      }
+      #question-title{
+        font-size: 0.8em;
+      }
+      .answer-board{
+        font-size: 20px;
+      }
+
+      #user-answer{
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+      }
+
+      .btn-submit{
+        width:70px;
+        height: 37px;
+        font-size:16px;
+      }
+
+      .quesReturn{
+        width: 45px;
+        height: 35px;
+        font-size: 15px;
+      }
+
+    }
+
+    @media screen and (max-width:480px){
+      .question-bg{
+        width: 130px;
+      }
+
+      .question-serial {
+        height:60px;
+        font-size: 1em;
+      }
+
+      .question-des {
+        /*height:200px;*/
+        font-size: 0.2em;
+      }
+
+      .question-status {
+        width:60px;
+        height:40px;
+        font-size:0.6em;
+      }
+
+      .question-word{
+        font-size: 1em;
+      }
+      #question-title{
+        font-size: 0.6em;
+      }
+      .answer-board{
+        font-size: 18px;
+      }
+
+      #user-answer{
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+      }
+
+      .btn-submit{
+        width:80px;
+        height: 35px;
+        font-size:15px;
+      }
+
+      .quesReturn{
+        width: 30px;
+        height: 26px;
+        font-size: 13px;
+      }
+
     }
 
     .btn-confirm{
@@ -1987,22 +546,28 @@
       font-size:1.2em;
     }
 
+
+
   </style>
 </head>
 <body>
 
-<div id="return">
-			<a href="start.html"><p > <	返回</p></a>
+<div class="return">
+			<a href="start.html"><span > < 返回</span></a>
 </div>
 
 <div class="container board">
 
 </div>
 
+
 <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop=”static”>
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content modal-bg">
       <div class="modal-header modal-header-bg">
+        <div class="quesReturn">
+              <span >返回</span>
+        </div>
         <span id="question-title">題目</span>
       </div>
       <div class="question-body">
@@ -2019,6 +584,7 @@
           </div>
 
           <button type="button" class="btn btn-submit" id="submit">提交</button>
+
         </div>
       </div>
 
@@ -2041,6 +607,7 @@
   </div>
 </div>
 
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -2052,6 +619,9 @@
 
   var typeID;
   var subTypeID;
+  var missionID;
+
+  var isAnswered = 0;
 
   var url = window.location.search;
   if (url.indexOf("?") != -1 && url.indexOf("&") != -1) {
@@ -2059,28 +629,27 @@
       strs = str.split("&");
       typeID = strs[0].split('=')[1];
       subTypeID = strs[1].split('=')[1];
+      missionID = strs[2].split('=')[1];
   }
   else {
       alert('url err, show default content');
       typeID = 'lidnPO';
       subTypeID = 'zGqDtC';
+      missionID = 1;
   }
 
   console.log(typeID, subTypeID);
 
-  var quesDict = questionLib[typeID]["subTypes"][subTypeID]["questions"];
+  // var quesDict = questionLib[typeID]["subTypes"][subTypeID]["mission"][missionID]["questions"];
 
-  /* this is for the cookies. Cookie can not store everything, but it can store each mission. */
-  console.log(quesDict)
-  if (Cookies.get("typeId") == null) {
-    Cookies.set("typeId", typeID);
-    console.log(Cookies.get("typeId"));
+  /*This is for the cookies. */
+  if(Cookies.get("quesDict") == null) {
+    var quesDict = questionLib[typeID]["subTypes"][subTypeID]["mission"][missionID]["questions"];
+    Cookies.set("quesDict", quesDict);
+  }else {
+    var quesDict = JSON.parse(Cookies.get("quesDict"));
+    console.log(quesDict);
   }
-  Cookies.set("typeId", typeID)
-  Cookies.set("subTypeID", subTypeID)
-  Cookies.set("missionId", 1)
-  Cookies.set("quesds", quesDict)
-  console.log(Cookies.get('quesds'));
 
   var rowDiv = $('<div class="row sub-board" >');
   $(".board:first").append(rowDiv);
@@ -2127,6 +696,10 @@
 
   var answerErrIndex = -1;
 
+  $('.quesReturn').on('click', 'span', function () {
+      $('#exampleModal').modal('hide');
+  });
+
 
    $('#question-content').on('click','.question-word', function(){
       $(this).css('background-color', '#ff0000');
@@ -2134,9 +707,6 @@
 
       answerErrIndex = $(this).attr('name');
       console.log(answerErrIndex);
-
-      Cookies.set("answerErrIndex", answerErrIndex);
-      console.log(Cookies.get("answerErrIndex"));
 
   });
 
@@ -2150,6 +720,7 @@
 
     $("#question-content").html('');
     answerErrIndex = -1;
+    isAnswered = 0;
 
     curQuesIndex = $(event.relatedTarget).data('serial'); // Extract info from data-* attributes
     curQuestion = quesDict[curQuesIndex];
@@ -2161,8 +732,48 @@
       $("#question-content").append(span);
     }
 
-    /* modal two to render a box to notify user the result is correct or incorrect */
+
+
+  }).on('hidden.bs.modal', function (event) {
+
+    // $(".container").show();
+    // $("#return").show();
+
+    console.log(quesDict[curQuesIndex]);
+    if (isAnswered == 0){
+        return;
+    }
+    let user_answer = $('#user-answer').val();
+
+    // console.log(user_answer, answerErrIndex);
+
+    curQuestion["done"] = 1;
+
+    curQuestion["answerWord"] = user_answer;
+    curQuestion["answerErrIndex"] = answerErrIndex;
+
+    if (curQuestion["answerWord"]== curQuestion["correct"] && curQuestion["answerErrIndex"]== curQuestion["errIndex"] ){
+        curQuestion["result"] = 1;
+    }
+    else{
+        curQuestion["result"] = 0;
+    }
+
+    // console.log('用户回答：', curQuestion);
+
+    console.log("回答：", curQuestion["result"] == 1? "正确":"错误");
+
+    $('#question-content').find('span').css('background-color', '#ffffff');
+    $('#user-answer').val('');
+    $("#question"+curQuesIndex).removeClass( "status-notDone");
+    $("#question"+curQuesIndex).addClass(curQuestion["result"] == 1? "status-done":"status-false");
+    $("#question"+curQuesIndex).find('span').text(curQuestion["result"] == 1? "完成":"進入")
+  })
+
+  /* modal two to render a box to notify user the result is correct or incorrect */
     $("#submit").click(function() {
+        isAnswered = 1;
+
         let user_answer = $('#user-answer').val();
         curQuestion["answerWord"] = user_answer;
         curQuestion["answerErrIndex"] = answerErrIndex;
@@ -2185,42 +796,8 @@
             $('#user-answer').val('');
           });
         }
-                
+
     });
-
-
-  }).on('hidden.bs.modal', function (event) {
-
-  // $(".container").show();
-  // $("#return").show();
-
-  console.log(quesDict[curQuesIndex]);
-  let user_answer = $('#user-answer').val();
-
-  // console.log(user_answer, answerErrIndex);
-
-  curQuestion["done"] = 1;
-
-  curQuestion["answerWord"] = user_answer;
-  curQuestion["answerErrIndex"] = answerErrIndex;
-
-  if (curQuestion["answerWord"]== curQuestion["correct"] && curQuestion["answerErrIndex"]== curQuestion["errIndex"] ){
-      curQuestion["result"] = 1;
-  }
-  else{
-      curQuestion["result"] = 0;
-  }
-
-  // console.log('用户回答：', curQuestion);
-
-  console.log("回答：", curQuestion["result"] == 1? "正确":"错误");
-
-  $('#question-content').find('span').css('background-color', '#ffffff');
-  $('#user-answer').val('');
-  $("#question"+curQuesIndex).removeClass( "status-notDone");
-  $("#question"+curQuesIndex).addClass(curQuestion["result"] == 1? "status-done":"status-false");
-  $("#question"+curQuesIndex).find('span').text(curQuestion["result"] == 1? "完成":"進入")
-  });
 </script>
 </body>
 </html>

@@ -653,11 +653,6 @@
       console.log("test 2", Cookies.get(i, {path: window.location.search }));
       quesDict[i]["done"] = 1;
     }
-
-    if (quesDict[i]["done"] == 0) {
-      var mission = typeID + subTypeID + missionID;
-      Cookies.set(mission, 0);
-    }
   }
 
 
@@ -767,6 +762,14 @@
     }
     else{
         curQuestion["result"] = 0;
+    }
+
+    /* Judge if all finished. */
+    for (let i in quesDict){
+      if (quesDict[i]["done"] == 0) {
+        var mission = typeID + subTypeID + missionID;
+        Cookies.set(mission, 0);
+      }
     }
 
     // console.log('用户回答：', curQuestion);

@@ -648,7 +648,7 @@
     Cookies.set("quesDict", quesDict);
   }else {
     var quesDict = JSON.parse(Cookies.get("quesDict"));
-    console.log(quesDict);
+    console.log("test 2", quesDict);
   }
 
   var rowDiv = $('<div class="row sub-board" >');
@@ -762,6 +762,7 @@
     // console.log('用户回答：', curQuestion);
 
     console.log("test 1", quesDict);
+    Cookies.set('quesDict', quesDict);
 
     console.log("回答：", curQuestion["result"] == 1? "正确":"错误");
 

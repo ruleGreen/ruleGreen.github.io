@@ -764,7 +764,8 @@
 
     // console.log('用户回答：', curQuestion);
     // curQuesIndex indices the index of the question.
-    Cookies.set(curQuesIndex, 1, {path: pathname});
+    console.log("test path", pathname);
+    Cookies.set(curQuesIndex, 1, { path: pathname });
     console.log("test 1", Cookies.get(curQuesIndex))
 
     console.log("回答：", curQuestion["result"] == 1? "正确":"错误");

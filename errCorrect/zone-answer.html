@@ -12,7 +12,7 @@
     // import Cookies from './js/js.cookie.js'
 
     var answer = 1;
-    Cookies.set('answer', "1");
+    Cookies.set('answer', answer);
     console.log(Cookies.get('answer'));
 
     Cookies.set('person',  { 'user': {'name' : 0 }, 'age': '18' });
@@ -1291,16 +1291,14 @@
             }
           }}};
     Cookies.set('data', data);
-    var raw = Cookies.get('data');
+    const raw = 66;
+    Cookies.set('raw', raw);
+    console.log(Cookies.get('raw'));
 
-    console.log(raw);
-    console.log(Cookies.get());
-    // console.log(JSON.parse(raw));
-    console.log(JSON.stringify(raw));
-
-
-    console.log(Cookies.getJSON('data'));
-    
+    const user = {name: "wanghongru", age: 18}
+    Cookies.set('user', user);
+    console.log(Cookies.get('user'));
+    console.log(JSON.parse(Cookies.get('user')))    
   </script>
 
   <!-- Bootstrap CSS -->

@@ -2070,8 +2070,15 @@
 
   var quesDict = questionLib[typeID]["subTypes"][subTypeID]["questions"];
 
-  /* this is for the cookies. */
+  /* this is for the cookies. Cookie can not store everything, but it can store each mission. */
   console.log(quesDict)
+  if (Cookies.get("typeId") == null) {
+    Cookies.set("typeId", typeID);
+    console.log(Cookies.get("typeId"));
+  }
+  Cookies.set("typeId", typeID)
+  Cookies.set("subTypeID", subTypeID)
+  Cookies.set("missionId", 1)
   Cookies.set("quesds", quesDict)
   console.log(Cookies.get('quesds'));
 

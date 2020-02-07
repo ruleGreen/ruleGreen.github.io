@@ -2070,6 +2070,12 @@
 
   var quesDict = questionLib[typeID]["subTypes"][subTypeID]["questions"];
 
+  /* this is for the cookies. */
+  console.log(quesDict)
+  console.log(quesDict.size())
+  Cookies.set("quesds", quesDict)
+  console.log(Cookies.get('quesds'));
+
   var rowDiv = $('<div class="row sub-board" >');
   $(".board:first").append(rowDiv);
   for(let i in quesDict){

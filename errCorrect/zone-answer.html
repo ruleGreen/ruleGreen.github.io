@@ -1298,8 +1298,8 @@
             }
           }
     Cookies.set('data', data);
-    console.log(Cookies.get('data'));
-    console.log(JSON.parse(Cookies.get('data')));
+    console.log(Cookies.getJSON('data'));
+    // console.log(JSON.parse(Cookies.get('data')));
 
     const raw = 66;
     Cookies.set('raw', raw);

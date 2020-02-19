@@ -30,14 +30,22 @@
 
     }
     .board{
-      margin-top: 25vh;
-      max-width: 960px
-      /*width: 75vw;*/
-      /*height: 60%;*/
+      margin-top: 20vh;
+      max-width: 960px;
+    }
+
+    @media (min-height: 992px) {
+      .board{
+        margin-top: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
     }
 
     .sub-board{
-      margin-top: 15px;
+      /*margin-top: 15px;*/
 
     }
 
@@ -141,22 +149,28 @@
       text-decoration: none;
       color: #f7f7f7;
     }
+    .return a{
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%,-50%)
+    }
     .return{
       position: fixed;
       top:5vh;
       left: 2vw;
-      width: 80px;
-      height: 40px;
+      width: 100px;
+      height: 45px;
 
       text-align: center;
 
       border-radius: 10.7rem!important;
-      background-color:rgba(26,36,43,0.7);
+      background-color: #534741;
 
-      border:2px solid rgba(39, 166, 137, 0.9);
+      border:3px solid #736357;
 
-      font-size: 20px;
-      box-shadow: 0 0 3px rgba(39, 166, 137, 0.6);
+      font-size: 1.2em;
+      color: #c7b299;
+      /* box-shadow: 0 0 3px rgba(39, 166, 137, 0.6); */
 
       transition: all 0.6s;
 
@@ -183,6 +197,11 @@
     .modal-dialog-centered{
       max-width: 800px;
       min-width: 300px;
+    }
+
+    .modal-size{
+      max-width: 400px;
+      min-width:150px;
     }
 
     .modal-bg{
@@ -229,7 +248,7 @@
 
     .question-word{
         font-size: 25px;
-      }
+    }
 
 
     .word-selected{
@@ -239,11 +258,11 @@
     .modal-footer{
       border-top: 1px solid rgba(174, 159, 143, 1);
       padding-top: 30px;
-      padding-bottom: 20px;
+      padding-bottom: 30px;
     }
     .answer-board{
       position:absolute;
-      left: 30%;
+      left: 50%;
       transform: translate(-50%,0);
 
       display: inline-block;
@@ -251,6 +270,23 @@
 
       font-size: 25px;
 
+    }
+    @media (max-width: 400px) {
+      .answer-board{
+        position:absolute;
+        left: 30%;
+        transform: translate(-50%,0);
+
+        display: inline-block;
+        vertical-align:middle;
+
+        font-size: 25px;
+      }
+
+      #submit-div{
+        position: relative;
+        right: -60px;
+      }
     }
     #user-answer{
       width: 60px;
@@ -268,18 +304,26 @@
 
     }
 
+    #submit-div{
+      width:100px;
+      height:50px;
+
+      position: relative;
+      right: -20px;
+    }
+
     .btn-submit{
 
       color: #ffffff;
-      background-color: rgba(174, 48, 53, 1);
-      border:3px solid rgba(216, 55, 50, 0.9);
+      background-color: #0054a6;
+      border:3px solid #0072bc;
 
       width:90px;
       height:45px;
       font-size:20px;
 
-      position: relative;
-      right: -20px;
+      /*position: relative;*/
+      /*right: -20px;*/
 
       /*bottom:-20px;*/
 
@@ -290,9 +334,10 @@
     }
 
     .quesReturn{
+      position: absolute;
 
-      width: 60px;
-      height: 40px;
+      width: 90px;
+      height: 45px;
 
       text-align: center;
 
@@ -301,22 +346,31 @@
 
       border:2px solid rgba(253, 238, 211, 1);
 
-      font-size: 19px;
-      /*box-shadow: 0 0 3px rgba(253, 238, 211, 1);*/
+      font-size: 20px;
 
       transition: all 0.6s;
-
 
     }
 
     .quesReturn span{
-      display: inline-block;
-      vertical-align:middle;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
     }
 
     .quesReturn:hover{
       transform:scale(1.1);
       cursor:pointer;
+    }
+
+    #result-content {
+      font-size: 25px;
+      text-align: center;
+    }
+
+    #confirm{
+      margin: auto;
     }
 
 
@@ -368,7 +422,7 @@
 <body>
 
 <div class="return">
-			<a href="start.html"><span > < 返回</span></a>
+			<a href="start.html"><span>返回</span></a>
 </div>
 
 <div class="container board">
@@ -381,7 +435,7 @@
     <div class="modal-content modal-bg">
       <div class="modal-header modal-header-bg">
         <div class="quesReturn">
-              <span >返回</span>
+              <span >關閉</span>
         </div>
         <div id="question-title">
           <span >題目</span>
@@ -400,8 +454,10 @@
             <input type="text" id="user-answer">
           </div>
 
-          <button type="button" class="btn btn-submit" id="submit">提交</button>
-
+          <div id="submit-div">
+            <img id="tick-img" src="img/tick.png" width="40" height="45">
+            <button type="button" class="btn btn-submit" id="submit">提交</button>
+          </div>
         </div>
       </div>
 
@@ -410,7 +466,7 @@
 </div>
 
 <div class="modal fade justify-content-md-center" id="notificationModal" tabindex="-1" role="dialog" aria-labelledby="notificationModalTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered col-8 modal-size" role="document">
+  <div class="modal-dialog modal-dialog-centered modal-size" role="document">
     <div class="modal-content">
       <div class="modal-body">
         <div id="result-content">
@@ -438,6 +494,8 @@
   var subTypeID;
   var missionID;
 
+  var mission;  //在全局代表該mission的ID串
+
   var isAnswered = 0;
 
   var url = window.location.search;
@@ -447,14 +505,11 @@
       typeID = strs[0].split('=')[1];
       subTypeID = strs[1].split('=')[1];
       missionID = strs[2].split('=')[1];
+      mission = typeID + subTypeID + missionID;
   }
   else {
-      alert('url err, show default content');
-      // typeID = 'lidnPO';
-      // subTypeID = 'zGqDtC';
+      alert('url error!');
   }
-
-  // console.log(typeID, subTypeID, missionID);
 
   var quesDict = data[typeID]["subTypes"][subTypeID]["mission"][missionID]["questions"];
 
@@ -462,10 +517,10 @@
   /* This is for the cookies. */
   console.log("test 1", quesDict);
   for (let i in quesDict){
-    console.log("i", i);
-    if (Cookies.get(quesDict[i]["id"]) != null) {
-      console.log("test 2", Cookies.get(quesDict[i]["id"]));
-      quesDict[i]["done"] = Cookies.get(quesDict[i]["id"]);
+    //console.log("i", i);
+    if (Cookies.get(mission +'q'+ i) != null) {
+      //console.log("test 2", Cookies.get(quesDict[i]["id"]));
+      quesDict[i]["result"] = Cookies.get(mission +'q'+ i);
     }
   }
 
@@ -520,7 +575,7 @@
 
 
    $('#question-content').on('click','.question-word', function(){
-      $(this).css('background-color', '#ff0000');
+      $(this).css('background-color', '#f26d7d');
       $(this).siblings().css('background-color', '#ffffff');
 
       answerErrIndex = $(this).attr('name');
@@ -537,6 +592,8 @@
     // $("#return").hide();
 
     $("#question-content").html('');
+    $('#submit').show();
+    $("#tick-img").hide();
     answerErrIndex = -1;
     isAnswered = 0;
 
@@ -550,6 +607,15 @@
       $("#question-content").append(span);
     }
 
+    if (quesDict[curQuesIndex]["result"]==1 || Cookies.get(mission +'q'+ curQuesIndex)==1){
+        $("#tick-img").show();
+        $('#submit').hide();
+        let word = $('.question-word[name='+quesDict[curQuesIndex]["errIndex"]+']').css('background-color', '#f26d7d');
+        word.siblings().css('background-color', '#ffffff');
+        $('#user-answer').val(quesDict[curQuesIndex]["correct"]);
+      // answerErrIndex = $(this).attr('name');
+    }
+
 
 
   }).on('hidden.bs.modal', function (event) {
@@ -557,7 +623,7 @@
     // $(".container").show();
     // $("#return").show();
 
-    console.log(quesDict[curQuesIndex]);
+    //console.log(quesDict[curQuesIndex]);
     
     let user_answer = $('#user-answer').val().trim();
 
@@ -580,23 +646,26 @@
     }
 
     /* Judge if all finished. */
-    var mission = typeID + subTypeID + missionID;
-    Cookies.set(mission, 1);
+    let flag = 1;
     for (let i in quesDict){
-      if (quesDict[i]["done"] == 0) {
-        Cookies.set(mission, 0);
+      if (quesDict[i]["result"] == 0) {
+          flag = 0;
       }
+    }
+    if(flag==1){
+        Cookies.set(mission, 1);
     }
 
     // console.log('用户回答：', curQuestion);
 
     // curQuesIndex indices the index of the question.
     if (curQuestion["result"] == 1) {
-      Cookies.set(quesDict[curQuesIndex]["id"], 1);
-      console.log("test 1", Cookies.get(quesDict[curQuesIndex]["id"]))
-    } else {
-      Cookies.set(quesDict[curQuesIndex]["id"], 0);
+      Cookies.set(mission +'q'+ curQuesIndex, 1);
+      //console.log("test 1", Cookies.get(quesDict[curQuesIndex]["id"]))
     }
+    // else {
+    //   Cookies.set(mission +'q'+ curQuesIndex, 0);
+    // }
 
     console.log("回答：", curQuestion["result"] == 1? "正确":"错误");
 
@@ -608,7 +677,7 @@
   })
 
   /* modal two to render a box to notify user the result is correct or incorrect */
-    $("#submit").click(function() {
+  $("#submit").click(function() {
         isAnswered = 1;
 
         let user_answer = $('#user-answer').val().trim();
@@ -625,8 +694,8 @@
           $("#confirm").addClass("btn-confirm-true");
           //confirm.style["background-color"] = rgba(23, 94, 49, 1);
           //confirm.attr("background-color") = rgba(23, 94, 49, 1);
-          $('#notificationModal').modal('show');
           $('#exampleModal').modal('hide');
+          $('#notificationModal').modal('show');
         }
         else{
           //console.log("你答錯了。請再嘗試。");
@@ -634,15 +703,25 @@
           result.innerHTML = "你答錯了。請再嘗試。";
           $("#confirm").removeClass("btn-confirm-true");
           $("#confirm").addClass("btn-confirm-false");
+          $('#exampleModal').modal('hide');
           $('#notificationModal').modal('show');
           /* empty all user input */
+          /*
           $("#confirm").click(function() {
             $('#question-content').find('span').css('background-color', '#ffffff');
             $('#user-answer').val('');
           });
+          */
         }
 
     });
+
+  $("#confirm").click(function() {
+    /* re show the modal if the result is wrong */
+    if (curQuestion["result"] != 1) {
+      $("#question"+curQuesIndex).click();
+    }
+  })
 </script>
 </body>
 </html>

@@ -28,7 +28,11 @@
 
       }
       .board{
-        margin-top: 20vh;
+        /*margin-top: 20vh;*/
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
       }
 
       .sub-board{
@@ -195,7 +199,8 @@
 
             // Read Cookies
             var mission = typeid + st + m;
-            // console.log("mission", typeid, st, m);
+
+            //console.log("mission", typeid, st, m, mission);
             if (Cookies.get(mission) != null) {
               data[typeid]["subTypes"][st]["mission"][m]["finished"] = Cookies.get(mission);
               // console.log("start test", Cookies.get(mission));
@@ -208,6 +213,7 @@
         }
       }
     }
+    //console.log("all cookies:",Cookies.get());
     </script>
   </body>
 </html>

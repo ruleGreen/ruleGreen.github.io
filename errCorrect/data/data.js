@@ -10,14 +10,14 @@ var data = {
                         'questions': {
                             0: {
                                 'questionName': '題目一',
-                                'id': 999,
+                                'id': 0,
                                 'content': '這個網站被黑客攻激，完全看不到畫面的內容了。',
                                 'correct': '擊',
                                 'errIndex': 8,
                                 'done': 0,
                                 'answerWord': '',
                                 'answerErrIndex': 0,
-                                'result': 0
+                                'result': 1
                             },
                             1: {
                                 'questionName': '題目二',

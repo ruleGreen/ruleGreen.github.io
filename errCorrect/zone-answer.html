@@ -549,7 +549,7 @@
       //'+ quesDict[i]["done"]==1?"status-done":"status-notDone"+'
       let quesBtnSpan = $('<span class="button-status"></span>');
 
-      if (quesDict[i]["done"] == 1){
+      if (quesDict[i]["result"] == 1){
           quesBtnSpan.text('完成');
           quesStatus.attr("class", "question-status status-done");
       }

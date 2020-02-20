@@ -27,12 +27,28 @@
         -moz-background-size: cover;
 
       }
+      /*
       .board{
-        /*margin-top: 20vh;*/
+        // margin-top: 20vh;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
+      }
+      */
+
+      .board{
+        margin-top: 20vh;
+      }
+
+      @media (min-height: 992px) {
+        .board{
+          margin-top: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+        }
       }
 
       .sub-board{

@@ -511,7 +511,8 @@
       alert('url error!');
   }
 
-  var quesDict = data[typeID]["subTypes"][subTypeID]["mission"][missionID]["questions"];
+  var levelData = data['primary'];
+  var quesDict = levelData[typeID]["subTypes"][subTypeID]["mission"][missionID]["questions"];
 
 
   /* This is for the cookies. */
@@ -610,7 +611,7 @@
     if (quesDict[curQuesIndex]["result"]==1 || Cookies.get(mission +'q'+ curQuesIndex)==1){
         $("#tick-img").show();
         $('#submit').hide();
-        let word = $('.question-word[name='+quesDict[curQuesIndex]["errIndex"]+']').css('background-color', '#f26d7d');
+        let word = $('.question-word[name='+quesDict[curQuesIndex]["errIndex"][0]+']').css('background-color', '#f26d7d');
         word.siblings().css('background-color', '#ffffff');
         $('#user-answer').val(quesDict[curQuesIndex]["correct"]);
       // answerErrIndex = $(this).attr('name');
@@ -638,7 +639,7 @@
     curQuestion["answerWord"] = user_answer;
     curQuestion["answerErrIndex"] = answerErrIndex;
 
-    if (curQuestion["answerWord"]== curQuestion["correct"] && curQuestion["answerErrIndex"]== curQuestion["errIndex"] ){
+    if (curQuestion["answerWord"]== curQuestion["correct"] && curQuestion["errIndex"].indexOf(curQuestion["answerErrIndex"]) > -1  ){
         curQuestion["result"] = 1;
     }
     else{
@@ -686,7 +687,7 @@
 
         console.log(user_answer, answerErrIndex);
 
-        if (curQuestion["answerWord"]== curQuestion["correct"] && curQuestion["answerErrIndex"]== curQuestion["errIndex"] ){
+        if (curQuestion["answerWord"]== curQuestion["correct"] && curQuestion["errIndex"].indexOf(curQuestion["answerErrIndex"]) > -1  ){
           //console.log("恭喜！你答對了！");
           var result = document.getElementById("result-content");
           result.innerHTML = "恭喜！你答對了！";

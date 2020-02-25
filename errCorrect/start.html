@@ -166,7 +166,7 @@
   <script src="data/data.js"></script>
 
   <script>
-
+    var levelData = data['primary'];
     $('.container').on('click','.button1', function(){
         let typeId = $(this).closest('.sub-board').attr('id');
         let subTypeId = $(this).closest('.task-card').attr('id');
@@ -177,7 +177,7 @@
     });
 
     var boardDiv = $('.board');
-    for(let typeid in data){
+    for(let typeid in levelData){
         console.log(typeid);
       var rowDiv = $('<div class="row sub-board justify-content-center" id="'+typeid+'">');
       boardDiv.append(rowDiv);
@@ -185,21 +185,21 @@
       var typeDiv = $('<div class="col-lg-2 title-board">');
       rowDiv.append(typeDiv);
 
-      var typeP = $('<p class="title-text">'+data[typeid]["typeName"]+'</p>');
+      var typeP = $('<p class="title-text">'+levelData[typeid]["typeName"]+'</p>');
       var giftDiv = $('<div class="gift-icon">\n' +
           '            <img src="img/gift.png" width="55" height="50">\n' +
           '          </div>');
       typeDiv.append(typeP);
       typeDiv.append(giftDiv);
 
-      for (let st in data[typeid]["subTypes"]){
+      for (let st in levelData[typeid]["subTypes"]){
         var stbDiv = $('<div class="col-lg sub-title-board">');
         rowDiv.append(stbDiv);
 
         var taskDiv = $('<div class="task-card" id="'+st+'">');
         stbDiv.append(taskDiv);
 
-        let subTitleText = $('<p class="sub-title-text">'+data[typeid]["subTypes"][st]["typeName"]+'</p>')
+        let subTitleText = $('<p class="sub-title-text">'+levelData[typeid]["subTypes"][st]["typeName"]+'</p>')
         taskDiv.append(subTitleText);
         let lineP = $('<p>\n' +
             '              <div class="line"></div>\n' +
@@ -210,7 +210,7 @@
 
         let btnDivs = $('<div></div>');
         taskDiv.append(btnDivs);
-        for(let m in data[typeid]["subTypes"][st]["mission"]){
+        for(let m in levelData[typeid]["subTypes"][st]["mission"]){
             let btnDiv = $('<div class="button1 rounded-circle"><span>'+m+'</span></div>');
 
             // Read Cookies
@@ -218,11 +218,11 @@
 
             //console.log("mission", typeid, st, m, mission);
             if (Cookies.get(mission) != null) {
-              data[typeid]["subTypes"][st]["mission"][m]["finished"] = Cookies.get(mission);
+              levelData[typeid]["subTypes"][st]["mission"][m]["finished"] = Cookies.get(mission);
               // console.log("start test", Cookies.get(mission));
             }
             
-            if (data[typeid]["subTypes"][st]["mission"][m]["finished"] == 1){
+            if (levelData[typeid]["subTypes"][st]["mission"][m]["finished"] == 1){
                 btnDiv = $('<div class="button1 rounded-circle missionDone"><span>'+m+'</span></div>');
             }
             btnDivs.append(btnDiv);

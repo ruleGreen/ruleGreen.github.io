@@ -1,0 +1,728 @@
+<!doctype html>
+<html>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- JS-Cookies -->
+  <script type="module" src="./js/js.cookie.mjs"></script>
+  <script src="./js/js.cookie.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <title>zone</title>
+
+  <style>
+
+    body {
+      color: #000000;
+      background-image: url("img/background.jpg");
+      background-position: center 0;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      -webkit-background-size: cover;
+      -o-background-size: cover;
+      -moz-background-size: cover;
+      -ms-background-size: cover;
+
+    }
+    .board{
+      margin-top: 20vh;
+      max-width: 960px;
+    }
+
+    @media (min-height: 992px) {
+      .board{
+        margin-top: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+    }
+
+    .sub-board{
+      /*margin-top: 15px;*/
+
+    }
+
+    .question-bg{
+      position: relative;
+      padding: 10px;
+      width: 180px;
+
+      border-radius: .7rem!important;
+      background-color:rgba(138, 146, 160, 0.6);
+      height: 200px;
+      /*margin-left: 10px;*/
+      margin-bottom: 30px;
+
+      /*width: 19%;*/
+      /*max-width: 300px;*/
+      /*min-width: 150px;*/
+
+    }
+
+    .question-board {
+      /*border-radius: .7rem!important;*/
+    }
+
+    .question-serial {
+      position:relative;
+      height:60px;
+      /*top:10px;*/
+      border: 10px;
+      background-color:rgba(77,66,60,1);
+      border-radius: 15px 15px 0 0;
+      color:rgba(183,173,145,1);
+      text-align: center;
+      padding: 8px;
+      font-size: 1.5em;
+    }
+
+    .question-des {
+      height:120px;
+      background-color:rgba(255,255,255,1);
+      border-radius: 0 0 15px 15px;
+      padding: 10px;
+      font-size: 0.6em;
+    }
+
+    .question-status {
+      position:absolute;
+      margin: auto;
+      width:100px;
+      /*max-width: 150px;*/
+      /*min-width: 100px;*/
+      height:45px;
+
+      bottom:-20px;
+
+
+      border-radius:10.7rem!important;
+      text-align: center;
+      font-size:1.2em;
+
+      left: 50%;
+      transform: translate(-50%,0);
+
+      transition: all 0.6s;
+    }
+
+    .question-status:hover{
+      transform: translate(-50%,0) scale(1.1);
+      cursor:pointer;
+    }
+
+    .status-done{
+      background-color: rgba(23, 94, 49, 1);
+      border:3px solid rgba(33, 137, 59, 0.9);
+    }
+
+    .status-notDone{
+      background-color: rgba(174, 48, 53, 1);
+      border:3px solid rgba(216, 55, 50, 0.9);
+    }
+
+    .status-false{
+      background-color: rgba(174, 48, 53, 1);
+      border:3px solid rgba(33, 137, 59, 0.9);
+    }
+
+    .button-status{
+      position:absolute;
+      color:rgba(255,255,255,1);
+      text-align: center;
+      top:50%;
+      transform: translate(-50%,-50%);
+    }
+
+
+    a{
+      text-decoration: none;
+      color: #f7f7f7;
+    }
+    a:hover{
+      text-decoration: none;
+      color: #f7f7f7;
+    }
+    .return a{
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%,-50%)
+    }
+    .return{
+      position: fixed;
+      top:5vh;
+      left: 2vw;
+      width: 100px;
+      height: 45px;
+
+      text-align: center;
+
+      border-radius: 10.7rem!important;
+      background-color: #534741;
+
+      border:3px solid #736357;
+
+      font-size: 1.2em;
+      color: #c7b299;
+      /* box-shadow: 0 0 3px rgba(39, 166, 137, 0.6); */
+
+      transition: all 0.6s;
+
+      display: inline-block;
+      vertical-align:middle;
+    }
+
+    .return:hover{
+      transform:scale(1.1);
+      cursor:pointer;
+    }
+
+
+    /*.modal-backdrop {*/
+    /*  opacity: 0 !important;*/
+    /*  filter: alpha(opacity=0) !important;*/
+    /*}*/
+
+    #exampleModal{
+      /*overflow: hidden;*/
+
+    }
+
+    .modal-dialog-centered{
+      max-width: 800px;
+      min-width: 300px;
+    }
+
+    .modal-size{
+      max-width: 400px;
+      min-width:150px;
+    }
+
+    .modal-bg{
+      padding: 20px;
+      border-radius: .7rem!important;
+      background-color:rgba(138, 146, 160, 0.6);
+    }
+
+    .modal-header-bg{
+      background-color:rgba(93,75,68,1);
+      border-top-left-radius: .7rem!important;
+      border-top-right-radius: .7rem!important;
+      height: 80px;
+      text-align: center;
+      color: rgba(253, 238, 211, 1);
+    }
+
+    #question-title{
+      width: 100px;
+      text-align: center;
+
+      font-size: 30px;
+
+      position:absolute;
+      left: 50%;
+      transform: translate(-50%,0);
+
+    }
+
+    .question-body{
+      background-color: rgba(255, 255, 255, 1);
+      border-bottom-left-radius: .7rem!important;
+      border-bottom-right-radius: .7rem!important;
+      padding: 20px;
+    }
+
+    #question-content{
+      height: auto;
+      min-height: 200px;
+      padding-bottom: 50px;
+      color: #000000;
+      cursor:pointer;
+    }
+
+    .question-word{
+        font-size: 25px;
+    }
+
+
+    .word-selected{
+      background-color: #ff0000;
+    }
+
+    .modal-footer{
+      border-top: 1px solid rgba(174, 159, 143, 1);
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    .answer-board{
+      position:absolute;
+      left: 50%;
+      transform: translate(-50%,0);
+
+      display: inline-block;
+      vertical-align:middle;
+
+      font-size: 25px;
+
+    }
+    @media (max-width: 400px) {
+      .answer-board{
+        position:absolute;
+        left: 30%;
+        transform: translate(-50%,0);
+
+        display: inline-block;
+        vertical-align:middle;
+
+        font-size: 25px;
+      }
+
+      #submit-div{
+        position: relative;
+        right: -60px;
+      }
+    }
+    #user-answer{
+      width: 60px;
+      /*height: 60px;*/
+      /*font-size: 30px;*/
+      border-bottom: 2px solid #151515;
+
+    }
+
+    input {
+      /*outline: none;*/
+      text-align: center;
+       border:none;
+      outline:medium;
+
+    }
+
+    #submit-div{
+      width:100px;
+      height:50px;
+
+      position: relative;
+      right: -20px;
+    }
+
+    .btn-submit{
+
+      color: #ffffff;
+      background-color: #0054a6;
+      border:3px solid #0072bc;
+
+      width:90px;
+      height:45px;
+      font-size:20px;
+
+      /*position: relative;*/
+      /*right: -20px;*/
+
+      /*bottom:-20px;*/
+
+
+      border-radius:10.7rem!important;
+      text-align: center;
+
+    }
+
+    .quesReturn{
+      position: absolute;
+
+      width: 90px;
+      height: 45px;
+
+      text-align: center;
+
+      border-radius: 10rem!important;
+      background-color:rgba(26,36,43,0.7);
+
+      border:2px solid rgba(253, 238, 211, 1);
+
+      font-size: 20px;
+
+      transition: all 0.6s;
+
+    }
+
+    .quesReturn span{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+
+    .quesReturn:hover{
+      transform:scale(1.1);
+      cursor:pointer;
+    }
+
+    #result-content {
+      font-size: 25px;
+      text-align: center;
+    }
+
+    #confirm{
+      margin: auto;
+    }
+
+
+    .btn-confirm-false{
+      color: #ffffff;
+      background-color: rgba(174, 48, 53, 1);
+      border:3px solid rgba(216, 55, 50, 0.9);
+
+      width:90px;
+      height:45px;
+
+      position: relative;
+      right: 0px;
+
+      /*bottom:-20px;*/
+
+      border-radius:10.7rem!important;
+      text-align: center;
+      font-size:20px;
+    }
+
+    .btn-confirm-true{
+      color: #ffffff;
+      background-color: rgba(23, 94, 49, 1);
+      border:3px solid rgba(33, 137, 59, 0.9);
+
+      width:90px;
+      height:45px;
+
+      position: relative;
+      right: 0px;
+
+      /*bottom:-20px;*/
+
+      border-radius:10.7rem!important;
+      text-align: center;
+      font-size:20px;
+    }
+
+    .col-center-block {
+      float: none;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="return">
+			<a href="start.html"><span>返回</span></a>
+</div>
+
+<div class="container board">
+
+</div>
+
+
+<div class="modal fade bd-example-modal-lg " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop=”static”>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content modal-bg">
+      <div class="modal-header modal-header-bg">
+        <div class="quesReturn">
+              <span >關閉</span>
+        </div>
+        <div id="question-title">
+          <span >題目</span>
+        </div>
+      </div>
+      <div class="question-body">
+        <div class="modal-body">
+          <div id="question-content">
+
+          </div>
+        </div>
+        <div class="modal-footer">
+
+          <div class="answer-board">
+            <span>正字：</span>
+            <input type="text" id="user-answer">
+          </div>
+
+          <div id="submit-div">
+            <img id="tick-img" src="img/tick.png" width="40" height="45">
+            <button type="button" class="btn btn-submit" id="submit">提交</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade justify-content-md-center" id="notificationModal" tabindex="-1" role="dialog" aria-labelledby="notificationModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-size" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div id="result-content">
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-confirm-false" data-dismiss="modal" id="confirm">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script src="data/data.js"></script>
+<script>
+
+  var typeID;
+  var subTypeID;
+  var missionID;
+
+  var mission;  //在全局代表該mission的ID串
+
+  var isAnswered = 0;
+
+  var url = window.location.search;
+  if (url.indexOf("?") != -1 && url.indexOf("&") != -1) {
+      var str = url.split('?')[1];
+      strs = str.split("&");
+      typeID = strs[0].split('=')[1];
+      subTypeID = strs[1].split('=')[1];
+      missionID = strs[2].split('=')[1];
+      mission = typeID + subTypeID + missionID;
+  }
+  else {
+      alert('url error!');
+  }
+
+  var levelData = data['junior'];
+  var quesDict = levelData[typeID]["subTypes"][subTypeID]["mission"][missionID]["questions"];
+
+
+  /* This is for the cookies. */
+  // console.log("test 1", quesDict);
+  for (let i in quesDict){
+    //console.log("i", i);
+    if (Cookies.get(mission +'q'+ i) != null) {
+      //console.log("test 2", Cookies.get(quesDict[i]["id"]));
+      quesDict[i]["result"] = Cookies.get(mission +'q'+ i);
+    }
+  }
+
+  var rowDiv = $('<div class="row sub-board justify-content-md-center" >');
+  $(".board:first").append(rowDiv);
+  for(let i in quesDict){
+      // console.log(quesDict[i]);
+      // if (i==5){
+      //     rowDiv = $('<div class="row sub-board align-self-center" >');
+      //     $(".board").append(rowDiv);
+      // }
+
+      let questionBg = $('<div class="col-center-block question-bg"></div>');
+      rowDiv.append(questionBg);
+
+      let quesBoard = $('<div class="question-board"></div>');
+      questionBg.append(quesBoard);
+
+      let quesSerial = $('<div class="question-serial"><p>'+quesDict[i]["questionName"]+'</p></div>');
+      quesBoard.append(quesSerial);
+
+      let quesContent = $('<div class="question-des"><p >'+quesDict[i]["content"]+'</p></div>');
+      quesBoard.append(quesContent);
+
+      let quesStatus = $('<div id="question'+i+'" class="question-status" data-toggle="modal" data-target="#exampleModal" data-serial='+i+'></div>');
+      //'+ quesDict[i]["done"]==1?"status-done":"status-notDone"+'
+      let quesBtnSpan = $('<span class="button-status"></span>');
+
+      if (quesDict[i]["result"] == 1){
+          quesBtnSpan.text('完成');
+          quesStatus.attr("class", "question-status status-done");
+      }
+      else{
+          quesBtnSpan.text('進入');
+          quesStatus.attr("class", "question-status status-notDone");
+      }
+      quesStatus.append(quesBtnSpan);
+      quesBoard.append(quesStatus);
+
+
+  }
+
+
+  var curQuesIndex = 0;
+  var curQuestion = {};
+
+  var answerErrIndex = -1;
+
+  $('.quesReturn').on('click', 'span', function () {
+      $('#exampleModal').modal('hide');
+  });
+
+
+   $('#question-content').on('click','.question-word', function(){
+      $(this).css('background-color', '#f26d7d');
+      $(this).siblings().css('background-color', '#ffffff');
+
+      answerErrIndex = $(this).attr('name');
+      console.log(answerErrIndex);
+
+  });
+
+  // $('#exampleModal').modal('show');
+
+  // $('#exampleModal').modal({backdrop:'static',keyboard:false});
+
+  $('#exampleModal').on('show.bs.modal', function (event) {
+    // $(".container").hide();
+    // $("#return").hide();
+
+    $("#question-content").html('');
+    $('#submit').show();
+    $("#tick-img").hide();
+    answerErrIndex = -1;
+    isAnswered = 0;
+
+    curQuesIndex = $(event.relatedTarget).data('serial'); // Extract info from data-* attributes
+    curQuestion = quesDict[curQuesIndex];
+
+    $(this).find('#question-title').text(curQuestion["questionName"]);
+
+    for(let i=0; i< curQuestion["content"].length; i++){
+      let span = $("<span class='question-word' name="+i+">"+curQuestion["content"][i]+"</span>");
+      $("#question-content").append(span);
+    }
+
+    if (quesDict[curQuesIndex]["result"]==1 || Cookies.get(mission +'q'+ curQuesIndex)==1){
+        $("#tick-img").show();
+        $('#submit').hide();
+        let word = $('.question-word[name='+quesDict[curQuesIndex]["errIndex"][0]+']').css('background-color', '#f26d7d');
+        word.siblings().css('background-color', '#ffffff');
+        $('#user-answer').val(quesDict[curQuesIndex]["correct"]);
+      // answerErrIndex = $(this).attr('name');
+    }
+
+
+
+  }).on('hidden.bs.modal', function (event) {
+
+    // $(".container").show();
+    // $("#return").show();
+
+    //console.log(quesDict[curQuesIndex]);
+    
+    let user_answer = $('#user-answer').val().trim();
+
+    // console.log(user_answer, answerErrIndex);
+
+    if (isAnswered == 0){
+        return;
+    }
+
+    curQuestion["done"] = 1;
+
+    curQuestion["answerWord"] = user_answer;
+    curQuestion["answerErrIndex"] = answerErrIndex;
+
+    if (curQuestion["answerWord"]== curQuestion["correct"] && curQuestion["errIndex"].indexOf(curQuestion["answerErrIndex"]) > -1  ){
+        curQuestion["result"] = 1;
+    }
+    else{
+        curQuestion["result"] = 0;
+    }
+
+    /* Judge if all finished. */
+    let flag = 1;
+    for (let i in quesDict){
+      if (quesDict[i]["result"] == 0) {
+          flag = 0;
+      }
+    }
+    if(flag==1){
+        Cookies.set(mission, 1);
+    }
+
+    // console.log('用户回答：', curQuestion);
+
+    // curQuesIndex indices the index of the question.
+    if (curQuestion["result"] == 1) {
+      Cookies.set(mission +'q'+ curQuesIndex, 1);
+      //console.log("test 1", Cookies.get(quesDict[curQuesIndex]["id"]))
+    }
+    // else {
+    //   Cookies.set(mission +'q'+ curQuesIndex, 0);
+    // }
+
+    console.log("回答：", curQuestion["result"] == 1? "正确":"错误");
+
+    $('#question-content').find('span').css('background-color', '#ffffff');
+    $('#user-answer').val('');
+    $("#question"+curQuesIndex).removeClass( "status-notDone");
+    $("#question"+curQuesIndex).addClass(curQuestion["result"] == 1? "status-done":"status-false");
+    $("#question"+curQuesIndex).find('span').text(curQuestion["result"] == 1? "完成":"進入")
+  })
+
+  /* modal two to render a box to notify user the result is correct or incorrect */
+  $("#submit").click(function() {
+        isAnswered = 1;
+
+        let user_answer = $('#user-answer').val().trim();
+        curQuestion["answerWord"] = user_answer;
+        curQuestion["answerErrIndex"] = answerErrIndex;
+
+        console.log(user_answer, answerErrIndex);
+
+        if (curQuestion["answerWord"]== curQuestion["correct"] && curQuestion["errIndex"].indexOf(curQuestion["answerErrIndex"]) > -1  ){
+          //console.log("恭喜！你答對了！");
+          var result = document.getElementById("result-content");
+          result.innerHTML = "恭喜！你答對了！";
+          $("#confirm").removeClass("btn-confirm-false");
+          $("#confirm").addClass("btn-confirm-true");
+          //confirm.style["background-color"] = rgba(23, 94, 49, 1);
+          //confirm.attr("background-color") = rgba(23, 94, 49, 1);
+          $('#exampleModal').modal('hide');
+          $('#notificationModal').modal('show');
+        }
+        else{
+          //console.log("你答錯了。請再嘗試。");
+          var result = document.getElementById("result-content");
+          result.innerHTML = "你答錯了。請再嘗試。";
+          $("#confirm").removeClass("btn-confirm-true");
+          $("#confirm").addClass("btn-confirm-false");
+          $('#exampleModal').modal('hide');
+          $('#notificationModal').modal('show');
+          /* empty all user input */
+          /*
+          $("#confirm").click(function() {
+            $('#question-content').find('span').css('background-color', '#ffffff');
+            $('#user-answer').val('');
+          });
+          */
+        }
+
+    });
+
+  $("#confirm").click(function() {
+    /* re show the modal if the result is wrong */
+    if (curQuestion["result"] != 1) {
+      $("#question"+curQuesIndex).click();
+    }
+  })
+</script>
+</body>
+</html>

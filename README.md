@@ -1,2 +1,1 @@
-# ruleGreen.github.io
-this is my personal web page
+# sz128.github.io

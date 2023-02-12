@@ -8,5 +8,5 @@
 
 a, a:link, a:active {
     color: inherit;
-    text-decoration:solid;
+    text-decoration: underline;
 }

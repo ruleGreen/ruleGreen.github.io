@@ -15,3 +15,7 @@ p, li {
     color: #494e52;
     font-family: "Trebuchet MS",Helvetica,sans-serif;
 }
+
+p {
+    margin-bottom:0;
+}

@@ -10,3 +10,8 @@ a, a:link, a:active {
     color: inherit;
     text-decoration: underline;
 }
+
+p, li {
+    color: #494e52;
+    font-family: "Trebuchet MS",Helvetica,sans-serif;
+}

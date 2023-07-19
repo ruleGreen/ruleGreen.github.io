@@ -19,3 +19,7 @@ p, li {
 p {
     margin-bottom:0;
 }
+
+img {
+    display: auto;
+}

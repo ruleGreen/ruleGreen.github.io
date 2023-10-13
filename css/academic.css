@@ -23,3 +23,7 @@ p {
 img {
     display: auto;
 }
+
+body {
+	font-family: "Trebuchet MS",Helvetica,sans-serif;
+}

@@ -1,2571 +1,683 @@
-<!DOCTYPE html><html lang="en-us" >
-
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Source Themes Academic 4.8.0">
-
-  
-
-  
-  
-  
-  
-  
-    
-    
-    
-  
-  
-
-  <meta name="author" content="Su Zhu">
-
-  
-  
-  
-    
-  
-  <meta name="description" content="PhD student in Computer Science and Technology">
-
-  
-  <link rel="alternate" hreflang="en-us" href="https://sz128.github.io/publication/">
-
-  
-
-
-  
-  
-  
-  <meta name="theme-color" content="#2962ff">
-  
-
-  
-  
-  
-  <script src="/js/mathjax-config.js"></script>
-  
-
-  
-  
-  
-  
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
-
-    
-    
-    
-      
-    
-    
-      
-      
-        
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
-        
-      
-    
-
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
-    
-
-    
-
-    
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
+<!DOCTYPE html>
+<html lang="en-us" >
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="generator" content="Source Themes Academic 4.8.0">
+        <meta name="author" content="Su Zhu">
+        <meta name="description" content="PhD student in Computer Science and Technology">
+        <link rel="alternate" hreflang="en-us" href="https://sz128.github.io/publication/">
+        <meta name="theme-color" content="#2962ff">
+        <script src="/js/mathjax-config.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
-      
-    
-      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+        <link rel="stylesheet" href="/css/academic.css">
+        <link rel="alternate" href="/publication/index.xml" type="application/rss+xml" title="Academic">
+        <link rel="manifest" href="/index.webmanifest">
+        <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+        <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+        <link rel="canonical" href="https://sz128.github.io/publication/">
+        <meta property="twitter:card" content="summary">
+        <meta property="og:site_name" content="Academic">
+        <meta property="og:url" content="https://sz128.github.io/publication/">
+        <meta property="og:title" content="Publications | Academic">
+        <meta property="og:description" content="PhD student in Computer Science and Technology">
+        <meta property="og:image" content="https://sz128.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+        <meta property="twitter:image" content="https://sz128.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+        <meta property="og:locale" content="en-us">
+        <meta property="og:updated_time" content="2020-06-07T00:00:00&#43;00:00">
+        <title>Publications | Academic</title>
+    </head>
+    <body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+        <aside class="search-results" id="search">
+            <div class="container">
+                <section class="search-header">
+                    <div class="row no-gutters justify-content-between mb-3">
+                        <div class="col-6">
+                            <h1>Search</h1>
+                        </div>
+                        <div class="col-6 col-search-close">
+                            <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div id="search-box">
+                        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+                            autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+                    </div>
+                </section>
+                <section class="section-search-results">
+                    <div id="search-hits">
+                    </div>
+                </section>
+            </div>
+        </aside>
+        <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+            <div class="container">
+                <div class="d-none d-lg-inline-flex">
+                    <a class="navbar-brand" href="/">Academic</a>
+                </div>
+                <button type="button" class="navbar-toggler" data-toggle="collapse"
+                    data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="fas fa-bars"></i></span>
+                </button>
+                <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+                    <a class="navbar-brand" href="/">Academic</a>
+                </div>
+                <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+                    <ul class="navbar-nav d-md-inline-flex">
+                        <li class="nav-item">
+                          <a class="nav-link " href="https://rulegreen.github.io/publication/" data-target="#contact"><span>Publications</span></a>
+                        </li>
 
-      
-      
+                        <li class="nav-item">
+                          <a class="nav-link " href="/#blog" data-target="#contact"><span>Blog</span></a>
+                        </li>
 
-      
-    
-
-  
-
-  
-  
-  
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
-  
-
-  
-  
-  
-  
-  <link rel="stylesheet" href="/css/academic.css">
-
-  
-
-
-
-
-  
-
-
-  
-  
-
-  
-  <link rel="alternate" href="/publication/index.xml" type="application/rss+xml" title="Academic">
-  
-
-  <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
-
-  <link rel="canonical" href="https://sz128.github.io/publication/">
-
-  
-  
-  
-  
-  
-  
-  
-    
-    
-  
-  
-  <meta property="twitter:card" content="summary">
-  
-  <meta property="og:site_name" content="Academic">
-  <meta property="og:url" content="https://sz128.github.io/publication/">
-  <meta property="og:title" content="Publications | Academic">
-  <meta property="og:description" content="PhD student in Computer Science and Technology"><meta property="og:image" content="https://sz128.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
-  <meta property="twitter:image" content="https://sz128.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
-  
-    <meta property="og:updated_time" content="2020-06-07T00:00:00&#43;00:00">
-  
-
-  
-
-
-
-
-  
-
-
-  
-
-
-
-
-
-  <title>Publications | Academic</title>
-
-</head>
-
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
-
-  <aside class="search-results" id="search">
-  <div class="container">
-    <section class="search-header">
-
-      <div class="row no-gutters justify-content-between mb-3">
-        <div class="col-6">
-          <h1>Search</h1>
+                        <li class="nav-item">
+                          <a class="nav-link " href="/#contact" data-target="#contact"><span>Contact</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+                    <li class="nav-item">
+                        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="nav-item dropdown theme-dropdown">
+                        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+                        <i class="fas fa-palette" aria-hidden="true"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item js-set-theme-light">
+                            <span>Light</span>
+                            </a>
+                            <a href="#" class="dropdown-item js-set-theme-dark">
+                            <span>Dark</span>
+                            </a>
+                            <a href="#" class="dropdown-item js-set-theme-auto">
+                            <span>Automatic</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="universal-wrapper pt-3">
+            <h1>Publications</h1>
         </div>
-        <div class="col-6 col-search-close">
-          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        <div class="universal-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="container-publications">
+
+                        <div class="pub-list-item" style="margin-bottom: 1rem">
+                          <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                          <span class="author_list"><strong>Hongru Wang</strong>, Minda Hu, Yang Deng, Rui Wang, Fei Mi, Weichao Wang, Yasheng Wang, Wai- Chung Kwan, Irwin King, Kam-Fai Wong: </span>
+                          <a href="https://arxiv.org/abs/2310.08840.pdf">Large Language Models as Source Planner for Personalized Knowledge-grounded Dialogue</a>
+                          <img src="https://img.shields.io/badge/PersonalizedDS-blue">
+                          <img src="https://img.shields.io/badge/KnowledgeDS-yellow">
+                          <img src="https://img.shields.io/badge/LLM-orange">
+                          <span><em>Findings of EMNLP 2023</em></span>
+                        </div>
+
+                        <div class="pub-list-item" style="margin-bottom: 1rem">
+                          <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                          <span class="author_list"><strong>Hongru Wang*</strong>, Rui Wang*, Fei Mi, Yang Deng, Zezhong Wang, Bin Liang, Ruifeng Xu, Kam-Fai Wong: </span>
+                          <a href="https://arxiv.org/abs/2305.11792.pdf">Cue-CoT: Chain-of-thought Prompting for Responding to In-depth Dialogue Questions with LLMs</a>
+                          <img src="https://img.shields.io/badge/PersonalizedDS-blue">
+                          <img src="https://img.shields.io/badge/LLM-orange">
+                          <span><em>Findings of EMNLP 2023</em></span>
+                        </div>
+
+                        <div class="pub-list-item" style="margin-bottom: 1rem">
+                          <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                          <span class="author_list"> Zezhong Wang*, Luyao YE*, <strong>Hongru Wang</strong>, Wai-Chung Kwan, David Ho, Kam-Fai Wong: </span>
+                          <a href="https://arxiv.org/abs/2108.11635">Read-Prompt: A Readable Prompting Method for Reliable Knowledge Probing </a>
+                          <img src="https://img.shields.io/badge/Knowledge_Probing-magenta">
+                          <img src="https://img.shields.io/badge/LLM-orange">
+                          <span><em>Findings of EMNLP 2023</em></span>
+                        </div>
+
+                        <div class="pub-list-item" style="margin-bottom: 1rem">
+                          <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                          <span class="author_list"> Boyang XUE*, Weichao Wang*, <strong>Hongru Wang</strong>, Fei Mi, Rui Wang, Yasheng Wang, Lifeng Shang, Xin Jiang, Qun Liu, Kam-Fai Wong: </span>
+                          <a href="https://arxiv.org/abs/2310.08372.pdf"> Improving Factual Consistency for Knowledge-Grounded Dialogue Systems via Knowledge Enhancement and Alignment </a>
+                          <img src="https://img.shields.io/badge/KnowledgeDS-yellow">
+                          <span><em>Findings of EMNLP 2023</em></span>
+                        </div>
+
+                        <div class="pub-list-item" style="margin-bottom: 1rem">
+                          <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                          <span class="author_list"><strong>Hongru Wang</strong>, Zezhong Wang, Wai Chung Kwan, Kam-Fai Wong: </span>
+                          <a href="https://arxiv.org/abs/2108.11635">MCML: A Novel Memory-based Contrastive Meta-Learning Method for Few Shot Slot Tagging</a>
+                          <img src="https://img.shields.io/badge/TOD_NLU-teal">
+                          <span><em>IJCNLP-AACL 2023</em> <strong style="color:red"> oral paper </strong></span>
+                        </div>
+
+                        <div class="pub-list-item" style="margin-bottom: 1rem">
+                          <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                          <span class="author_list">Liang Chen, <strong>Hongru Wang</strong>, Yang Deng, Wai Chung Kwan, Zezhong Wang, Kam-Fai Wong: </span>
+                          <a href="https://aclanthology.org/2023.findings-acl.462/">Towards Robust Personalized Dialogue Generation via Order-Insensitive Representation Regularization</a>
+                          <img src="https://img.shields.io/badge/PersonalizedDS-blue">
+                          <span>Findings, <em>ACL 2023</em></span>
+                        </div>
+
+                        <div class="pub-list-item" style="margin-bottom: 1rem">
+                          <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                          <span class="author_list">Rui Wang, Jianzhu Bao, Fei Mi, Yi Chen, <strong>Hongru Wang</strong>, Yasheng Wang, Yitong Li, Lifeng Shang, Kam-Fai Wong, Ruifeng Xu: </span>
+                          <a href="https://aclanthology.org/2023.acl-long.364/">Retrieval-free Knowledge Injection through Multi-Document Traversal for Dialogue Models</a>
+                          <img src="https://img.shields.io/badge/KnowledgeDS-yellow">
+                          <span><em>ACL 2023</em></span>
+                        </div>
+
+                        <div class="pub-list-item" style="margin-bottom: 1rem">
+                          <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                          <span class="author_list">Zhiming Mao, Jian Li, <strong>Hongru WANG</strong>, Xingshan Zeng, Kam-Fai Wong: </span>
+                          <a href="https://arxiv.org/abs/2210.05196">DIGAT: Modeling News Recommendation with Dual-Graph Interaction</a>
+                          <img src="https://img.shields.io/badge/Other-red">
+                          <span>Findings, <em>EMNLP 2022</em></span>
+                        </div>
+
+                        <div class="pub-list-item" style="margin-bottom: 1rem">
+                          <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                          <span class="author_list">Wai-Chung Kwan*, <strong>Hongru WANG*</strong>, Huimin Wang, Kam-Fai Wong: </span>
+                          <a href="https://arxiv.org/abs/2202.13675.pdf">A Survey on Recent Advances and Challenges in Reinforcement Learning Methods for Task-Oriented Dialogue Policy Learning</a>
+                          <img src="https://img.shields.io/badge/TOD_DPL-teal">
+                          <span>Equal Contribution, <em>Machine Intelligence Research.</em> <strong style="color:red">Invited Paper </strong></span>
+                        </div>
+
+                        <div class="pub-list-item" style="margin-bottom: 1rem">
+                          <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                          <span class="author_list"><strong>Hongru WANG</strong>, Huimin Wang, Zezhong Wang, Kam-Fai Wong: </span>
+                          <a href="https://arxiv.org/abs/2111.01398.pdf">Integrating Pretrained Language Model for Dialogue Policy Learning</a>
+                          <img src="https://img.shields.io/badge/TOD_DPL-teal">
+                          <img src="https://img.shields.io/badge/RLAIF-olive">
+                          <span><em>ICASSP 2022</em></span>
+                        </div>
+
+                        <div class="pub-list-item" style="margin-bottom: 1rem">
+                          <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                          <span class="author_list"><strong>Hongru WANG</strong>, Xiangru Tang, Sunny Lai, Kwong Sak Leung, Jia Zhu, Gabriel, and Kam-Fai WONG: </span>
+                          <a href="https://arxiv.org/abs/2006.09161">CUHK at SemEval-2020 Task 4: CommonSense Explanation, Reasoning and Prediction with Multi-task Learning</a>
+                          <img src="https://img.shields.io/badge/Other-red">
+                          <span><em>SemEval 2020</em></span>
+                        </div>
+
+
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2020">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list"><strong>Su Zhu$^\ddagger$</strong>, Ruisheng Cao$^\ddagger$ and Kai Yu</span>
+                                (2020).
+                                <a href="/publication/2020-dual-learning-for-semi-supervised-natural-language-understanding/">Dual Learning for Semi Supervised Natural Language Understanding</a>.
+                                IEEE/ACM Transactions on Audio, Speech, and Language Processing (TASLP), vol. 28, pp. 1936-1947, 2020.
+                                <p>
+                                    <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://arxiv.org/abs/2004.12299" target="_blank" rel="noopener">
+                                    Preprint
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-0 year-2020">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list">Chen Liu$^\ddagger$, <strong>Su Zhu$^\ddagger$</strong>, Zijian Zhao, Ruisheng Cao, Lu Chen and Kai Yu</span>
+                                (2020).
+                                <a href="/publication/2020-bert-wcn/">Jointly Encoding Word Confusion Network and Dialogue Context with BERT for Spoken Language Understanding</a>.
+                                <a href="https://arxiv.org/abs/2005.11640">Arxiv (Submitted to INTERSPEECH 2020), 2020</a>.
+                                <p>
+                                    <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://arxiv.org/abs/2005.11640" target="_blank" rel="noopener">
+                                    Preprint
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2020">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list">Ruisheng Cao, <strong>Su Zhu</strong>, Chenyu Yang, Chen Liu, Rao Ma, Yanbin Zhao, Lu Chen and Kai Yu</span>
+                                (2020).
+                                <a href="/publication/2020-acl-semantic_parsing/">Unsupervised Dual Paraphrasing for Two-stage Semantic Parsing</a>.
+                                ACL 2020.
+                                <p>
+                                    <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://arxiv.org/abs/2005.13485" target="_blank" rel="noopener">
+                                    PDF
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2020">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list">Lu Chen, Yanbin Zhao, Boer Lv, Lesheng Jin, Zhi Chen, <strong>Su Zhu</strong> and Kai Yu</span>
+                                (2020).
+                                <a href="/publication/2020-acl-chen_lu/">Neural Graph Matching Networks for Chinese Short Text Matching</a>.
+                                ACL 2020.
+                                <p>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2020">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list">Yanbin Zhao, Lu Chen, Zhi Chen, Ruisheng Cao, <strong>Su Zhu</strong> and Kai Yu</span>
+                                (2020).
+                                <a href="/publication/2020-acl-zhao_yanbin/">Line Graph Enhanced AMR-to-Text Generation with Mix-Order Graph Attention Networks</a>.
+                                ACL 2020.
+                                <p>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2020">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list">Jieyu Li, <strong>Su Zhu</strong> and Kai Yu</span>
+                                (2020).
+                                <a href="/publication/2020-icassp-hd_dst/">A Hierarchical Tracker For Multi-domain Dialogue State Tracking</a>.
+                                In 45th IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2020.
+                                <p>
+                                    <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://ieeexplore.ieee.org/document/9053248" target="_blank" rel="noopener">
+                                    PDF
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2020">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list"><strong>Su Zhu</strong>, Jieyu Li, Lu Chen and Kai Yu</span>
+                                (2020).
+                                <a href="/publication/2020-tranformer-dst/">Efficient Context and Schema Fusion Networks for Multi-Domain Dialogue State Tracking</a>.
+                                <a href="https://arxiv.org/abs/2004.03386">Arxiv, 2020</a>.
+                                <p>
+                                    <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://arxiv.org/abs/2004.03386" target="_blank" rel="noopener">
+                                    Preprint
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2020">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list"><strong>Su Zhu</strong>, Zijian Zhao, Rao Ma and Kai Yu</span>
+                                (2020).
+                                <a href="/publication/2020-taslp-label_embeddings/">Prior Knowledge Driven Label Embedding for Slot Filling in Natural Language Understanding</a>.
+                                IEEE/ACM Transactions on Audio, Speech, and Language Processing (TASLP), vol. 28, pp. 1440-1451, 2020.
+                                <p>
+                                    <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://ieeexplore.ieee.org/document/9033997" target="_blank" rel="noopener">
+                                    PDF
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2020">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list">Lu Chen, Boer Lv, Chi Wang, <strong>Su Zhu</strong>, Bowen Tan and Kai Yu</span>
+                                (2020).
+                                <a href="/publication/2020-aaai-chen_lu/">Schema-Guided Multi-Domain Dialogue State Tracking with Graph Attention Neural Networks</a>.
+                                In The Thirty-Fourth AAAI Conference on Artificial Intelligence (AAAI-20), New York, USA, 2020.
+                                <p>
+                                    <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://www.aaai.org/Papers/AAAI/2020GB/AAAI-ChenL.10030.pdf" target="_blank" rel="noopener">
+                                    PDF
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2019">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list">Zijian Zhao$^\ddagger$, <strong>Su Zhu$^\ddagger$</strong> and Kai Yu</span>
+                                (2019).
+                                <a href="/publication/2019-emnlp-atomic_template/">Data Augmentation with Atomic Templates for Spoken Language Understanding</a>.
+                                In 2019 Conference on Empirical Methods in Natural Language Processing and 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP 2019), Hong Kong, China, 2019, 3628–3634.
+                                <p>
+                                    <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://www.aclweb.org/anthology/D19-1375.pdf" target="_blank" rel="noopener">
+                                    PDF
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2019">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list">Hao Li$^\ddagger$, Chen Liu$^\ddagger$, <strong>Su Zhu</strong> and Kai Yu</span>
+                                (2019).
+                                <a href="/publication/2019-icmi-robust_slu/">Robust Spoken Language Understanding with Acoustic and Domain Knowledge</a>.
+                                In 2019 International Conference on Multimodal Interaction (ICMI 2019), Suzhou, China, 2019, 521-525.
+                                <p>
+                                    <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://dl.acm.org/doi/pdf/10.1145/3340555.3356100" target="_blank" rel="noopener">
+                                    PDF
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2019">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list"><strong>Su Zhu</strong>, Zijian Zhao, Tiejun Zhao, Chengqing Zong and Kai Yu</span>
+                                (2019).
+                                <a href="/publication/2019-icmi-catslu/">CATSLU: The 1st Chinese Audio-Textual Spoken Language Understanding Challenge</a>.
+                                In 2019 International Conference on Multimodal Interaction (ICMI 2019), Suzhou, China, 2019, 521-525.
+                                <p>
+                                    <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://dl.acm.org/doi/10.1145/3340555.3356098" target="_blank" rel="noopener">
+                                    PDF
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2019">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list">Ruisheng Cao$^\ddagger$, <strong>Su Zhu$^\ddagger$</strong>, Chen Liu, Jieyu Li and Kai Yu</span>
+                                (2019).
+                                <a href="/publication/2019-acl-dual_semantic_parsing/">Semantic Parsing with Dual Learning</a>.
+                                In 57th Annual Meeting of the Association for Computational Linguistics (ACL), Florence, Italy, 2019, 51-64.
+                                <p>
+                                    <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://www.aclweb.org/anthology/P19-1007.pdf" target="_blank" rel="noopener">
+                                    PDF
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2019">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list">Zijian Zhao, <strong>Su Zhu</strong> and Kai Yu</span>
+                                (2019).
+                                <a href="/publication/2019-icassp-hdslu/">A Hierarchical Decoding Model for Spoken Language Understanding from Unaligned Data</a>.
+                                In 2019 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Brighton, UK, 2019, 7305-7309.
+                                <p>
+                                    <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://ieeexplore.ieee.org/document/8682463" target="_blank" rel="noopener">
+                                    PDF
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2018">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list">Huifeng Zhang, <strong>Su Zhu</strong>, Shuai Fan and Kai Yu</span>
+                                (2018).
+                                <a href="/publication/2018-iscide-joint_slu_lm/">Joint Spoken Language Understanding and Domain Adaptive Language Modeling</a>.
+                                International Conference on Intelligence Science and Big Data Engineering (IScIDE), Lanzhou, China, 2018.
+                                <p>
+                                    <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://link.springer.com/chapter/10.1007/978-3-030-02698-1_27" target="_blank" rel="noopener">
+                                    PDF
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2018">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list"><strong>Su Zhu</strong> and Kai Yu</span>
+                                (2018).
+                                <a href="/publication/2018-sigdial-adaptivelu/">Concept Transfer Learning for Adaptive Language Understanding</a>.
+                                In 19th Annual Meeting of the Special Interest Group on Discourse and Dialogue, Melbourne, Australia, 2018, 391-399.
+                                <p>
+                                    <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://www.aclweb.org/anthology/W18-5047.pdf" target="_blank" rel="noopener">
+                                    PDF
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2018">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list">Ouyu Lan, <strong>Su Zhu</strong> and Kai Yu</span>
+                                (2018).
+                                <a href="/publication/2018-icassp-semi_supervised_slu/">Semi-Supervised Training Using Adversarial Multi-Task Learning for Spoken Language Understanding</a>.
+                                In 2018 IEEE International Conference on Acoustics Speech and Signal Processing(ICASSP), Calgary, Canada, 2018, 6049-6053.
+                                <p>
+                                    <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://ieeexplore.ieee.org/document/8462669" target="_blank" rel="noopener">
+                                    PDF
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2018">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list"><strong>Su Zhu</strong>, Ouyu Lan and Kai Yu</span>
+                                (2018).
+                                <a href="/publication/2018-icassp-asr_error_adaptation/">Robust Spoken Language Understanding with Unsupervised ASR-error Adaptation</a>.
+                                In 2018 IEEE International Conference on Acoustics Speech and Signal Processing(ICASSP), Calgary, Canada, 2018, 6179-6183.
+                                <p>
+                                    <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://ieeexplore.ieee.org/document/8461831" target="_blank" rel="noopener">
+                                    PDF
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2017">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list"><strong>Su Zhu</strong> and Kai Yu</span>
+                                (2017).
+                                <a href="/publication/2017-icassp-focus/">Encoder-decoder with Focus-mechanism for Sequence Labelling Based Spoken Language Understanding</a>.
+                                In 2017 IEEE International Conference on Acoustics, Speech and Signal Processing(ICASSP), New Orleans, USA, 2017.
+                                <p>
+                                    <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://ieeexplore.ieee.org/document/7953243" target="_blank" rel="noopener">
+                                    PDF
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2016">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list">Xueyang Wu, <strong>Su Zhu</strong>, Yue Wu and Kai Yu</span>
+                                (2016).
+                                <a href="/publication/2016-iscslp-wu_xueyang/">Rich Punctuations Prediction Using Large-scale Deep Learning</a>.
+                                International Symposium on Chinese Spoken Language Processing(ISCSLP), Tianjin, China, 2016.
+                                <p>
+                                    <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://ieeexplore.ieee.org/document/7918418/" target="_blank" rel="noopener">
+                                    PDF
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2016">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list">Kai Sun, <strong>Su Zhu</strong>, Lu Chen, Siqiu Yao, Xueyang Wu, Kai Yu</span>
+                                (2016).
+                                <a href="/publication/2016-is-dstc4/">Hybrid Dialogue State Tracking for Real World Human-to-Human Dialogues</a>.
+                                17th Annual Conference of the International Speech Communication Association (InterSpeech), San Francisco, America, 2016.
+                                <p>
+                                    <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://www.isca-speech.org/archive/Interspeech_2016/pdfs/0949.PDF" target="_blank" rel="noopener">
+                                    PDF
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2015">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list">Kai Yu, Lu Chen, Kai Sun, Qizhe Xie and <strong>Su Zhu</strong></span>
+                                (2015).
+                                <a href="/publication/2016-fcs-yu_kai/">Evolvable dialogue state tracking for statistical dialogue management</a>.
+                                Frontiers of Computer Science, vol. 10, no. 2, 201-215, 2016.
+                                <p>
+                                    <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://link.springer.com/article/10.1007/s11704-015-5209-4" target="_blank" rel="noopener">
+                                    PDF
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2015">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list">Qizhe Xie, Kai Sun, <strong>Su Zhu</strong>, Lu Chen and Kai Yu</span>
+                                (2015).
+                                <a href="/publication/2015-sigdial-xie_qizhe/">Recurrent Polynomial Network for Dialogue State Tracking with Mismatched Semantic Parsers</a>.
+                                The 16th Annual SIGdial Meeting on Discourse and Dialogue (SIGDIAL), Prague, Czech Republic, 2015: 295&ndash;304.
+                                <p>
+                                    <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://www.aclweb.org/anthology/W15-4641.pdf" target="_blank" rel="noopener">
+                                    PDF
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2015">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list">Kai Yu, Kai Sun, Lu Chen and <strong>Su Zhu</strong></span>
+                                (2015).
+                                <a href="/publication/2015-taslp-yu_kai/">Constrained Markov Bayesian Polynomial for Efficient Dialogue State Tracking</a>.
+                                IEEE/ACM Transactions on Audio, Speech and Language Processing, vol. 23, no. 12, 2177-2188, 2015.
+                                <p>
+                                    <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://ieeexplore.ieee.org/document/7214235" target="_blank" rel="noopener">
+                                    PDF
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2015">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list">Kai Sun, Lu Chen, <strong>Su Zhu</strong> and Kai Yu</span>
+                                (2015).
+                                <a href="/publication/2014-sigdial-sun_kai/">The SJTU System for Dialog State Tracking Challenge 2</a>.
+                                The 15th Annual SIGdial Meeting on Discourse and Dialogue (SIGDIAL), Pennsylvania, USA, 2014: 318-326.
+                                <p>
+                                    <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://www.aclweb.org/anthology/W14-4343.pdf" target="_blank" rel="noopener">
+                                    PDF
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2014">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list"><strong>Su Zhu</strong>, Lu Chen, Kai Sun, Da Zheng and Kai Yu</span>
+                                (2014).
+                                <a href="/publication/2014-slt-dstc3_slu/">Semantic parser enhancement for dialogue domain extensions with little data</a>.
+                                In Proc. IEEE Spoken Language Technology Workshop (SLT), South Lake Tahoe, USA, 2014.
+                                <p>
+                                    <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://ieeexplore.ieee.org/document/7078597" target="_blank" rel="noopener">
+                                    PDF
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2014">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list">Kai Sun, Lu Chen, <strong>Su Zhu</strong> and Kai Yu</span>
+                                (2014).
+                                <a href="/publication/2014-slt-sun_kai/">A Generalized Rule Based Tracker for Dialogue State Tracking</a>.
+                                IEEE Spoken Language Technology Workshop (SLT), South Lake Tahoe, USA, 2014: 330-335.
+                                <p>
+                                    <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://ieeexplore.ieee.org/document/7078596" target="_blank" rel="noopener">
+                                    PDF
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2014">
+                            <div class="pub-list-item" style="margin-bottom: 1rem">
+                                <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                                <span class="author_list">Kai Yu, Lu Chen, Bo Chen, Kai Sun and <strong>Su Zhu</strong></span>
+                                (2014).
+                                <a href="/publication/2014-cjc-yu_kai/">Cognitive Technology in Task-oriented Dialogue Systems – Concepts, Advances and Future</a>.
+                                Chinese Journal of Computers, 2014, 37. (In Chinese).
+                                <p>
+                                    <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="http://cjc.ict.ac.cn/online/cre/yk-2015112465445-20151210162142.pdf" target="_blank" rel="noopener">
+                                    PDF
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div id="search-box">
-        
-        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
-        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
-        
-      </div>
-
-    </section>
-    <section class="section-search-results">
-
-      <div id="search-hits">
-        
-      </div>
-
-    </section>
-  </div>
-</aside>
-
-
-  
-
-
-
-
-
-
-
-<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
-  <div class="container">
-
-    
-    <div class="d-none d-lg-inline-flex">
-      <a class="navbar-brand" href="/">Academic</a>
-    </div>
-    
-
-    
-    <button type="button" class="navbar-toggler" data-toggle="collapse"
-            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-    <span><i class="fas fa-bars"></i></span>
-    </button>
-    
-
-    
-    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
-      <a class="navbar-brand" href="/">Academic</a>
-    </div>
-    
-
-    
-    
-    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
-
-      
-      <ul class="navbar-nav d-md-inline-flex">
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-          
-          
-          
-            
-          
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/#about"><span>Home</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/post"><span>Posts</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link  active" href="/publication"><span>Publications</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-          
-          
-          
-            
-          
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/#contact"><span>Contact</span></a>
-        </li>
-
-        
-        
-
-      
-
-        
-      </ul>
-    </div>
-
-    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
-      
-      <li class="nav-item">
-        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
-      </li>
-      
-
-      
-      <li class="nav-item dropdown theme-dropdown">
-        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
-          <i class="fas fa-palette" aria-hidden="true"></i>
-        </a>
-        <div class="dropdown-menu">
-          <a href="#" class="dropdown-item js-set-theme-light">
-            <span>Light</span>
-          </a>
-          <a href="#" class="dropdown-item js-set-theme-dark">
-            <span>Dark</span>
-          </a>
-          <a href="#" class="dropdown-item js-set-theme-auto">
-            <span>Automatic</span>
-          </a>
-        </div>
-      </li>
-      
-
-      
-
-    </ul>
-
-  </div>
-</nav>
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-<div class="universal-wrapper pt-3">
-  <h1>Publications</h1>
-
-  
-
-  
-</div>
-
-
-
-<div class="universal-wrapper">
-  <div class="row">
-    <div class="col-lg-12">
-
-      
-
-      
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-
-      <div class="form-row mb-4">
-        <div class="col-auto">
-          <input type="search" class="filter-search" placeholder="Search..." autocapitalize="off"
-          autocomplete="off" autocorrect="off" role="textbox" spellcheck="false">
-        </div>
-        <div class="col-auto">
-          <select class="pub-filters pubtype-select form-control form-control-sm" data-filter-group="pubtype">
-            <option value="*">Type</option>
-            
-            
-            <option value=".pubtype-1">
-              Conference paper
-            </option>
-            
-            <option value=".pubtype-2">
-              Journal article
-            </option>
-            
-            <option value=".pubtype-8">
-              Patent
-            </option>
-            
-          </select>
-        </div>
-        <div class="col-auto">
-          <select class="pub-filters form-control form-control-sm" data-filter-group="year">
-            <option value="*">Date</option>
-            
-            
-            
-            <option value=".year-2020">
-              2020
-            </option>
-            
-            <option value=".year-2019">
-              2019
-            </option>
-            
-            <option value=".year-2018">
-              2018
-            </option>
-            
-            <option value=".year-2017">
-              2017
-            </option>
-            
-            <option value=".year-2016">
-              2016
-            </option>
-            
-            <option value=".year-2015">
-              2015
-            </option>
-            
-            <option value=".year-2014">
-              2014
-            </option>
-            
-            
-          </select>
-        </div>
-      </div>
-
-      <div id="container-publications">
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2020">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list"><strong>Su Zhu$^\ddagger$</strong>, Ruisheng Cao$^\ddagger$ and Kai Yu</span>
-  (2020).
-  <a href="/publication/2020-dual-learning-for-semi-supervised-natural-language-understanding/">Dual Learning for Semi Supervised Natural Language Understanding</a>.
-  IEEE/ACM Transactions on Audio, Speech, and Language Processing (TASLP), vol. 28, pp. 1936-1947, 2020.
-  
-  <p>
-
-
-
-
-
-  
-  
-    
-  
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://arxiv.org/abs/2004.12299" target="_blank" rel="noopener">
-  Preprint
-</a>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-0 year-2020">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list">Chen Liu$^\ddagger$, <strong>Su Zhu$^\ddagger$</strong>, Zijian Zhao, Ruisheng Cao, Lu Chen and Kai Yu</span>
-  (2020).
-  <a href="/publication/2020-bert-wcn/">Jointly Encoding Word Confusion Network and Dialogue Context with BERT for Spoken Language Understanding</a>.
-  <a href="https://arxiv.org/abs/2005.11640">Arxiv (Submitted to INTERSPEECH 2020), 2020</a>.
-  
-  <p>
-
-
-
-
-
-  
-  
-    
-  
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://arxiv.org/abs/2005.11640" target="_blank" rel="noopener">
-  Preprint
-</a>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2020">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list">Ruisheng Cao, <strong>Su Zhu</strong>, Chenyu Yang, Chen Liu, Rao Ma, Yanbin Zhao, Lu Chen and Kai Yu</span>
-  (2020).
-  <a href="/publication/2020-acl-semantic_parsing/">Unsupervised Dual Paraphrasing for Two-stage Semantic Parsing</a>.
-  ACL 2020.
-  
-  <p>
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://arxiv.org/abs/2005.13485" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2020">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list">Lu Chen, Yanbin Zhao, Boer Lv, Lesheng Jin, Zhi Chen, <strong>Su Zhu</strong> and Kai Yu</span>
-  (2020).
-  <a href="/publication/2020-acl-chen_lu/">Neural Graph Matching Networks for Chinese Short Text Matching</a>.
-  ACL 2020.
-  
-  <p>
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2020">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list">Yanbin Zhao, Lu Chen, Zhi Chen, Ruisheng Cao, <strong>Su Zhu</strong> and Kai Yu</span>
-  (2020).
-  <a href="/publication/2020-acl-zhao_yanbin/">Line Graph Enhanced AMR-to-Text Generation with Mix-Order Graph Attention Networks</a>.
-  ACL 2020.
-  
-  <p>
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2020">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list">Jieyu Li, <strong>Su Zhu</strong> and Kai Yu</span>
-  (2020).
-  <a href="/publication/2020-icassp-hd_dst/">A Hierarchical Tracker For Multi-domain Dialogue State Tracking</a>.
-  In 45th IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2020.
-  
-  <p>
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://ieeexplore.ieee.org/document/9053248" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2020">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list"><strong>Su Zhu</strong>, Jieyu Li, Lu Chen and Kai Yu</span>
-  (2020).
-  <a href="/publication/2020-tranformer-dst/">Efficient Context and Schema Fusion Networks for Multi-Domain Dialogue State Tracking</a>.
-  <a href="https://arxiv.org/abs/2004.03386">Arxiv, 2020</a>.
-  
-  <p>
-
-
-
-
-
-  
-  
-    
-  
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://arxiv.org/abs/2004.03386" target="_blank" rel="noopener">
-  Preprint
-</a>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2020">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list"><strong>Su Zhu</strong>, Zijian Zhao, Rao Ma and Kai Yu</span>
-  (2020).
-  <a href="/publication/2020-taslp-label_embeddings/">Prior Knowledge Driven Label Embedding for Slot Filling in Natural Language Understanding</a>.
-  IEEE/ACM Transactions on Audio, Speech, and Language Processing (TASLP), vol. 28, pp. 1440-1451, 2020.
-  
-  <p>
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://ieeexplore.ieee.org/document/9033997" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2020">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list">Lu Chen, Boer Lv, Chi Wang, <strong>Su Zhu</strong>, Bowen Tan and Kai Yu</span>
-  (2020).
-  <a href="/publication/2020-aaai-chen_lu/">Schema-Guided Multi-Domain Dialogue State Tracking with Graph Attention Neural Networks</a>.
-  In The Thirty-Fourth AAAI Conference on Artificial Intelligence (AAAI-20), New York, USA, 2020.
-  
-  <p>
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://www.aaai.org/Papers/AAAI/2020GB/AAAI-ChenL.10030.pdf" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2019">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list">Zijian Zhao$^\ddagger$, <strong>Su Zhu$^\ddagger$</strong> and Kai Yu</span>
-  (2019).
-  <a href="/publication/2019-emnlp-atomic_template/">Data Augmentation with Atomic Templates for Spoken Language Understanding</a>.
-  In 2019 Conference on Empirical Methods in Natural Language Processing and 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP 2019), Hong Kong, China, 2019, 3628–3634.
-  
-  <p>
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://www.aclweb.org/anthology/D19-1375.pdf" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2019">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list">Hao Li$^\ddagger$, Chen Liu$^\ddagger$, <strong>Su Zhu</strong> and Kai Yu</span>
-  (2019).
-  <a href="/publication/2019-icmi-robust_slu/">Robust Spoken Language Understanding with Acoustic and Domain Knowledge</a>.
-  In 2019 International Conference on Multimodal Interaction (ICMI 2019), Suzhou, China, 2019, 521-525.
-  
-  <p>
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://dl.acm.org/doi/pdf/10.1145/3340555.3356100" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2019">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list"><strong>Su Zhu</strong>, Zijian Zhao, Tiejun Zhao, Chengqing Zong and Kai Yu</span>
-  (2019).
-  <a href="/publication/2019-icmi-catslu/">CATSLU: The 1st Chinese Audio-Textual Spoken Language Understanding Challenge</a>.
-  In 2019 International Conference on Multimodal Interaction (ICMI 2019), Suzhou, China, 2019, 521-525.
-  
-  <p>
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://dl.acm.org/doi/10.1145/3340555.3356098" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2019">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list">Ruisheng Cao$^\ddagger$, <strong>Su Zhu$^\ddagger$</strong>, Chen Liu, Jieyu Li and Kai Yu</span>
-  (2019).
-  <a href="/publication/2019-acl-dual_semantic_parsing/">Semantic Parsing with Dual Learning</a>.
-  In 57th Annual Meeting of the Association for Computational Linguistics (ACL), Florence, Italy, 2019, 51-64.
-  
-  <p>
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://www.aclweb.org/anthology/P19-1007.pdf" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2019">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list">Zijian Zhao, <strong>Su Zhu</strong> and Kai Yu</span>
-  (2019).
-  <a href="/publication/2019-icassp-hdslu/">A Hierarchical Decoding Model for Spoken Language Understanding from Unaligned Data</a>.
-  In 2019 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Brighton, UK, 2019, 7305-7309.
-  
-  <p>
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://ieeexplore.ieee.org/document/8682463" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2018">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list">Huifeng Zhang, <strong>Su Zhu</strong>, Shuai Fan and Kai Yu</span>
-  (2018).
-  <a href="/publication/2018-iscide-joint_slu_lm/">Joint Spoken Language Understanding and Domain Adaptive Language Modeling</a>.
-  International Conference on Intelligence Science and Big Data Engineering (IScIDE), Lanzhou, China, 2018.
-  
-  <p>
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://link.springer.com/chapter/10.1007/978-3-030-02698-1_27" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2018">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list"><strong>Su Zhu</strong> and Kai Yu</span>
-  (2018).
-  <a href="/publication/2018-sigdial-adaptivelu/">Concept Transfer Learning for Adaptive Language Understanding</a>.
-  In 19th Annual Meeting of the Special Interest Group on Discourse and Dialogue, Melbourne, Australia, 2018, 391-399.
-  
-  <p>
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://www.aclweb.org/anthology/W18-5047.pdf" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2018">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list">Ouyu Lan, <strong>Su Zhu</strong> and Kai Yu</span>
-  (2018).
-  <a href="/publication/2018-icassp-semi_supervised_slu/">Semi-Supervised Training Using Adversarial Multi-Task Learning for Spoken Language Understanding</a>.
-  In 2018 IEEE International Conference on Acoustics Speech and Signal Processing(ICASSP), Calgary, Canada, 2018, 6049-6053.
-  
-  <p>
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://ieeexplore.ieee.org/document/8462669" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2018">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list"><strong>Su Zhu</strong>, Ouyu Lan and Kai Yu</span>
-  (2018).
-  <a href="/publication/2018-icassp-asr_error_adaptation/">Robust Spoken Language Understanding with Unsupervised ASR-error Adaptation</a>.
-  In 2018 IEEE International Conference on Acoustics Speech and Signal Processing(ICASSP), Calgary, Canada, 2018, 6179-6183.
-  
-  <p>
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://ieeexplore.ieee.org/document/8461831" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2017">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list"><strong>Su Zhu</strong> and Kai Yu</span>
-  (2017).
-  <a href="/publication/2017-icassp-focus/">Encoder-decoder with Focus-mechanism for Sequence Labelling Based Spoken Language Understanding</a>.
-  In 2017 IEEE International Conference on Acoustics, Speech and Signal Processing(ICASSP), New Orleans, USA, 2017.
-  
-  <p>
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://ieeexplore.ieee.org/document/7953243" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2016">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list">Xueyang Wu, <strong>Su Zhu</strong>, Yue Wu and Kai Yu</span>
-  (2016).
-  <a href="/publication/2016-iscslp-wu_xueyang/">Rich Punctuations Prediction Using Large-scale Deep Learning</a>.
-  International Symposium on Chinese Spoken Language Processing(ISCSLP), Tianjin, China, 2016.
-  
-  <p>
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://ieeexplore.ieee.org/document/7918418/" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2016">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list">Kai Sun, <strong>Su Zhu</strong>, Lu Chen, Siqiu Yao, Xueyang Wu, Kai Yu</span>
-  (2016).
-  <a href="/publication/2016-is-dstc4/">Hybrid Dialogue State Tracking for Real World Human-to-Human Dialogues</a>.
-  17th Annual Conference of the International Speech Communication Association (InterSpeech), San Francisco, America, 2016.
-  
-  <p>
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://www.isca-speech.org/archive/Interspeech_2016/pdfs/0949.PDF" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2015">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list">Kai Yu, Lu Chen, Kai Sun, Qizhe Xie and <strong>Su Zhu</strong></span>
-  (2015).
-  <a href="/publication/2016-fcs-yu_kai/">Evolvable dialogue state tracking for statistical dialogue management</a>.
-  Frontiers of Computer Science, vol. 10, no. 2, 201-215, 2016.
-  
-  <p>
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://link.springer.com/article/10.1007/s11704-015-5209-4" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2015">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list">Qizhe Xie, Kai Sun, <strong>Su Zhu</strong>, Lu Chen and Kai Yu</span>
-  (2015).
-  <a href="/publication/2015-sigdial-xie_qizhe/">Recurrent Polynomial Network for Dialogue State Tracking with Mismatched Semantic Parsers</a>.
-  The 16th Annual SIGdial Meeting on Discourse and Dialogue (SIGDIAL), Prague, Czech Republic, 2015: 295&ndash;304.
-  
-  <p>
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://www.aclweb.org/anthology/W15-4641.pdf" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2015">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list">Kai Yu, Kai Sun, Lu Chen and <strong>Su Zhu</strong></span>
-  (2015).
-  <a href="/publication/2015-taslp-yu_kai/">Constrained Markov Bayesian Polynomial for Efficient Dialogue State Tracking</a>.
-  IEEE/ACM Transactions on Audio, Speech and Language Processing, vol. 23, no. 12, 2177-2188, 2015.
-  
-  <p>
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://ieeexplore.ieee.org/document/7214235" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2015">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list">Kai Sun, Lu Chen, <strong>Su Zhu</strong> and Kai Yu</span>
-  (2015).
-  <a href="/publication/2014-sigdial-sun_kai/">The SJTU System for Dialog State Tracking Challenge 2</a>.
-  The 15th Annual SIGdial Meeting on Discourse and Dialogue (SIGDIAL), Pennsylvania, USA, 2014: 318-326.
-  
-  <p>
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://www.aclweb.org/anthology/W14-4343.pdf" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2014">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list"><strong>Su Zhu</strong>, Lu Chen, Kai Sun, Da Zheng and Kai Yu</span>
-  (2014).
-  <a href="/publication/2014-slt-dstc3_slu/">Semantic parser enhancement for dialogue domain extensions with little data</a>.
-  In Proc. IEEE Spoken Language Technology Workshop (SLT), South Lake Tahoe, USA, 2014.
-  
-  <p>
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://ieeexplore.ieee.org/document/7078597" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-1 year-2014">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list">Kai Sun, Lu Chen, <strong>Su Zhu</strong> and Kai Yu</span>
-  (2014).
-  <a href="/publication/2014-slt-sun_kai/">A Generalized Rule Based Tracker for Dialogue State Tracking</a>.
-  IEEE Spoken Language Technology Workshop (SLT), South Lake Tahoe, USA, 2014: 330-335.
-  
-  <p>
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://ieeexplore.ieee.org/document/7078596" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2014">
-          
-            <div class="pub-list-item" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="author_list">Kai Yu, Lu Chen, Bo Chen, Kai Sun and <strong>Su Zhu</strong></span>
-  (2014).
-  <a href="/publication/2014-cjc-yu_kai/">Cognitive Technology in Task-oriented Dialogue Systems – Concepts, Advances and Future</a>.
-  Chinese Journal of Computers, 2014, 37. (In Chinese).
-  
-  <p>
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="http://cjc.ict.ac.cn/online/cre/yk-2015112465445-20151210162142.pdf" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-
-  
-  
-</div>
-
-          
-        </div>
-
-        
-      </div>
-
-    </div>
-  </div>
-</div>
-
-      
-
-    
-    
-    
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
-
-      
-
-      
-        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
-        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
-        
-      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+        <script>const code_highlighting = true;</script>
+        <script>const isSiteThemeDark = false;</script>
+        <script>
+            const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+            const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+            const content_type = {
+              'post': "Posts",
+              'project': "Projects",
+              'publication' : "Publications",
+              'talk' : "Talks"
+              };
+        </script>
+        <script id="search-hit-fuse-template" type="text/x-template">
+            <div class="search-hit" id="summary-{{key}}">
+            <div class="search-hit-content">
+              <div class="search-hit-name">
+                <a href="{{relpermalink}}">{{title}}</a>
+                <div class="article-metadata search-hit-type">{{type}}</div>
+                <p class="search-hit-description">{{snippet}}</p>
+              </div>
+            </div>
+            </div>
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+        <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
 
-    
 
-    
-    
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
-    
-
-    
-    
-    <script>const code_highlighting = true;</script>
-    
-
-    
-    
-    <script>const isSiteThemeDark = false;</script>
-    
-
-    
-    
-    
-    
-    
-    
-    <script>
-      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
-      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
-      const content_type = {
-        'post': "Posts",
-        'project': "Projects",
-        'publication' : "Publications",
-        'talk' : "Talks"
-        };
-    </script>
-    
-
-    
-    
-
-    
-    
-    <script id="search-hit-fuse-template" type="text/x-template">
-      <div class="search-hit" id="summary-{{key}}">
-      <div class="search-hit-content">
-        <div class="search-hit-name">
-          <a href="{{relpermalink}}">{{title}}</a>
-          <div class="article-metadata search-hit-type">{{type}}</div>
-          <p class="search-hit-description">{{snippet}}</p>
+        <div class="container">
+            <footer class="site-footer">
+                <p class="powered-by">
+                    Powered by the
+                    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+                    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+                    <span class="float-right" aria-hidden="true">
+                    <a href="#" class="back-to-top">
+                    <span class="button_icon">
+                    <i class="fas fa-chevron-up fa-2x"></i>
+                    </span>
+                    </a>
+                    </span>
+                </p>
+            </footer>
         </div>
-      </div>
-      </div>
-    </script>
-    
-
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-      
-    
-    
-    
-    
-    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
-
-    
-
-
-
-
-
-
-  
-  
-  <div class="container">
-    <footer class="site-footer">
-  
-
-  <p class="powered-by">
-    
-
-    Powered by the
-    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
-    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
-
-    
-    <span class="float-right" aria-hidden="true">
-      <a href="#" class="back-to-top">
-        <span class="button_icon">
-          <i class="fas fa-chevron-up fa-2x"></i>
-        </span>
-      </a>
-    </span>
-    
-  </p>
-</footer>
-
-  </div>
-  
-
-  
-<div id="modal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Cite</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <pre><code class="tex hljs"></code></pre>
-      </div>
-      <div class="modal-footer">
-        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
-          <i class="fas fa-copy"></i> Copy
-        </a>
-        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
-          <i class="fas fa-download"></i> Download
-        </a>
-        <div id="modal-error"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-</body>
+        <div id="modal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Cite</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <pre><code class="tex hljs"></code></pre>
+                    </div>
+                    <div class="modal-footer">
+                        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+                        <i class="fas fa-copy"></i> Copy
+                        </a>
+                        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+                        <i class="fas fa-download"></i> Download
+                        </a>
+                        <div id="modal-error"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

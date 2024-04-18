@@ -6,7 +6,7 @@
         content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SIGIR 2024 Tutorial: Retrieval-based LMs and Applications</title>
+  <title>SIGIR 2024 Tutorial: Tools Meet LLMs</title>
 
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
@@ -46,26 +46,28 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-2 publication-title">
-              <span style="font-size: 80%">SIGIR 2024 Tutorial:</span><br />
-              Empowering Large Language Models: Tool Learning for Real-World Interaction
-            </h1>
+            <span style="font-size: 80%">SIGIR 2024 Tutorial:</span><br />
+            Empowering Large Language Models: Tool Learning for Real-World Interaction
+          </h1>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <table>
-            <tr>
-                <!-- <th scope="row">TR-7</th> -->
-                <td width="25%" style="text-align: center; padding: 3px"><img width="150px" height="150px" src="static/imgs/profile_hongru.png"></td>
-                <td width="25%" style="text-align: center; padding: 3px"><img width="150px" height="150px" src="static/imgs/profile_sewon.jpeg"></td>
-                <td width="25%" style="text-align: center; padding: 3px"><img width="150px" height="150px" src="static/imgs/profile_zexuan.png"></td>
-                <td width="25%" style="text-align: center; padding: 3px"><img width="150px" height="150px" src="static/imgs/profile_danqi.png"></td>
-            </tr>
+              <tr>
+                  <!-- <th scope="row">TR-7</th> -->
+                  <td width="20%" style="text-align: center; padding: 3px"><img width="150px" height="120px" src="static/imgs/profile_hongru.png"></td>
+                  <td width="20%" style="text-align: center; padding: 3px"><img width="150px" height="120px" src="static/imgs/profile_hongru.png"></td>
+                  <td width="20%" style="text-align: center; padding: 3px"><img width="150px" height="120px" src="static/imgs/profile_hongru.png"></td>
+                  <td width="20%" style="text-align: center; padding: 3px"><img width="150px" height="120px" src="static/imgs/profile_hongru.png"></td>
+                   <td width="20%" style="text-align: center; padding: 3px"><img width="150px" height="120px" src="static/imgs/profile_kfwong.png"></td>
+              </tr>
               <tr>
                 <!-- <th scope="row">TR-7</th> -->
-                <td width="25%" style="text-align: center"><a href="https://akariasai.github.io/" style="border-radius: 50%">Hongru Wang</a><sup>1</sup>,</td>
-                <td width="25%" style="text-align: center"><a href="https://shmsw25.github.io/" style="border-radius: 50%">Yujia Qin</a><sup>1</sup>,</td>
-                <td width="25%" style="text-align: center"><a href="https://www.cs.princeton.edu/~zzhong/" style="border-radius: 50%">Zexuan Zhong</a><sup>2</sup>,</td>
-                <td width="25%" style="text-align: center"><a href="https://www.cs.princeton.edu/~danqic/" style="border-radius: 50%">Danqi Chen</a><sup>2</sup></td>
+                <td width="20%" style="text-align: center"><a href="https://rulegreen.github.io/" style="border-radius: 50%">Hongru Wang</a><sup>1</sup>,</td>
+                <td width="20%" style="text-align: center"><a href="https://yujia-qin.github.io/" style="border-radius: 50%">Yujia Qin</a><sup>2</sup>,</td>
+                <td width="20%" style="text-align: center"><a href="https://linyankai.github.io/" style="border-radius: 50%">Yankai Lin</a><sup>3</sup>,</td>
+                <td width="20%" style="text-align: center"><a href="https://knowledge-representation.org/j.z.pan/" style="border-radius: 50%">Jeff Z. Pan</a><sup>4</sup></td>
+                <td width="20%" style="text-align: center"><a href="https://kfwong.cintec.cuhk.edu.hk/" style="border-radius: 50%">Kam-Fai Wong</a><sup>1</sup></td>
               </tr>
             </table>
               <!-- <a href="https://akariasai.github.io/">Akari Asai</a><sup>1</sup>,</span>
@@ -81,6 +83,8 @@
           <div class="is-size-6 publication-authors">
             <span class="author-block"><sup>1</sup>The Chinese University of Hong Kong,</span>
             <span class="author-block"><sup>2</sup>Tsinghua University</span>
+            <span class="author-block"><sup>3</sup>Renmin University of China</span>
+            <span class="author-block"><sup>4</sup>The University of Edinburgh</span>
           </div>
           <br />
 
@@ -118,35 +122,17 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">About this tutorial</h2>
         <div class="content has-text-justified">
-          <!--<p>
-            Language models (LMs) such as GPT-3 (Brown et al., 2020) and PaLM (Chowdhery et al., 2022) have shown impressive abilities in a range of natural language processing (NLP) tasks. 
-            However, relying solely on their parameters to encode a wealth of world knowledge requires a prohibitively large number of parameters and hence massive computing, and they often struggle to learn long-rail knowledge (Roberts et al., 2020; Kandpal et al., 2022; Mallen et al., 2022). 
-            Moreover, these parametric LMs are fundamentally incapable of adapting over time (De Cao et al., 2021; Lazaridou et al., 2021; Kasai et al., 2022), often hallucinate (Shuster et al., 2021), and may leak private data from the
-            training corpus (Carlini et al., 2021). To overcome these limitations, there has been growing interest in retrieval-based LMs (Guu et al., 2020; Khandelwal et al., 2020; Borgeaud et al., 2022; Zhong et al., 2022; Izacard et al., 2022b; Min et al., 2022),
-            which incorporate a non-parametric datastore (e.g., text chunks from an external corpus) with their parametric counterparts. Retrieval-based LMs can outperform LMs without retrieval by a large margin with much fewer parameters (Mallen et al., 2022), can update their knowledge by replacing their retrieval corpora (Izacard et al., 2022b), and provide citations for users to easily verify and evaluate the predictions (Menick et al., 2022; Bohnet et al., 2022).
+          <p>
+            Since the advent of large language models (LLMs), the field of tool learning has remained very active in solving various tasks in practice, including but not limited to information retrieval. This half-day tutorial provides basic concepts of this field and an overview of recent advancements with several applications. In specific, we start with some foundational components and architecture of tool learning (i.e., cognitive tool and physical tool), and then we categorize existing studies in this field into tool-augmented learning and tool-oriented learning, and introduce various learning methods to empower LLMs this kind of capability. Furthermore, we provide several cases about when, what, and how to use tools in different applications. We end with some open challenges and several potential research directions for future studies. We believe this tutorial is suited for both researchers at different stages (introductory, intermediate, and advanced) and industry practitioners who are interested in LLMs and tool learning
           </p>
+          
           <p>
-            In this tutorial, we aim to provide a comprehensive and coherent overview of recent
-            advances in retrieval-based LMs. We will start
-            by first providing preliminaries covering the foundations of LM (e.g., masked LMs, autoregressive LMs) and retrieval systems (e.g., nearest-neighbor search methods widely used in neural retrieval systems; Karpukhin et al. 2020). We will then focus
-            on recent progress in architectures, learning approaches, and applications of retrieval-based LMs.
-          </p>-->
-          <p>
-            Language models (LMs) such as GPT-3 and PaLM have shown impressive abilities in a range of natural language processing (NLP) tasks. 
-            However, relying solely on their parameters to encode a wealth of world knowledge requires a prohibitively large number of parameters and hence massive computing, and they often struggle to learn long-tail knowledge.
-            Moreover, these parametric LMs are fundamentally incapable of adapting over time, often hallucinate, and may leak private data from the
-            training corpus. To overcome these limitations, there has been growing interest in retrieval-based LMs 
-            which incorporate a non-parametric datastore (e.g., text chunks from an external corpus) with their parametric counterparts. Retrieval-based LMs can outperform LMs without retrieval by a large margin with much fewer parameters, can update their knowledge by replacing their retrieval corpora, and provide citations for users to easily verify and evaluate the predictions.
-          </p>
-          <p>
-            In this tutorial, we aim to provide a comprehensive and coherent overview of recent
-            advances in retrieval-based LMs. We will start
-            by first providing preliminaries covering the foundations of LMs and retrieval systems. We will then focus
-            on recent progress in architectures, learning approaches, and applications of retrieval-based LMs.
+            To the best of our knowledge, this is the first tutorial about tool learning based on LLMs.
           </p>
         </div>
       </div>
     </div>
+
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
@@ -162,7 +148,7 @@
       <div class="column is-full-width">
         <h2 class="title is-3">Schedule</h2>
         <p>
-          Our tutorial will be held on July 9 (all the times are based on EDT = Toronto local time).
+          Our tutorial will be held on July 14, 2024 (all the times are based on EDT = Toronto local time).
           <em>Slides may be subject to updates.</em>
         </p>
 
@@ -246,114 +232,43 @@
         </div>
       </div>
     </div>
+</section>
 
-    <!-- Concurrent Work. -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Reading List</h2>
-
-        <p><b>Bold papers</b> are discussed in detail during our tutorial.</p>
-
-        <br />
+        <h2 class="title is-3">Resources</h2>
         
-        
-        <h3 class="title is-5">Section 3: Architecture</h3>
-
-        <ul>
-          <li><a href="https://arxiv.org/abs/2002.08909"><b>REALM: Retrieval-Augmented Language Model Pre-Training</b></a> (Guu et al., 2020)</li>
-          <li><a href="https://arxiv.org/pdf/2302.00083.pdf"><b>In-Context Retrieval-Augmented Language Models</b></a> (Ram et al., 2023)</li>
-          <li><a href="https://arxiv.org/pdf/2301.12652.pdf"><b>REPLUG: Retrieval-Augmented Black-Box Language Models</b></a> (Shi et al., 2023)</li>
-          <li><a href="https://arxiv.org/pdf/2112.04426.pdf"><b>Improving language models by retrieving from trillions of tokens</b></a> (Borgeaud et al., 2022)</li>
-          <li><a href="https://arxiv.org/pdf/1911.00172.pdf"><b>Generalization through Memorization: Nearest Neighbor Language Models</b></a> (Khandelwal et al., 2020)</li>
-          <li><a href="https://arxiv.org/abs/2305.06983">Active Retrieval Augmented Generation</a> (Jiang et al., 2023)</li>
-          <li><a href="https://arxiv.org/abs/2109.04212">Efficient Nearest Neighbor Language Models</a> (He et al., 2021)</li>
-          <li><a href="https://arxiv.org/abs/2210.15859">You can't pick your neighbors, or can you? When and how to rely on retrieval in the kNN-LM</a> (Drozdov et al., 2022)</li>
-          <li><a href="https://arxiv.org/abs/2201.12431">Neuro-Symbolic Language Modeling with Automaton-augmented Retrieval</a> (Alon et al., 2022)</li>
-          <li><a href="https://arxiv.org/abs/2004.07202">Entities as Experts: Sparse Memory Access with Entity Supervision</a> (Févry et al., 2020)</li>
-          <li><a href="https://arxiv.org/abs/2110.06176">Mention Memory: incorporating textual knowledge into Transformers through entity mention attention</a> (de Jong et al., 2021)</li>
-          <li><a href="https://arxiv.org/abs/2203.08913">Memorizing Transformers</a> (Wu et al., 2022)</li>
-          <li><a href="https://arxiv.org/abs/2305.01625">Unlimiformer: Long-Range Transformers with Unlimited Length Input</a> (Bertsch et al. 2023)</li>
-          <li><a href="https://arxiv.org/abs/2306.13421">Long-range Language Modeling with Self-retrieval</a> (Rubin & Brent, 2023)</li>
-        </ul>
-        
-        <br />
-
-        <h3 class="title is-5">Section 4: Training</h3>
-
-        <ul>
-          <li><a href="https://arxiv.org/abs/2004.04906"><b>Dense Passage Retrieval for Open-Domain Question Answering</b></a> (Karpukhin et al., 2020)</li>
-          <li><a href="https://arxiv.org/abs/2112.04426"><b>Improving language models by retrieving from trillions of tokens</b></a> (Borgeaud et al., 2022 ;also in Section 3)</li>
-          <li><a href="https://arxiv.org/abs/2208.03299"><b>Atlas: Few-shot Learning with Retrieval Augmented Language Models</b></a> (Izacard et al., 2022)</li>
-          <li><a href="https://arxiv.org/abs/2205.12674"><b>Training Language Models with Memory Augmentation</b></a> (Zhong et al., 2022)</li>
-          <li><a href="https://arxiv.org/pdf/2112.09118.pdf">Unsupervised Dense Information Retrieval with Contrastive Learning</a> (Izacard et al., 2022)</li>
-          <li><a href="https://arxiv.org/pdf/2302.00083.pdf">In-Context Retrieval-Augmented Language Models</a> (Ram et al., 2023; also in Section 3)</li>
-          <li><a href="https://arxiv.org/pdf/2301.12652.pdf">REPLUG: Retrieval-Augmented Black-Box Language Models</a> (Shi et al., 2023; also in Section 3)</li>
-          <li><a href="https://arxiv.org/abs/2002.08909">REALM: Retrieval-Augmented Language Model Pre-Training</a> (Guu et al., 2020; also in Section 3)</li>
-          <li><a href="https://arxiv.org/abs/2212.01349">Nonparametric Masked Language Modeling</a> (Min et al., 2023)</li>
-          <li><a href="https://arxiv.org/abs/2306.13421">Long-range Language Modeling with Self-retrieval</a> (Rubin et al., 2023)</li>
+        <ul style="list-style-type:square; line-height:200%; margin-left:15px;">
+            <li>Tool Learning and Language Agent Repo: <a href="https://github.com/ruleGreen/tools-meet-llm">&#128214; ToolsMeetLLMs</a></li>
+            <li>Retrievl-augmented Generation Repo: <a href="https://github.com/ruleGreen/RAG_LLM">&#128214; RAG_LLM</a></li>
+            <li>Survey Paper:</li>
         </ul>
 
-        <br />
-
-        <h3 class="title is-5">Section 5: Application</h3>
-
-        <ul>
-          <li><a href="https://arxiv.org/abs/2208.03299"><b>Atlas: Few-shot Learning with Retrieval Augmented Language Models</b></a> (Izacard et al., 2022; also in Section 4)</li>
-          <li><a href="https://arxiv.org/abs/2203.11147"><b>Teaching language models to support answers with verified quotes</b></a> (Menick et al., 2022)</li>
-          <li><a href="https://arxiv.org/pdf/2301.12652.pdf"><b>REPLUG: Retrieval-Augmented Black-Box Language Models</b></a> (Shi et al., 2023; also in Section 3)</li>
-          <!-- <li><a href="https://arxiv.org/abs/2212.14024"><b>Demonstrate-Search-Predict: Composing retrieval and language models for knowledge-intensive NLP</b></a></li> -->
-          <!-- <li><a href="https://arxiv.org/abs/2305.06311">Automatic evaluations of Attributions of large language models</a></li> -->
-          <!-- <li><a href="https://arxiv.org/abs/2210.08726">RARR: Researching and Revising What Language Models Say, Using Language Models</a></li> -->
-          <!-- <li><a href="https://arxiv.org/abs/2305.14625">kNN-LM Does Not Improve Open-ended Text Generation</a></li> -->
-          <!-- <li><a href="https://arxiv.org/abs/2212.09146">Can Retriever-augmented Language Models Reason? The Blame Game between the Retriever and the Language Model</a></li> -->
-          <li><a href="https://arxiv.org/abs/2205.13792"><b>kNN-Prompt: Nearest Neighbor Zero-Shot Inference</b></a> (Shi et al., 2022)</li>
-          <li><a href="https://arxiv.org/abs/2212.08037"><b>Attributed Question Answering: Evaluation and Modeling for Attributed Large Language Models</b></a> (Bohnet et al., 2023)</li>
-          <li><a href="https://arxiv.org/abs/2207.05987"><b>DocPrompting: Generating Code by Retrieving the Docs</b></a> (Zhou et al., 2022)</li>
-          <li><a href="https://arxiv.org/abs/2212.10511">When Not to Trust Language Models: Investigating Effectiveness of Parametric and Non-Parametric Memories</a> (Mallen et al., 2022)</li>
-          <li><a href="https://arxiv.org/abs/2212.01349">Nonparametric Masked Language Modeling</a> (Min et al., 2023; also in Section 4)</li>
-          <!-- <li><a href="https://arxiv.org/abs/2305.14627">Enabling Large Language Models to Generate Text with Citations</a> (Gao et al., 2023)</li>
-          <li><a href="https://arxiv.org/abs/2304.09848">Evaluating Verifiability in Generative Search Engines</a> (Liu et al., 2023)</li> -->
-          <li><a href="https://arxiv.org/abs/2305.14251">FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation</a> (Min et al., 2023)</li>
-          <!-- <li><a href="https://arxiv.org/abs/2305.14888">Privacy Implications of Retrieval-Based Language Models</a></li> -->
-        </ul>
-
-        <br />
-
-        <h3 class="title is-5">Section 6: Extension</h3>
-        
-        <ul>
-          <li><a href="https://arxiv.org/abs/2107.11976">One Question Answering Model for Many Languages with Cross-lingual Dense Passage Retrieval</a> (Asai et al., 2021)</li>
-          <li><a href="https://arxiv.org/abs/2211.12561">Retrieval-Augmented Multimodal Language Modeling</a> (Yasunaga et al., 2023)</li>
-        </ul>
-        <!--<ul>
-          <li><a href="https://arxiv.org/abs/2107.11976">One Question Answering Model for Many Languages with Cross-lingual Dense Passage Retrieval</a></li>
-          <li><a href="https://arxiv.org/abs/2211.12561">Retrieval-Augmented Multimodal Language Modeling</a></li>
-        </ul> -->
-
-        
-        <br />
-        <h3 class="title is-5">Section 7: Challenges & Opportunities</h3>
-        <ul>
-          <li><a href="https://arxiv.org/abs/2305.14625">KNN-LM Does Not Improve Open-ended Text Generation</a> (Wang et al., 2023)</li>
-          <li><a href="https://arxiv.org/abs/2212.09146">Can Retriever-Augmented Language Models Reason? The Blame Game Between the Retriever and the Language Model</a> (BehnamGhader et al., 2022)</li>
-          <li><a href="https://arxiv.org/abs/2212.14024">Demonstrate-Search-Predict: Composing retrieval and language models for knowledge-intensive NLP</a> (Khattab et al., 2022)</li>
-        </ul>
+      </div>
       </div>
     </div>
 </section>
 
 
+
+
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{ retrieval-lm-tutorial,
-  author    = { Asai, Akari and Min, Sewon and Zhong, Zexuan and Chen, Danqi },
-  title     = { ACL 2023 Tutorial: Retrieval-based Language Models and Applications },
-  journal   = { ACL 2023 },
-  year      = { 2023 },
-}</code></pre>
+    <pre><code>@article{ tools_meet_llm,
+        author    = { Hongru Wang, Yujia Qin, Yankai Lin, Jeff Z. Pan and Kam-fai Wong},
+        title     = { SIGIR 2024 Tutorial: Empowering Large Language Models: Tool Learning for Real-World Interaction},
+        journal   = { SIGIR 2024 },
+        year      = { 2024 },
+        }</code></pre>
   </div>
 </section>
+
 
 
 <footer class="footer">

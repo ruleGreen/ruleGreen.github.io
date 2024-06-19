@@ -10,6 +10,24 @@ body {
   background-size: 100% auto;
 }
 
+/* University Logos Styling */
+.university-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.university-logo {
+  max-height: 120px; /* Set the height of the logos */
+  margin: 0 30px;
+}
+
+.university-logo:hover {
+  opacity: 0.8; /* Slight transparency effect on hover */
+}
+
 section {
   padding: 100px 1.5rem !important;
 }

@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/nav.css">
+
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
@@ -28,106 +30,35 @@
   <script src="./static/js/index.js"></script>
 </head>
 <body>
+  <nav class="llm-nav" >
+    <a class="llm-nav-item" href="#summary">Summary</a>
+    <a class="llm-nav-item" href="#organizer">Organizer</a>
+    <a class="llm-nav-item" href="#schedule">Schedule</a>
+    <a class="llm-nav-item" href="#resource">Resource</a>
+  </nav>
 
-
-<section>
-  <!-- background-image: url('static/photos/background.jpeg') -->
-  <div style="background-color: #006CA5; background-position: center top;
-    background-size: 100% auto; height:300px;">
-    <p style="color:white;text-align:center;padding-top:40px;font-size:50px">Empowering Large Language Models: <br \> Tool Learning for Real-World Interaction</p>
-    <p style="color:white;text-align:center;padding-top:20px;font-size:20px">SIGIR 2024 Tutorial </p>
-    <p style="color:white;text-align:center;padding-top:10px;font-size:20px">14th, July 2024 </p>
+<div class="main-title">
+  <div style="padding: 0 20px">
+    <p style="color:#333;text-align:center;padding-top:40px;font-size:2.6em">Empowering Large Language Models: <br \> Tool Learning for Real-World Interaction</p>
+    <p style="color:#333;text-align:center;padding-top:20px;font-size:1.5em">SIGIR 2024 Tutorial </p>
+    <p style="color:#333;text-align:center;padding-top:10px;font-size:1.5em">14th, July 2024 </p>
   </div>
-</section>
+</div>
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <!-- <h1 class="title is-2 publication-title">
-            <span style="font-size: 80%">SIGIR 2024 Tutorial:</span><br />
-            Empowering Large Language Models: Tool Learning for Real-World Interaction
-          </h1> -->
 
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <table>
-              <tr>
-                  <!-- <th scope="row">TR-7</th> -->
-                  <td width="20%" style="text-align: center; padding: 3px"><img width="150px" height="120px" src="static/imgs/profile_hongru.png"></td>
-                  <td width="20%" style="text-align: center; padding: 3px"><img width="150px" height="120px" src="static/imgs/profile_yujia.jpg"></td>
-                  <td width="20%" style="text-align: center; padding: 3px"><img width="150px" height="120px" src="static/imgs/profile_yankai.png"></td>
-                  <td width="20%" style="text-align: center; padding: 3px"><img width="150px" height="120px" src="static/imgs/profile_jeff.png"></td>
-                   <td width="20%" style="text-align: center; padding: 3px"><img width="150px" height="120px" src="static/imgs/profile_kfwong.png"></td>
-              </tr>
-              <tr>
-                <!-- <th scope="row">TR-7</th> -->
-                <td width="20%" style="text-align: center"><a href="https://rulegreen.github.io/" style="border-radius: 50%">Hongru Wang</a><sup>1</sup>,</td>
-                <td width="20%" style="text-align: center"><a href="https://yujia-qin.github.io/" style="border-radius: 50%">Yujia Qin</a><sup>2</sup>,</td>
-                <td width="20%" style="text-align: center"><a href="https://linyankai.github.io/" style="border-radius: 50%">Yankai Lin</a><sup>3</sup>,</td>
-                <td width="20%" style="text-align: center"><a href="https://knowledge-representation.org/j.z.pan/" style="border-radius: 50%">Jeff Z. Pan</a><sup>4</sup></td>
-                <td width="20%" style="text-align: center"><a href="https://kfwong.cintec.cuhk.edu.hk/" style="border-radius: 50%">Kam-Fai Wong</a><sup>1</sup></td>
-              </tr>
-            </table>
-              <!-- <a href="https://akariasai.github.io/">Akari Asai</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://shmsw25.github.io/">Sewon Min</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://www.cs.princeton.edu/~zzhong/">Zexuan Zhong</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.cs.princeton.edu/~danqic/">Danqi Chen</a><sup>2</sup>, -->
-            </span>
-          </div>
-          <div class="is-size-6 publication-authors">
-            <span class="author-block"><sup>1</sup>The Chinese University of Hong Kong,</span>
-            <span class="author-block"><sup>2</sup>Tsinghua University</span>
-            <span class="author-block"><sup>3</sup>Renmin University of China</span>
-            <span class="author-block"><sup>4</sup>The University of Edinburgh</span>
-          </div>
-          <br />
-
-          <!-- <div class="is-size-5 publication-authors">
-            <b>Sunday July 9 14:00 - 17:30 (EDT) @ Metropolitan West</b>
-          </div>
-           -->
-
-          <!-- <div class="is-size-5 publication-authors">
-            
-            Zoom link available on <a href="https://underline.io/events/395/sessions?eventSessionId=15330&searchGroup=lecture" target="_blank">Underline</a>
-            
-            Visit <a target="_blank" href="https://us06web.zoom.us/rec/play/6fqU9YDLoFtWqpk8w8I7oFrszHKW6JkbPVGgHsdPBxa69ecgCxbmfP33asLU3DJ74q5BXqDGR2ycOTFk.93teqylfi_uiViNK?canPlayFromShare=true&from=share_recording_detail&continueMode=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fus06web.zoom.us%2Frec%2Fshare%2FNrYheXPtE5zOlbogmdBg653RIu7RBO1uAsYH2CZt_hacD1jOHksRahGlERHc_Ybs.KGX1cRVtJBQtJf0o">this link</a>
-            for the Zoom recording of the tutorial
-          </div> -->
-
-          <!--<div class="is-size-6 publication-authors">
-            For those who have not registered to ACL: we will release video recordings after the tutorial
-          </div>
-          <br />-->
-
-          <!-- <div class="is-size-5 publication-authors">
-            QnA: <a href="https://tinyurl.com/retrieval-lm-tutorial" target="_blank"><b>tinyurl.com/retrieval-lm-tutorial</b></a>
-          </div> -->
-
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="section">
+<section class="section" id="summary">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">About this tutorial [<a href="static/references/Tut_ToolsMeetLLM.pdf">Proposal</a>]</h2>
+        <h2 class="title is-3">Summary</h2>
         <div class="content has-text-justified">
           <p>
             Since the advent of large language models (LLMs), the field of tool learning has remained very active in solving various tasks in practice, including but not limited to information retrieval. This half-day tutorial provides basic concepts of this field and an overview of recent advancements with several applications. In specific, we start with some foundational components and architecture of tool learning (i.e., cognitive tool and physical tool), and then we categorize existing studies in this field into tool-augmented learning and tool-oriented learning, and introduce various learning methods to empower LLMs this kind of capability. Furthermore, we provide several cases about when, what, and how to use tools in different applications. We end with some open challenges and several potential research directions for future studies. We believe this tutorial is suited for both researchers at different stages (introductory, intermediate, and advanced) and industry practitioners who are interested in LLMs and tool learning
           </p>
           
           <p>
-            To the best of our knowledge, this is the first tutorial about tool learning based on LLMs.
+            To the best of our knowledge, this is the first tutorial about tool learning based on LLMs. More detail can be found in original <a href="static/references/Tut_ToolsMeetLLM.pdf">proposal</a>.
           </p>
         </div>
       </div>
@@ -140,8 +71,41 @@
   </div>
 </section>
 
+<section class="section hero" id="organizer">
+  <h2 class="title is-3 is-centered has-text-centered">About US</h2>
+  <div class="organizer-container">
+    <div class="organizer-item">
+      <img width="150px" height="120px" src="static/imgs/profile_hongru.png">
+      <div> <a href="https://rulegreen.github.io/" style="border-radius: 50%">Hongru Wang</a><sup>1</sup></div>
+    </div>
+    <div class="organizer-item">
+      <img width="150px" height="120px" src="static/imgs/profile_yujia.jpg">
+      <div> <a href="https://yujia-qin.github.io/" style="border-radius: 50%">Yujia Qin</a><sup>2</sup></div>
+    </div>
+    <div class="organizer-item">
+      <img width="150px" height="120px" src="static/imgs/profile_yankai.png">
+      <div> <a href="https://linyankai.github.io/" style="border-radius: 50%">Yankai Lin</a><sup>3</sup></div>
+    </div>
+    <div class="organizer-item">
+      <img width="150px" height="120px" src="static/imgs/profile_jeff.png">
+      <div> <a href="https://knowledge-representation.org/j.z.pan/" style="border-radius: 50%">Jeff Z. Pan</a><sup>4</sup></div>
+    </div>
+    <div class="organizer-item">
+      <img width="150px" height="120px" src="static/imgs/profile_kfwong.png">
+      <div> <a href="https://kfwong.cintec.cuhk.edu.hk/" style="border-radius: 50%">Kam-Fai Wong</a><sup>1</sup></div>
+    </div>
+  </div>
+  <div class="publication-authors">
+    <span class="author-block"><sup>1</sup>The Chinese University of Hong Kong,</span>
+    <span class="author-block"><sup>2</sup>Tsinghua University,</span>
+    <span class="author-block"><sup>3</sup>Renmin University of China,</span>
+    <span class="author-block"><sup>4</sup>The University of Edinburgh</span>
+  </div>
+</section>
 
-<section class="section">
+
+
+<section class="section" id="schedule">
   <div class="container is-max-desktop">
 
     <div class="columns is-centered">
@@ -174,22 +138,22 @@
           <tbody>
             <tr>
               <td class="tg-0lax">14:00—14:15</td>
-              <td class="tg-0lax">Section 1: Introduction  <a href="" target='_blank'>[Slides]</a></td>
+              <td class="tg-0lax">Section 1: Introduction</td>
               <td class="tg-0lax">Hongru Wang</td>
             </tr>
             <tr>
               <td class="tg-0lax">14:15—14:25</td>
-              <td class="tg-0lax">Section 2: Foundations of Tool Learning  <a href="" target='_blank'>[Slides]</a></td>
+              <td class="tg-0lax">Section 2: Foundations of Tool Learning</td>
               <td class="tg-0lax">Hongru Wang</td>
             </tr>
             <tr>
               <td class="tg-0lax">14:25—15:00</td>
-              <td class="tg-0lax">Section 3: Tool Learning based on LLMs  <a href="" target='_blank'>[Slides]</a></td>
+              <td class="tg-0lax">Section 3: Tool Learning based on LLMs</td>
               <td class="tg-0lax">Yujia Qin</td>
             </tr>
             <tr>
               <td class="tg-0lax">15:00—15:25</td>
-              <td class="tg-0lax">Section 4: Application of Tool Learning  <a href="." target='_blank'>[Slides]</a></td>
+              <td class="tg-0lax">Section 4: Application of Tool Learning</td>
               <td class="tg-0lax">Yujia Qin</td>
             </tr>
             <tr>
@@ -204,12 +168,12 @@
             </tr>
             <tr>
               <td class="tg-0lax">16:00—16:25</td>
-              <td class="tg-0lax">Section 5: Advanced Topics and Future Directions  <a href="" target='_blank'>[Slides]</a></td>
+              <td class="tg-0lax">Section 5: Advanced Topics and Future Directions</td>
               <td class="tg-0lax">Hongru Wang</td>
             </tr>
             <tr>
               <td class="tg-0lax">17:10—17:20</td>
-              <td class="tg-0lax">Section 6: Summary and Overlook <a href="" target='_blank'>[Slides]</a> <a href="./slides/references.pdf" target='_blank'>[References]</a></td>
+              <td class="tg-0lax">Section 6: Summary and Overlook</td>
               <td class="tg-0lax">Hongru Wang</td>
             </tr>
             <tr>
@@ -226,7 +190,7 @@
 
 
 
-<section class="section">
+<section class="section" id="resource">
   <div class="container is-max-desktop">
 
     <div class="columns is-centered">
@@ -234,7 +198,8 @@
         <h2 class="title is-3">Resources</h2>
         
         <ul style="list-style-type:square; line-height:200%; margin-left:15px;">
-            <li>Tool Learning and Language Agent Repo: <a href="https://github.com/ruleGreen/tools-meet-llm">&#128214; ToolsMeetLLMs</a></li>
+            <li>Our slides can be found here: <a href="https://docs.google.com/presentation/d/1jI-kx8NIQdfy5Sp2213H7tJ9g6EW1_TCl0Im2-27Th4/edit?usp=sharing">Slides</a>. Feel free to comments and give us feedbacks.</li>
+            <li>All mentioned paper can be found in this Repo: <a href="https://github.com/ruleGreen/tools-meet-llm">&#128214; ToolsMeetLLMs</a> We will keep updating it.</li>
             <li>Retrievl-augmented Generation Repo: <a href="https://github.com/ruleGreen/RAG_LLM">&#128214; RAG_LLM</a></li>
             <li>Survey Paper: <a href="https://arxiv.org/abs/2304.08354.pdf"> Tool Learning with Foundation Models </a> </li>
         </ul>
@@ -247,7 +212,7 @@
 
 
 
-<section class="section" id="BibTeX">
+<section id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{ tools_meet_llm,
@@ -284,6 +249,8 @@
     </div>
   </div>
 </footer>
+<script src="./static/js/main.js"></script>
+<!-- <script type="module" src="./static/js/main.js"></script> -->
 
 </body>
 </html>

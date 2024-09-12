@@ -128,7 +128,7 @@
         </div>
 
         <div class="universal-wrapper pt-3">
-          <h3>2024 <button class="toggle-all-btn">Show All</button></h3>
+          <h3>2024 <button class="toggle-all-btn">Hide All</button></h3>
 
           <button class="toggle-btn">
             <span class="pub-details-toggle"></span>
@@ -475,7 +475,7 @@
               const details = btn.nextElementSibling;
               details.style.display = isAllOpen ? 'block' : 'none';
             });
-            toggleAllBtn.textContent = isAllOpen ? 'Hide All' : 'Show All';
+            toggleAllBtn.textContent = isAllOpen ? 'Show All' : 'Hide All';
           });
 
           const twentytree_toggleBtns = document.querySelectorAll('.twentythree-toggle-btn');

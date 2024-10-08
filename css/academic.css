@@ -34,3 +34,8 @@ blockquote {
     border-left: 4px solid #007BFF;
     background: #e9ecef;
 }
+
+.cvdate {
+	float: right;
+	margin-left: .5em;
+}

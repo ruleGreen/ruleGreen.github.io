@@ -172,9 +172,9 @@
 
 
         <div class="universal-wrapper pt-3">
-          <h3>2024 <button class="toggle-all-btn">Show All</button></h3>
+          <h3>2024 <button class="twentyfour-toggle-all-btn">Show All</button></h3>
 
-          <button class="toggle-btn">
+          <button class="twentyfour-toggle-btn">
             <span class="pub-details-toggle"></span>
           </button>
           
@@ -578,6 +578,20 @@
               details.style.display = isAllOpen ? 'block' : 'none';
             });
             toggleAllBtn.textContent = isAllOpen ? 'Hide All' : 'Show All';
+          });
+
+          const twentyfour_toggleBtns = document.querySelectorAll('.twentyfour-toggle-btn');
+          const twentyfour_toggleAllBtn = document.querySelector('.twentyfour-toggle-all-btn');
+          let twentyfour_isAllOpen = false;
+
+          twentyfour_toggleAllBtn.addEventListener('click', () => {
+            twentyfour_isAllOpen = !twentytree_isAllOpen;
+            twentyfour_toggleBtns.forEach(btn => {
+              btn.classList.toggle('active', twentytree_isAllOpen);
+              const details = btn.nextElementSibling;
+              details.style.display = twentyfour_isAllOpen ? 'block' : 'none';
+            });
+            twentyfour_toggleAllBtn.textContent = twentyfour_isAllOpen ? 'Hide All' : 'Show All';
           });
 
           const twentytree_toggleBtns = document.querySelectorAll('.twentythree-toggle-btn');

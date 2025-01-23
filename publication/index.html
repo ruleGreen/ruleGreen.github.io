@@ -585,9 +585,9 @@
           let twentyfour_isAllOpen = false;
 
           twentyfour_toggleAllBtn.addEventListener('click', () => {
-            twentyfour_isAllOpen = !twentytree_isAllOpen;
+            twentyfour_isAllOpen = !twentyfour_isAllOpen;
             twentyfour_toggleBtns.forEach(btn => {
-              btn.classList.toggle('active', twentytree_isAllOpen);
+              btn.classList.toggle('active', twentyfour_isAllOpen);
               const details = btn.nextElementSibling;
               details.style.display = twentyfour_isAllOpen ? 'block' : 'none';
             });
